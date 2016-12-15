@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c51335b-8e9f-48e3-bf33-0261edf5831f" name="Default" comment="initial commit.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../.vs/MosaicoSolutions.ViaCep/v14/.suo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/bin/Debug/MosaicoSolutions.ViaCep.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/bin/Debug/MosaicoSolutions.ViaCep.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.csprojResolveAssemblyReference.cache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.dll" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.pdb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/riderModule.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.sln" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.sln.DotSettings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Cep.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/CepInvalidoException.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Endereco.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/UF.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/MosaicoSolutions.ViaCep.csproj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/MosaicoSolutions.ViaCep.csproj.DotSettings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/EnderecoRequisicao.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/IViaCepRequisicao.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/IViaCepResposta.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepCliente.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoJsonPorCep.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoJsonPorEndereco.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPipedPorCep.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorCep.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorEndereco.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoQuertyPorCep.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoXmlPorCep.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoXmlPorEndereco.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaJson.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaPiped.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaQuerty.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaXml.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostas.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Properties/AssemblyInfo.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Util/ViaCepUtil.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/ViaCep.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.csproj.FileListAbsolute.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     </list>
     <ignored path="MosaicoSolutions.ViaCep.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -240,12 +195,10 @@
       <workItem from="1481285992830" duration="6363000" />
       <workItem from="1481293135701" duration="3546000" />
       <workItem from="1481763228598" duration="13399000" />
-      <workItem from="1481822298334" duration="4135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47443000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
