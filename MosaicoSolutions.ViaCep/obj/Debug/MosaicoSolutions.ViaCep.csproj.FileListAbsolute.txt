@@ -1,0 +1,5 @@
+C:\Users\BrunoXavier\Documents\GitHub\MosaicoSolutions.ViaCep\MosaicoSolutions.ViaCep\bin\Debug\MosaicoSolutions.ViaCep.dll
+C:\Users\BrunoXavier\Documents\GitHub\MosaicoSolutions.ViaCep\MosaicoSolutions.ViaCep\bin\Debug\MosaicoSolutions.ViaCep.pdb
+C:\Users\BrunoXavier\Documents\GitHub\MosaicoSolutions.ViaCep\MosaicoSolutions.ViaCep\obj\Debug\MosaicoSolutions.ViaCep.csprojResolveAssemblyReference.cache
+C:\Users\BrunoXavier\Documents\GitHub\MosaicoSolutions.ViaCep\MosaicoSolutions.ViaCep\obj\Debug\MosaicoSolutions.ViaCep.dll
+C:\Users\BrunoXavier\Documents\GitHub\MosaicoSolutions.ViaCep\MosaicoSolutions.ViaCep\obj\Debug\MosaicoSolutions.ViaCep.pdb
