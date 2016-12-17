@@ -25,11 +25,41 @@ Authors: Anderson Oliveira - https://github.com/RunF0rrestRun
          Johnnys Martins - https://github.com/JohnnysMartins
 */
 
+using System;
+using System.Threading.Tasks;
+using MosaicoSolutions.ViaCep.Modelos;
+using MosaicoSolutions.ViaCep.Net;
+using MosaicoSolutions.ViaCep.Util;
+
 namespace MosaicoSolutions.ViaCep
 {
     //TODO: Classe que executa as requisições.
     public static class ViaCep
     {
+        public static async Task<string> ObterEnderecoComoJsonAsync(string cep)
+        {
+            return await ObterEnderecoComoJsonAsync(new Cep(cep));
+        }
 
+        private static async Task<string> ObterEnderecoComoJsonAsync(Cep cep)
+        {
+            if (cep == null)
+                throw new ArgumentNullException(nameof(cep));
+
+            var requisicao = ViaCepRequisicaoPorCep.CriarRequisicaoJson(cep);
+            var responseMessage = await ViaCepCliente.ObterResponseMessageAsync(requisicao);
+
+            if (!responseMessage.IsSuccessStatusCode)
+                throw ViaCepUtil.CriarExceptionPeloStatusCode(responseMessage.StatusCode);
+
+            var conteudo = await responseMessage.Content.ReadAsStringAsync();
+
+            if (!EhConteudoDaRequisicaoValido(conteudo))
+                throw ViaCepUtil.CriarExceptionCepInexistente();
+
+            return conteudo;
+        }
+
+        private static bool EhConteudoDaRequisicaoValido(string conteudo) => !conteudo.Contains("erro");
     }
 }
