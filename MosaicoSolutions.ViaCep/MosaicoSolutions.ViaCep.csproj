@@ -46,24 +46,15 @@
     <Compile Include="Modelos\UF.cs" />
     <Compile Include="Net\EnderecoRequisicao.cs" />
     <Compile Include="Net\IViaCepRequisicao.cs" />
-    <Compile Include="Net\IViaCepResposta.cs" />
     <Compile Include="Net\ViaCepCliente.cs" />
-    <Compile Include="Net\ViaCepRequisicaoJsonPorCep.cs" />
-    <Compile Include="Net\ViaCepRequisicaoJsonPorEndereco.cs" />
-    <Compile Include="Net\ViaCepRequisicaoPipedPorCep.cs" />
-    <Compile Include="Net\ViaCepRequisicaoPorEndereco.cs" />
-    <Compile Include="Net\ViaCepRequisicaoQuertyPorCep.cs" />
-    <Compile Include="Net\ViaCepRequisicaoXmlPorCep.cs" />
     <Compile Include="Net\ViaCepRequisicaoPorCep.cs" />
-    <Compile Include="Net\ViaCepRequisicaoXmlPorEndereco.cs" />
-    <Compile Include="Net\ViaCepRespostaJson.cs" />
-    <Compile Include="Net\ViaCepRespostaPiped.cs" />
-    <Compile Include="Net\ViaCepRespostaQuerty.cs" />
-    <Compile Include="Net\ViaCepRespostas.cs" />
-    <Compile Include="Net\ViaCepRespostaXml.cs" />
+    <Compile Include="Net\ViaCepRequisicaoPorEndereco.cs" />
+    <Compile Include="Net\ViaCepTipoResposta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\MensagensDeErro.cs" />
     <Compile Include="Util\ViaCepUtil.cs" />
     <Compile Include="ViaCep.cs" />
+    <Compile Include="ViaCepException.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Modelos" />
