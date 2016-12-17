@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
+using System.Net;
 using MosaicoSolutions.ViaCep.Modelos;
-using static System.String;
+using MosaicoSolutions.ViaCep.Net;
 
 namespace MosaicoSolutions.ViaCep.Util
 {
@@ -25,6 +25,33 @@ namespace MosaicoSolutions.ViaCep.Util
 
         private static bool CompareUFComString(string siglaUF, UF uf)
             => string.Equals(Enum.GetName(typeof(UF), uf), siglaUF, StringComparison.InvariantCultureIgnoreCase);
+
+        internal static string ObterTipoRespostaComoString(ViaCepTipoResposta resposta)
+            => TiposResposta[resposta];
+
+        internal static ViaCepException CriarExceptionPeloStatusCode(HttpStatusCode statusCode)
+        {
+            switch (statusCode)
+            {
+                case HttpStatusCode.BadRequest:
+                    return CriarExceptionBadRequest();
+
+                case HttpStatusCode.ProxyAuthenticationRequired:
+                    return CriarExcetionProxyRequerido();
+
+                default:
+                    return new ViaCepException();
+            }
+        }
+
+        internal static ViaCepException CriarExceptionBadRequest()
+            => new ViaCepException(MensagensDeErro.BadRequest);
+
+        internal static ViaCepException CriarExcetionProxyRequerido()
+            => new ViaCepException(MensagensDeErro.AutenticacaoProxyRequerida);
+
+        internal static ViaCepException CriarExceptionCepInexistente()
+            => new ViaCepException(MensagensDeErro.CepInexistente);
 
         private static readonly Dictionary<UF, string> NomesDosEstados = new Dictionary<UF, string>
         {
@@ -55,6 +82,14 @@ namespace MosaicoSolutions.ViaCep.Util
             {UF.SP, "São Paulo"},
             {UF.SE, "Sergipe"},
             {UF.TO, "Tocantins"}
+        };
+
+        private static readonly Dictionary<ViaCepTipoResposta, string> TiposResposta = new Dictionary<ViaCepTipoResposta, string>
+        {
+            {ViaCepTipoResposta.Json, "json"},
+            {ViaCepTipoResposta.Piped, "piped"},
+            {ViaCepTipoResposta.Querty, "querty"},
+            {ViaCepTipoResposta.Xml, "xml"}
         };
     }
 }
