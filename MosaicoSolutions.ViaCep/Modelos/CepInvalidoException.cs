@@ -13,7 +13,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// Inicializa uma nova instância da class <code>CepInvalidoException</code>.
         /// </summary>
         public CepInvalidoException()
-            : base("O Cep não estava em um formato válido. Um dos seguintes formatos eram esperados: 00000000 ou 00000-000")
+            : base(Util.MensagensDeErro.CepInvalido)
         {
         }
 
