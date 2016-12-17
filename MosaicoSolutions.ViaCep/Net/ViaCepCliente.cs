@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using MosaicoSolutions.ViaCep.Modelos;
 
 namespace MosaicoSolutions.ViaCep.Net
 {
-    public static class ViaCepCliente
+    internal static class ViaCepCliente
     {
         private static HttpClient _instancia;
 
         internal static HttpClient Instancia
             => _instancia ?? (_instancia = new HttpClient {BaseAddress = new Uri("http://viacep.com.br/ws/")});
 
-        public static async Task<string> ObterStringAsync(IViaCepRequisicao requisicao)
-            => await Instancia.GetStringAsync(requisicao.ObterUriDoRecurso());
+        internal static async Task<HttpResponseMessage> ObterResponseMessageAsync(IViaCepRequisicao requisicao)
+            => await Instancia.GetAsync(requisicao.ObterUriDoRecurso());
+
+        internal static HttpResponseMessage ObterResponseMessage(IViaCepRequisicao requisicao)
+            => Instancia.GetAsync(requisicao.ObterUriDoRecurso()).Result;
     }
 }
