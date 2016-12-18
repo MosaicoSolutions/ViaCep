@@ -11,10 +11,10 @@ namespace MosaicoSolutions.ViaCep.Net
         internal static HttpClient Instancia
             => _instancia ?? (_instancia = new HttpClient {BaseAddress = new Uri("http://viacep.com.br/ws/")});
 
-        internal static async Task<HttpResponseMessage> ObterResponseMessageAsync(IViaCepRequisicao requisicao)
-            => await Instancia.GetAsync(requisicao.ObterUriDoRecurso());
+        internal static async Task<ViaCepResposta> ObterResponseMessageAsync(IViaCepRequisicao requisicao)
+            => new ViaCepResposta(await Instancia.GetAsync(requisicao.ObterUriDoRecurso()));
 
-        internal static HttpResponseMessage ObterResponseMessage(IViaCepRequisicao requisicao)
-            => Instancia.GetAsync(requisicao.ObterUriDoRecurso()).Result;
+        internal static ViaCepResposta ObterResponseMessage(IViaCepRequisicao requisicao)
+            => new ViaCepResposta(Instancia.GetAsync(requisicao.ObterUriDoRecurso()).Result);
     }
 }
