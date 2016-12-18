@@ -37,29 +37,32 @@ namespace MosaicoSolutions.ViaCep
     public static class ViaCep
     {
         public static async Task<string> ObterEnderecoComoJsonAsync(string cep)
-        {
-            return await ObterEnderecoComoJsonAsync(new Cep(cep));
-        }
+            => await ObterEnderecoComoJsonAsync(new Cep(cep));
 
-        private static async Task<string> ObterEnderecoComoJsonAsync(Cep cep)
+        public static async Task<string> ObterEnderecoComoJsonAsync(Cep cep)
         {
             if (cep == null)
                 throw new ArgumentNullException(nameof(cep));
 
-            var requisicao = ViaCepRequisicaoPorCep.CriarRequisicaoJson(cep);
-            var responseMessage = await ViaCepCliente.ObterResponseMessageAsync(requisicao);
+            var conteudo = await ObterConteudoAsync(ViaCepRequisicaoPorCep.CriarRequisicaoJson(cep));
 
-            if (!responseMessage.IsSuccessStatusCode)
-                throw ViaCepUtil.CriarExceptionPeloStatusCode(responseMessage.StatusCode);
-
-            var conteudo = await responseMessage.Content.ReadAsStringAsync();
-
-            if (!EhConteudoDaRequisicaoValido(conteudo))
+            if (conteudo.PossuiErro())
                 throw ViaCepUtil.CriarExceptionCepInexistente();
 
-            return conteudo;
+            return conteudo.LerComoString();
         }
 
-        private static bool EhConteudoDaRequisicaoValido(string conteudo) => !conteudo.Contains("erro");
+        public static async Task<ViaCepConteudo> ObterConteudoAsync(IViaCepRequisicao requisicao)
+        {
+            var resposta = await ObterRespostaAsync(requisicao);
+
+            if (!resposta.EhCodigoDeSucesso)
+                throw ViaCepUtil.CriarExceptionPeloStatusCode(resposta.CodigoDeStatus);
+
+            return resposta.ObterConteudo();
+        }
+
+        public static async Task<ViaCepResposta> ObterRespostaAsync(IViaCepRequisicao requisicao)
+            => await ViaCepCliente.ObterResponseMessageAsync(requisicao);
     }
 }
