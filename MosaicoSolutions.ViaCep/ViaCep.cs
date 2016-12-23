@@ -46,23 +46,60 @@ namespace MosaicoSolutions.ViaCep
 
             var conteudo = await ObterConteudoAsync(ViaCepRequisicaoPorCep.CriarRequisicaoJson(cep));
 
-            if (conteudo.PossuiErro())
-                throw ViaCepUtil.CriarExceptionCepInexistente();
-
             return conteudo.LerComoString();
         }
 
         public static async Task<ViaCepConteudo> ObterConteudoAsync(IViaCepRequisicao requisicao)
         {
-            var resposta = await ObterRespostaAsync(requisicao);
+            var conteudo =  (await ObterRespostaAsync(requisicao)).ObterConteudo();
+
+            if (conteudo.PossuiErro())
+                throw ViaCepUtil.CriarExceptionCepInexistente();
+
+            return conteudo;
+        }
+
+        public static async Task<ViaCepResposta> ObterRespostaAsync(IViaCepRequisicao requisicao)
+        {
+            var resposta = await ViaCepCliente.ObterResponseMessageAsync(requisicao);
 
             if (!resposta.EhCodigoDeSucesso)
                 throw ViaCepUtil.CriarExceptionPeloStatusCode(resposta.CodigoDeStatus);
 
-            return resposta.ObterConteudo();
+            return resposta;
         }
 
-        public static async Task<ViaCepResposta> ObterRespostaAsync(IViaCepRequisicao requisicao)
-            => await ViaCepCliente.ObterResponseMessageAsync(requisicao);
+        public static string ObterEnderecoComoJson(string cep)
+            => ObterEnderecoComoJson(new Cep(cep));
+
+        public static string ObterEnderecoComoJson(Cep cep)
+        {
+            if (cep == null)
+                throw new ArgumentNullException(nameof(cep));
+
+            var conteudo = ObterConteudo(ViaCepRequisicaoPorCep.CriarRequisicaoJson(cep));
+
+            return conteudo.LerComoString();
+        }
+
+        public static ViaCepConteudo ObterConteudo(IViaCepRequisicao requisicao)
+        {
+            var conteudo = ObterResposta(requisicao).ObterConteudo();
+
+            if (conteudo.PossuiErro())
+                throw ViaCepUtil.CriarExceptionCepInexistente();
+
+            return conteudo;
+        }
+
+        public static ViaCepResposta ObterResposta(IViaCepRequisicao requisicao)
+        {
+            var resposta = ViaCepCliente.ObterResponseMessage(requisicao);
+
+            if (!resposta.EhCodigoDeSucesso)
+                throw ViaCepUtil.CriarExceptionPeloStatusCode(resposta.CodigoDeStatus);
+
+            return resposta;
+        }
     }
 }
