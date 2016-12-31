@@ -36,6 +36,19 @@ namespace MosaicoSolutions.ViaCep
     //TODO: Classe que executa as requisições.
     public static class ViaCep
     {
+        public static async Task<Endereco> ObterEnderecoAsync(string cep)
+            => await ObterEnderecoAsync(new Cep(cep));
+
+        public static async Task<Endereco> ObterEnderecoAsync(Cep cep)
+        {
+            if (cep == null)
+                throw new ArgumentNullException(nameof(cep));
+
+            var json = await ObterEnderecoComoJsonAsync(cep);
+
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<Endereco>(json);
+        }
+
         public static async Task<string> ObterEnderecoComoJsonAsync(string cep)
             => await ObterEnderecoComoJsonAsync(new Cep(cep));
 
