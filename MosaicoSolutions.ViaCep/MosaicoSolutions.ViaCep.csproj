@@ -46,6 +46,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fluent\Interfaces\IViaCepFluentComoEndereco.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepFluentComoJson.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepFluentComoListaDeEnderecos.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepFluentComoPiped.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepFluentComoQuerty.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepFluentComoXml.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepFluentPorCep.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepFluentPorEndereco.cs" />
+    <Compile Include="Fluent\ViaCepFluent.cs" />
+    <Compile Include="Fluent\ViaCepFluentPorCep.cs" />
+    <Compile Include="Fluent\ViaCepFluentPorEndereco.cs" />
     <Compile Include="Modelos\Cep.cs" />
     <Compile Include="Modelos\CepInvalidoException.cs" />
     <Compile Include="Modelos\Endereco.cs" />
@@ -60,6 +71,7 @@
     <Compile Include="Net\ViaCepResposta.cs" />
     <Compile Include="Net\ViaCepTipoResposta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\EnderecoConvert.cs" />
     <Compile Include="Util\MensagensDeErro.cs" />
     <Compile Include="Util\ViaCepUtil.cs" />
     <Compile Include="ViaCep.cs" />
