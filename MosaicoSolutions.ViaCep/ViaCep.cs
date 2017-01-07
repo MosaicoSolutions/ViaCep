@@ -27,13 +27,14 @@ Authors: Anderson Oliveira - https://github.com/RunF0rrestRun
 
 using System;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using MosaicoSolutions.ViaCep.Modelos;
 using MosaicoSolutions.ViaCep.Net;
 using MosaicoSolutions.ViaCep.Util;
 
 namespace MosaicoSolutions.ViaCep
 {
-    //TODO: Classe que executa as requisições.
+
     public static class ViaCep
     {
         public static async Task<Endereco> ObterEnderecoAsync(string cep)
@@ -41,12 +42,9 @@ namespace MosaicoSolutions.ViaCep
 
         public static async Task<Endereco> ObterEnderecoAsync(Cep cep)
         {
-            if (cep == null)
-                throw new ArgumentNullException(nameof(cep));
-
             var json = await ObterEnderecoComoJsonAsync(cep);
 
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Endereco>(json);
+            return EnderecoConvert.DeJsonParaEndereco(json);
         }
 
         public static async Task<string> ObterEnderecoComoJsonAsync(string cep)
@@ -60,6 +58,19 @@ namespace MosaicoSolutions.ViaCep
             var conteudo = await ObterConteudoAsync(ViaCepRequisicaoPorCep.CriarRequisicaoJson(cep));
 
             return conteudo.LerComoString();
+        }
+
+        public static async Task<XDocument> ObterEnderecoComoXmlAsync(string cep)
+            => await ObterEnderecoComoXmlAsync(new Cep(cep));
+
+        public static async Task<XDocument> ObterEnderecoComoXmlAsync(Cep cep)
+        {
+            if (cep == null)
+                throw new ArgumentNullException(nameof(cep));
+
+            var conteudo = await ObterConteudoAsync(ViaCepRequisicaoPorCep.CriarRequisicaoXml(cep));
+
+            return conteudo.LerComoXml();
         }
 
         public static async Task<ViaCepConteudo> ObterConteudoAsync(IViaCepRequisicao requisicao)
@@ -82,6 +93,17 @@ namespace MosaicoSolutions.ViaCep
             return resposta;
         }
 
+        public static Endereco ObterEndereco(string cep)
+            => ObterEndereco(new Cep(cep));
+
+        public static Endereco ObterEndereco(Cep cep)
+        {
+            var json = ObterEnderecoComoJson(cep);
+
+            return EnderecoConvert.DeJsonParaEndereco(json);
+        }
+
+
         public static string ObterEnderecoComoJson(string cep)
             => ObterEnderecoComoJson(new Cep(cep));
 
@@ -93,6 +115,19 @@ namespace MosaicoSolutions.ViaCep
             var conteudo = ObterConteudo(ViaCepRequisicaoPorCep.CriarRequisicaoJson(cep));
 
             return conteudo.LerComoString();
+        }
+
+        public static XDocument ObterEnderecoComoXml(string cep)
+            => ObterEnderecoComoXml(new Cep(cep));
+
+        public static XDocument ObterEnderecoComoXml(Cep cep)
+        {
+            if (cep == null)
+                throw new ArgumentNullException(nameof(cep));
+
+            var conteudo = ObterConteudo(ViaCepRequisicaoPorCep.CriarRequisicaoXml(cep));
+
+            return conteudo.LerComoXml();
         }
 
         public static ViaCepConteudo ObterConteudo(IViaCepRequisicao requisicao)
