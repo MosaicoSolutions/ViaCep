@@ -26,6 +26,7 @@ Authors: Anderson Oliveira - https://github.com/RunF0rrestRun
 */
 
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using MosaicoSolutions.ViaCep.Modelos;
@@ -73,6 +74,53 @@ namespace MosaicoSolutions.ViaCep
             return conteudo.LerComoXml();
         }
 
+        public static async Task<string> ObterEnderecoComoPipedAsync(string cep)
+            => await ObterEnderecoComoPipedAsync(new Cep(cep));
+
+        public static async Task<string> ObterEnderecoComoPipedAsync(Cep cep)
+        {
+            if (cep == null)
+                throw new ArgumentNullException(nameof(cep));
+
+            var conteudo = await ObterConteudoAsync(ViaCepRequisicaoPorCep.CriarRequisicaoPiped(cep));
+
+            return conteudo.LerComoString();
+        }
+
+        public static async Task<string> ObterEnderecoComoQuertyAsync(string cep)
+            => await ObterEnderecoComoQuertyAsync(new Cep(cep));
+
+        public static async Task<string> ObterEnderecoComoQuertyAsync(Cep cep)
+        {
+            if (cep == null)
+                throw new ArgumentNullException(nameof(cep));
+
+            var conteudo = await ObterConteudoAsync(ViaCepRequisicaoPorCep.CriarRequisicaoQuerty(cep));
+
+            return conteudo.LerComoString();
+        }
+
+        public static async Task<IEnumerable<Endereco>> ObterEnderecosAsync(EnderecoRequisicao enderecoRequisicao)
+        {
+            var json = await ObterEnderecosComoJsonAsync(enderecoRequisicao);
+
+            return EnderecoConvert.DeJsonParaListaDeEnderecos(json);
+        }
+
+        public static async Task<string> ObterEnderecosComoJsonAsync(EnderecoRequisicao enderecoRequisicao)
+        {
+            var conteudo = await ObterConteudoAsync(ViaCepRequisicaoPorEndereco.CriarRequisicaoJson(enderecoRequisicao));
+
+            return conteudo.LerComoString();
+        }
+
+        public static async Task<XDocument> ObterEnderecosComoXmlAsync(EnderecoRequisicao enderecoRequisicao)
+        {
+            var conteudo = await ObterConteudoAsync(ViaCepRequisicaoPorEndereco.CriarRequisicaoXml(enderecoRequisicao));
+
+            return conteudo.LerComoXml();
+        }
+
         public static async Task<ViaCepConteudo> ObterConteudoAsync(IViaCepRequisicao requisicao)
         {
             var conteudo =  (await ObterRespostaAsync(requisicao)).ObterConteudo();
@@ -103,7 +151,6 @@ namespace MosaicoSolutions.ViaCep
             return EnderecoConvert.DeJsonParaEndereco(json);
         }
 
-
         public static string ObterEnderecoComoJson(string cep)
             => ObterEnderecoComoJson(new Cep(cep));
 
@@ -126,6 +173,53 @@ namespace MosaicoSolutions.ViaCep
                 throw new ArgumentNullException(nameof(cep));
 
             var conteudo = ObterConteudo(ViaCepRequisicaoPorCep.CriarRequisicaoXml(cep));
+
+            return conteudo.LerComoXml();
+        }
+
+        public static string ObterEnderecoComoPiped(string cep)
+            => ObterEnderecoComoPiped(new Cep(cep));
+
+        public static string ObterEnderecoComoPiped(Cep cep)
+        {
+            if (cep == null)
+                throw new ArgumentNullException(nameof(cep));
+
+            var conteudo = ObterConteudo(ViaCepRequisicaoPorCep.CriarRequisicaoPiped(cep));
+
+            return conteudo.LerComoString();
+        }
+
+        public static string ObterEnderecoComoQuerty(string cep)
+            => ObterEnderecoComoQuerty(new Cep(cep));
+
+        public static string ObterEnderecoComoQuerty(Cep cep)
+        {
+            if (cep == null)
+                throw new ArgumentNullException(nameof(cep));
+
+            var conteudo = ObterConteudo(ViaCepRequisicaoPorCep.CriarRequisicaoQuerty(cep));
+
+            return conteudo.LerComoString();
+        }
+
+        public static IEnumerable<Endereco> ObterEnderecos(EnderecoRequisicao enderecoRequisicao)
+        {
+            var json = ObterEnderecosComoJson(enderecoRequisicao);
+
+            return EnderecoConvert.DeJsonParaListaDeEnderecos(json);
+        }
+
+        public static string ObterEnderecosComoJson(EnderecoRequisicao enderecoRequisicao)
+        {
+            var conteudo = ObterConteudo(ViaCepRequisicaoPorEndereco.CriarRequisicaoJson(enderecoRequisicao));
+
+            return conteudo.LerComoString();
+        }
+
+        public static XDocument ObterEnderecosComoXml(EnderecoRequisicao enderecoRequisicao)
+        {
+            var conteudo = ObterConteudo(ViaCepRequisicaoPorEndereco.CriarRequisicaoXml(enderecoRequisicao));
 
             return conteudo.LerComoXml();
         }
