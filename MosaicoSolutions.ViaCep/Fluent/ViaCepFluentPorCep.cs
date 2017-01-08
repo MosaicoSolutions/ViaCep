@@ -1,11 +1,11 @@
-﻿using System.Xml.Linq;
+﻿using System.Threading.Tasks;
+using System.Xml.Linq;
 using MosaicoSolutions.ViaCep.Fluent.Interfaces;
 using MosaicoSolutions.ViaCep.Modelos;
 using MosaicoSolutions.ViaCep.Util;
 
 namespace MosaicoSolutions.ViaCep.Fluent
 {
-    //TODO: Implementar métodos restantes.
     public class ViaCepFluentPorCep : IViaCepFluentPorCep
     {
         private readonly Cep _cep;
@@ -25,14 +25,24 @@ namespace MosaicoSolutions.ViaCep.Fluent
             => ViaCep.ObterEnderecoComoXml(_cep);
 
         public string ComoPiped()
-        {
-            throw new System.NotImplementedException();
-        }
+            => ViaCep.ObterEnderecoComoPiped(_cep);
 
         public string ComoQuerty()
-        {
-            throw new System.NotImplementedException();
-        }
+            => ViaCep.ObterEnderecoComoQuerty(_cep);
 
+        public async Task<string> ComoJsonAsync()
+            => await ViaCep.ObterEnderecoComoJsonAsync(_cep);
+
+        public async Task<XDocument> ComoXmlAsync()
+            => await ViaCep.ObterEnderecoComoXmlAsync(_cep);
+
+        public async Task<string> ComoPipedAsync()
+            => await ViaCep.ObterEnderecoComoPipedAsync(_cep);
+
+        public async Task<string> ComoQuertyAsync()
+            => await ViaCep.ObterEnderecoComoQuertyAsync(_cep);
+
+        public async Task<Endereco> ComoEnderecoAsync()
+            => await ViaCep.ObterEnderecoAsync(_cep);
     }
 }
