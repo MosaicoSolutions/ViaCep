@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MosaicoSolutions.ViaCep</name>
+    </assembly>
+    <members>
+        <member name="T:MosaicoSolutions.ViaCep.Modelos.Cep">
+            <summary>
+            Representa o CEP de um endereço.
+            </summary>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.#ctor(System.String)">
+            <summary>
+            Inicializa uma nova instância da class <code>Cep</code> com o valor do cep especificado.
+            </summary>
+            <param name="cep">O cep.</param>
+            <exception cref="T:MosaicoSolutions.ViaCep.Modelos.CepInvalidoException">Se o CEP estiver em um formato inválido.</exception>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.EhCepValido(System.String)">
+            <summary>
+            Testa se o CEP é válido.
+            </summary>
+            <param name="cep">O cep.</param>
+            <returns>true, se o cep está em um formato válido, caso contrário, false.</returns>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.FormataCepSomenteNumeros(System.String)">
+            <summary>
+            Retira a máscara do Cep.
+            </summary>
+            <param name="cep">O cep.</param>
+            <returns>O cep somente com digitos.</returns>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.GetCep">
+            <summary>
+            Acessa o Cep.
+            </summary>
+            <returns>O Cep</returns>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.GetCepFormatado">
+            <summary>
+            Retorna o CEP no formato 00000-000.
+            </summary>
+            <returns>O CEP no formato 00000-000.</returns>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.FormataCep">
+            <summary>
+            Retorna o CEP no formato 00000-000.
+            </summary>
+            <returns>O CEP formatado.</returns>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.CompareTo(System.Object)">
+            <summary>
+            Compara a instância atual com outro objeto do mesmo tipo e retorna um inteiro que indica se a instância atual precede,
+            segue ou ocorre na mesma posição na ordem de classificação do outro objeto.
+            </summary>
+            <param name="obj">Um objeto para comparar com esta instância.</param>
+            <returns>
+            Um valor que indica a ordem relativa dos objetos que estão sendo comparados.
+            O valor de retorno tem esses significados: Valor Significado Menos que zero Essa instância precede obj na ordem de classificação.
+            Zero Esta instância ocorre na mesma posição na ordem de classificação como obj.
+            Maior que zero Esta instância segue obj na ordem de classificação.</returns>
+            <exception cref="T:System.ArgumentException">obj não é do mesmo tipo que esta instância.</exception>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.CompareTo(MosaicoSolutions.ViaCep.Modelos.Cep)">
+            <summary>
+            Compara o objeto atual com outro objeto do mesmo tipo.
+            </summary>
+            <param name="other">Um objeto para comparar com este objeto.</param>
+            <returns>Um valor que indica a ordem relativa dos objetos que estão sendo comparados.
+            O valor de retorno tem os seguintes significados: Valor Significado Menos que zero Este objeto é menor que o outro parâmetro.
+            Zero Este objeto é igual a outro. Maior que zero Este objeto é maior que outro.
+            </returns>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.Clone">
+            <summary>
+            Cria um novo objeto que é uma cópia da instância atual.
+            </summary>
+            <returns>Um novo objeto que é uma cópia desta instância.</returns>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.Equals(System.Object)">
+            <summary>
+            Determina se o objeto especificado é igual ao objeto atual.
+            </summary>
+            <param name="obj">O objeto a ser comparado com o objeto atual.</param>
+            <returns>true se o objeto especificado for igual ao objeto atual; Caso contrário, false.</returns>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.Equals(MosaicoSolutions.ViaCep.Modelos.Cep)">
+            <summary>
+            Indica se o objeto atual é igual a outro objeto do mesmo tipo.
+            </summary>
+            <param name="other">true se o objeto atual for igual ao outro parâmetro; Caso contrário, false.</param>
+            <returns>Um objeto para comparar com este objeto.</returns>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.Cep.GetHashCode">
+            <summary>
+            Retorna o código hash para esta instância.
+            </summary>
+            <returns>Um código de hash</returns>
+        </member>
+        <member name="F:MosaicoSolutions.ViaCep.Modelos.Cep.CepUnformatedPattern">
+            <summary>
+            Expressão regular para CEP sem formato. Pattern: "^\\d{8}$"
+            </summary>
+        </member>
+        <member name="F:MosaicoSolutions.ViaCep.Modelos.Cep.CepFormatedPattern">
+            <summary>
+            Expressão regular para CEP com formato. Pattern: "^\\d{5}-\\d{3}$"
+            </summary>
+        </member>
+        <member name="F:MosaicoSolutions.ViaCep.Modelos.Cep.CepPattern">
+            <summary>
+            Expressão regular para CEP com ou sem formato.
+            </summary>
+        </member>
+        <member name="T:MosaicoSolutions.ViaCep.Modelos.CepInvalidoException">
+            <summary>
+            A exceção que é lançada quando o Cep está em um formato inválido.
+            </summary>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.CepInvalidoException.#ctor">
+            <summary>
+            Inicializa uma nova instância da class <code>CepInvalidoException</code>.
+            </summary>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.CepInvalidoException.#ctor(System.String)">
+            <summary>
+            Inicializa uma nova instância da class <code>CepInvalidoException</code> com a mensagem de erro especificada.
+            </summary>
+            <param name="message">A mensagem de erro que explica o motivo da exceção.</param>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.CepInvalidoException.#ctor(System.String,System.Exception)">
+            <summary>
+            Inicializa uma nova instância da class <code>CepInvalidoException</code> com a mensagem de erro especificada.
+            e uma referência para a exceção interna que é a causa dessa exceção.
+            </summary>
+            <param name="message">A mensagem de erro que explica o motivo para a exceção.</param>
+            <param name="innerException">A exceção que é a causa da exceção atual.
+            Se o <code>innerException</code> parâmetro não é uma referência nula,
+            a exceção atual é gerada em um bloco catch que manipula a exceção interna.
+            </param>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Modelos.CepInvalidoException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Inicializa uma nova instância da classe <code>CepInvalidoException</code> com dados serializados.
+            </summary>
+            <param name="info">O objeto que contém os dados do objeto serializado.</param>
+            <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        </member>
+        <member name="T:MosaicoSolutions.ViaCep.Modelos.UF">
+            <summary>
+            Unidade Federativa.
+            </summary>
+        </member>
+        <member name="F:MosaicoSolutions.ViaCep.Net.EnderecoRequisicao.QuantidadeMinimaDeCaracteres">
+            <summary>
+            Quantidade de Caracteres mínimo da Cidade e Logradouro para uma requisicao por endereço válida.
+            </summary>
+        </member>
+        <member name="T:MosaicoSolutions.ViaCep.Net.ViaCepConteudo">
+            <summary>
+            Representa o conteúdo de uma requisisão.
+            </summary>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Net.ViaCepConteudo.LerComoXml">
+            <summary>
+            Lê o conteúdo como xml.
+            </summary>
+            <returns>Um Objeto do tipo <code>XDocument</code>.</returns>
+            <exception cref="T:System.InvalidOperationException">Se não for possivel ler o conteúdo como xml.</exception>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Net.ViaCepConteudo.LerComoString">
+            <summary>
+            Lê o conteúdo como <code>string</code>.
+            </summary>
+            <returns>Uma string que representa o conteúdo da requisição.</returns>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.Net.ViaCepConteudo.PossuiErro">
+            <summary>
+            Testa se o conteúdo possui erro.
+            </summary>
+            <returns>true, se possuir erro, caso contrário, false.</returns>
+        </member>
+        <member name="T:MosaicoSolutions.ViaCep.Net.ViaCepResposta">
+            <summary>
+            Representa a resposta de uma requisiçao.
+            </summary>
+        </member>
+        <member name="T:MosaicoSolutions.ViaCep.Util.ViaCepUtil">
+            <summary>
+            Classe utilitária.
+            </summary>
+        </member>
+        <member name="T:MosaicoSolutions.ViaCep.ViaCepException">
+            <summary>
+            A exceção que é lançada quando o ocorre algum erro na requisição do endereço.
+            </summary>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.ViaCepException.#ctor">
+            <summary>
+            Inicializa uma nova instância da class <code>ViaCepException</code>.
+            </summary>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.ViaCepException.#ctor(System.String)">
+            <summary>
+            Inicializa uma nova instância da class <code>ViaCepException</code> com a mensagem de erro especificada.
+            </summary>
+            <param name="message">A mensagem de erro que explica o motivo da exceção.</param>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.ViaCepException.#ctor(System.String,System.Exception)">
+            <summary>
+            Inicializa uma nova instância da class <code>ViaCepException</code> com a mensagem de erro especificada.
+            e uma referência para a exceção interna que é a causa dessa exceção.
+            </summary>
+            <param name="message">A mensagem de erro que explica o motivo para a exceção.</param>
+            <param name="innerException">A exceção que é a causa da exceção atual.
+            Se o <code>innerException</code> parâmetro não é uma referência nula,
+            a exceção atual é gerada em um bloco catch que manipula a exceção interna.
+            </param>
+        </member>
+        <member name="M:MosaicoSolutions.ViaCep.ViaCepException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Inicializa uma nova instância da classe <code>ViaCepException</code> com dados serializados.
+            </summary>
+            <param name="info">O objeto que contém os dados do objeto serializado.</param>
+            <param name="context">As informações contextuais sobre a origem ou o destino.</param>
+        </member>
+    </members>
+</doc>
