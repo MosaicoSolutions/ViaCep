@@ -45,7 +45,7 @@ var requisicao = new EnderecoRequisicao {
 var enderecos = ViaCep.ObterEnderecos(requisicao);
 ```
 Neste exemplo será pesquisado na cidade de "Porto Algre/RS" por todos os logradouros que contenham "Olavo" em seu nome. 
-Quando o nome da cidade ou do logradouro não contiver ao menos três caracteres o código de retorno será um 400 (Bad Request).
+Quando o nome da cidade ou do logradouro não contiver ao menos três caracteres será lançado uma Exception;
 
 O resultado desta consulta é um `IEnumerable<Endereco>` contendo todos os resultados. Caso nenhum endereço seja encontrado uma lista vazia será retornada.
 
@@ -65,4 +65,24 @@ Para facilitar ainda mais as consultas utilize a *Fluent Interface* veja como é
 ``` c#
 var json = ViaCepFluent.Obter("01001000").ComoJson();
 ```
-Você pode consultar mais sobre fluent [aqui](MosaicoSolutions.ViaCep/Fluent)
+Se desejar utilizar callbacks adicione o namespace `MosaicoSolutions.ViaCep.Fluent.Callback`.
+
+``` c#
+var requisicao = new EnderecoRequisicao {
+                    UF = UF.RS,
+                    Cidade = "Porto Alegre",
+                    Logradouro = "Olavo"
+                }
+
+ViaCepFluent.ObterEnderecos(requisicao)
+            .ComoListaDeEnderecos((enderecos) => {
+                foreach(var endereco in enderecos)
+                {
+                  Console.WriteLine("CEP: " + endereco.CEP);
+                  Console.WriteLine("Cidade: " + endereco.Localidade);
+                  Console.WriteLine("Logradouro: " + endereco.Logradouro);
+                }
+             })
+```
+
+Você pode consultar mais sobre fluent [aqui](MosaicoSolutions.ViaCep/Fluent).
