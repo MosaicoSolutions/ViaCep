@@ -29,7 +29,7 @@ Se desejar retornar como outros formatos:
 var endereco = ViaCep.ObterEnderecoComoJson(cep); //ViaCep.ObterEnderecoComoJson("01001000");
 ```
 Você ainda pode retornar com `Xml`, `Piped`, ou `Querty` utilizando os métodos `ObterEnderecoComoXml` , `ObterEnderecoComoPiped` e 
-`ObterEnderecoComoQuerty`, respectivamente, ambos métodos da classe `ViaCep`.
+`ObterEnderecoComoQuerty`, respectivamente, ambos métodos da classe [ViaCep](MosaicoSolutions.ViaCep/ViaCep.cs).
 
 * Consultando por Endereco
 
@@ -47,4 +47,22 @@ var enderecos = ViaCep.ObterEnderecos(requisicao);
 Neste exemplo será pesquisado na cidade de "Porto Algre/RS" por todos os logradouros que contenham "Olavo" em seu nome. 
 Quando o nome da cidade ou do logradouro não contiver ao menos três caracteres o código de retorno será um 400 (Bad Request).
 
-O resultado desta consulta é um `IEnumerable<Endereco>` contendo todos os resultados. 
+O resultado desta consulta é um `IEnumerable<Endereco>` contendo todos os resultados. Caso nenhum endereço seja encontrado uma lista vazia será retornada.
+
+Use os métodos `ObterEnderecosComoJson` e `ObterEnderecosComoXml`, ambos da classe `ViaCep`, para retornar os resultados nos formatos 
+`Json` e `Xml`, respectivamente.
+
+A classe [ViaCep](MosaicoSolutions.ViaCep/ViaCep.cs) também fornece métodos assíncronos.
+
+``` c#
+var xml = await ViaCep.ObterEnderecoComoXmlAsync("01001000");
+```
+
+* Fluent Interface
+
+Para facilitar ainda mais as consultas utilize a *Fluent Interface* veja como é simples.
+
+``` c#
+var json = ViaCepFluent.Obter("01001000").ComoJson();
+```
+Você pode consultar mais sobre fluent [aqui](MosaicoSolutions.ViaCep/Fluent)
