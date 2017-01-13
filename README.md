@@ -86,3 +86,7 @@ ViaCepFluent.ObterEnderecos(requisicao)
 ```
 
 Você pode consultar mais sobre fluent [aqui](MosaicoSolutions.ViaCep/Fluent).
+
+## Dependências
+
+[Newtonsoft.Json](http://www.newtonsoft.com/json) 9.0.1 
