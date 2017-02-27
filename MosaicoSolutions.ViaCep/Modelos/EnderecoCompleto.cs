@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using MosaicoSolutions.ViaCep.Util;
 
@@ -20,7 +20,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
 
         public EnderecoCompleto(Endereco endereco)
         {
-            Cep = new Cep(endereco.CEP);
+            Cep = endereco.CEP;
             Logradouro = endereco.Logradouro;
             Complemento = endereco.Complemento;
             Bairro = endereco.Bairro;
@@ -37,7 +37,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         public string ToString(string separador)
         {
             var stringBuilder = new StringBuilder();
-            stringBuilder.Append(nameof(Cep)).Append(separador).Append(Cep.GetCep()).Append(Environment.NewLine);
+            stringBuilder.Append(nameof(Cep)).Append(separador).Append(Cep.GetCepFormatado()).Append(Environment.NewLine);
             stringBuilder.Append(nameof(Logradouro)).Append(separador).Append(Logradouro).Append(Environment.NewLine);
             stringBuilder.Append(nameof(Complemento)).Append(separador).Append(Complemento).Append(Environment.NewLine);
             stringBuilder.Append(nameof(Localidade)).Append(separador).Append(Localidade).Append(Environment.NewLine);
