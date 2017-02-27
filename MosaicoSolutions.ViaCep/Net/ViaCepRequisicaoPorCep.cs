@@ -14,7 +14,7 @@ namespace MosaicoSolutions.ViaCep.Net
         }
 
         public string ObterUriDoRecurso()
-            => $"{Cep.GetCep()}/{Util.ViaCepUtil.ObterTipoRespostaComoString(TipoDaResposta)}";
+            => $"{Cep}/{Util.ViaCepUtil.ObterTipoRespostaComoString(TipoDaResposta)}";
 
         public static ViaCepRequisicaoPorCep CriarRequisicaoJson(Cep cep)
             => CriarRequisicao(cep, ViaCepTipoResposta.Json);
