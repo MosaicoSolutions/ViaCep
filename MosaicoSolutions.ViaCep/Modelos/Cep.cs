@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -8,20 +8,53 @@ namespace MosaicoSolutions.ViaCep.Modelos
     /// Representa o CEP de um endereço.
     /// </summary>
     [Serializable]
-    public sealed class Cep : IComparable, IComparable<Cep>, ICloneable, IEquatable<Cep>
+    public struct Cep : IComparable, IComparable<Cep>, IEquatable<Cep>
     {
+        private readonly string _cep;
+
+        /// <summary>
+        /// Expressão regular para CEP sem formato. Pattern: "^\\d{8}$"
+        /// </summary>
+        public const string CepUnformatedPattern = "^\\d{8}$";
+
+        /// <summary>
+        /// Expressão regular para CEP com formato. Pattern: "^\\d{5}-\\d{3}$"
+        /// </summary>
+        public const string CepFormatedPattern = "^\\d{5}-\\d{3}$";
+
+        /// <summary>
+        /// Expressão regular para CEP com ou sem formato.
+        /// </summary>
+        public const string CepPattern =  CepFormatedPattern + "|" + CepUnformatedPattern;
 
         /// <summary>
         /// Inicializa uma nova instância da class <code>Cep</code> com o valor do cep especificado.
         /// </summary>
         /// <param name="cep">O cep.</param>
         /// <exception cref="CepInvalidoException">Se o CEP estiver em um formato inválido.</exception>
-        public Cep(string cep)
+        private Cep(string cep)
+        {
+            _cep = Regex.IsMatch(cep, CepFormatedPattern) ? FormataCepSomenteNumeros(cep) : cep;
+        }
+
+        public static implicit operator string(Cep cep)
+            => cep._cep;
+
+        public static implicit operator Cep(string cep)
+            => Parse(cep);
+
+        /// <summary>
+        /// Converte uma string em um objeto do tipo <code>Cep</code>.
+        /// </summary>
+        /// <param name="cep">Uma string a ser convertida.</param>
+        /// <returns>Uma objeto da tipo Cep equivalente ao contido em <code>cep</code>.</returns>
+        /// <exception cref="CepInvalidoException">Se o CEP estiver em um formato inválido.</exception>
+        public static Cep Parse(string cep)
         {
             if (!EhCepValido(cep))
                 throw new CepInvalidoException();
 
-            _cep = Regex.IsMatch(cep, CepFormatedPattern) ? FormataCepSomenteNumeros(cep) : cep;
+            return new Cep(cep);
         }
 
         /// <summary>
@@ -37,12 +70,6 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// <param name="cep">O cep.</param>
         /// <returns>O cep somente com digitos.</returns>
         private static string FormataCepSomenteNumeros(string cep) => cep.Replace("-", "");
-
-        /// <summary>
-        /// Acessa o Cep.
-        /// </summary>
-        /// <returns>O Cep</returns>
-        public string GetCep() => _cep;
 
         /// <summary>
         /// Retorna o CEP no formato 00000-000.
@@ -79,11 +106,10 @@ namespace MosaicoSolutions.ViaCep.Modelos
             if (obj == null)
                 return 1;
 
-            var cep = obj as Cep;
+            if (!(obj is Cep))
+                throw new ArgumentException("Argumento deve ser do tipo Cep.");
 
-            if (cep == null) throw new ArgumentException("Argumento deve ser do tipo Cep.");
-
-            return CompareTo(cep);
+            return CompareTo((Cep)obj);
         }
 
         /// <summary>
@@ -94,13 +120,8 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// O valor de retorno tem os seguintes significados: Valor Significado Menos que zero Este objeto é menor que o outro parâmetro.
         /// Zero Este objeto é igual a outro. Maior que zero Este objeto é maior que outro.
         /// </returns>
-        public int CompareTo(Cep other) => other == null ? 1 : string.Compare(_cep, other._cep, StringComparison.Ordinal);
-
-        /// <summary>
-        /// Cria um novo objeto que é uma cópia da instância atual.
-        /// </summary>
-        /// <returns>Um novo objeto que é uma cópia desta instância.</returns>
-        public object Clone() => new Cep(_cep);
+        public int CompareTo(Cep other)
+            => string.Compare(_cep, other._cep, StringComparison.Ordinal);
 
         /// <summary>
         /// Determina se o objeto especificado é igual ao objeto atual.
@@ -108,21 +129,15 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// <param name="obj">O objeto a ser comparado com o objeto atual.</param>
         /// <returns>true se o objeto especificado for igual ao objeto atual; Caso contrário, false.</returns>
         public override bool Equals(object obj)
-        {
-            if (obj == null)
-                return false;
-
-            var cep = obj as Cep;
-
-            return cep != null && Equals(cep);
-        }
+            => obj is Cep && Equals((Cep)obj);
 
         /// <summary>
         /// Indica se o objeto atual é igual a outro objeto do mesmo tipo.
         /// </summary>
         /// <param name="other">true se o objeto atual for igual ao outro parâmetro; Caso contrário, false.</param>
         /// <returns>Um objeto para comparar com este objeto.</returns>
-        public bool Equals(Cep other) => other != null && _cep == other._cep;
+        public bool Equals(Cep other)
+            => _cep == other._cep;
 
         /// <summary>
         /// Retorna o código hash para esta instância.
@@ -139,20 +154,16 @@ namespace MosaicoSolutions.ViaCep.Modelos
         }
 
         /// <summary>
-        /// Expressão regular para CEP sem formato. Pattern: "^\\d{8}$"
+        /// Retorna o valor do cep deste objeto.
         /// </summary>
-        public const string CepUnformatedPattern = "^\\d{8}$";
+        /// <returns>Uma string que representa o cep.</returns>
+        public override string ToString()
+            => _cep;
 
         /// <summary>
-        /// Expressão regular para CEP com formato. Pattern: "^\\d{5}-\\d{3}$"
+        /// Avalia para True, se o objeto está vazio (o cep não foi informado), caso contrário, False.
         /// </summary>
-        public const string CepFormatedPattern = "^\\d{5}-\\d{3}$";
-
-        /// <summary>
-        /// Expressão regular para CEP com ou sem formato.
-        /// </summary>
-        public const string CepPattern =  CepFormatedPattern + "|" + CepUnformatedPattern;
-
-        private readonly string _cep;
+        public bool IsEmpty
+            => _cep == null;
     }
 }
