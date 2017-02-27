@@ -3,7 +3,7 @@
 namespace MosaicoSolutions.ViaCep.Modelos
 {
     [Serializable]
-    public class Endereco
+    public struct Endereco
     {
         public string CEP { get; set; }
         public string Logradouro { get; set; }
