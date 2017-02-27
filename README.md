@@ -14,7 +14,7 @@ Existem duas formas de consultar endereços.
 
 * Consultando por Cep.
 
-Crie uma objeto do tipo `Cep` ou use uma `string` se preferir.
+Crie um objeto do tipo `Cep` ou use uma `string` se preferir.
 
 ``` c#
 Cep cep = "01001000";
@@ -22,7 +22,7 @@ Cep cep = "01001000";
 var endereco = ViaCep.ObterEndereco(cep); // ViaCep.ObterEndereco("01001000");
 
 ```
-Nesse caso o endereço será retornado como uma objeto do tipo [Endereco](MosaicoSolutions.ViaCep/Modelos/Endereco.cs).
+Nesse caso o endereço será retornado como um objeto do tipo [Endereco](MosaicoSolutions.ViaCep/Modelos/Endereco.cs).
 Se desejar retornar como outros formatos:
 
 ``` c#
