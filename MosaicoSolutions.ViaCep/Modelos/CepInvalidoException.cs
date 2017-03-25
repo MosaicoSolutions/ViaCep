@@ -9,16 +9,18 @@ namespace MosaicoSolutions.ViaCep.Modelos
     [Serializable]
     public class CepInvalidoException : Exception
     {
+        private const string CepInexistenteError =
+            "O Cep não estava em um formato válido. Um dos seguintes formatos eram esperados: 00000000 ou 00000-000";
+
         /// <summary>
-        /// Inicializa uma nova instância da class <code>CepInvalidoException</code>.
+        /// Inicializa uma nova instância da classe <see cref="CepInexistenteException"/>.
         /// </summary>
-        public CepInvalidoException()
-            : base(Util.MensagensDeErro.CepInvalido)
+        public CepInvalidoException() : base(CepInexistenteError)
         {
         }
 
         /// <summary>
-        /// Inicializa uma nova instância da class <code>CepInvalidoException</code> com a mensagem de erro especificada.
+        /// Inicializa uma nova instância da classe <see cref="CepInexistenteException"/> com a mensagem de erro especificada.
         /// </summary>
         /// <param name="message">A mensagem de erro que explica o motivo da exceção.</param>
         public CepInvalidoException(string message) : base(message)
@@ -26,7 +28,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         }
 
         /// <summary>
-        /// Inicializa uma nova instância da class <code>CepInvalidoException</code> com a mensagem de erro especificada.
+        /// Inicializa uma nova instância da classe <see cref="CepInexistenteException"/> com a mensagem de erro especificada.
         /// e uma referência para a exceção interna que é a causa dessa exceção.
         /// </summary>
         /// <param name="message">A mensagem de erro que explica o motivo para a exceção.</param>
@@ -39,7 +41,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         }
 
         /// <summary>
-        /// Inicializa uma nova instância da classe <code>CepInvalidoException</code> com dados serializados.
+        /// Inicializa uma nova instância da classe <see cref="CepInexistenteException"/> com dados serializados.
         /// </summary>
         /// <param name="info">O objeto que contém os dados do objeto serializado.</param>
         /// <param name="context">As informações contextuais sobre a origem ou o destino.</param>
