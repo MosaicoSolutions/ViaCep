@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace MosaicoSolutions.ViaCep.Modelos
 {
     /// <summary>
-    /// Representa o CEP de um endereço.
+    /// Representa o Cep de um endereço.
     /// </summary>
     [Serializable]
     public struct Cep : IComparable, IComparable<Cep>, IEquatable<Cep>
@@ -13,17 +13,17 @@ namespace MosaicoSolutions.ViaCep.Modelos
         private readonly string _cep;
 
         /// <summary>
-        /// Expressão regular para CEP sem formato. Pattern: "^\\d{8}$"
+        /// Expressão regular para Cep sem formato. Pattern: "^\\d{8}$"
         /// </summary>
         public const string CepUnformatedPattern = "^\\d{8}$";
 
         /// <summary>
-        /// Expressão regular para CEP com formato. Pattern: "^\\d{5}-\\d{3}$"
+        /// Expressão regular para Cep com formato. Pattern: "^\\d{5}-\\d{3}$"
         /// </summary>
         public const string CepFormatedPattern = "^\\d{5}-\\d{3}$";
 
         /// <summary>
-        /// Expressão regular para CEP com ou sem formato.
+        /// Expressão regular para Cep com ou sem formato.
         /// </summary>
         public const string CepPattern =  CepFormatedPattern + "|" + CepUnformatedPattern;
 
@@ -31,7 +31,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// Inicializa uma nova instância da class <code>Cep</code> com o valor do cep especificado.
         /// </summary>
         /// <param name="cep">O cep.</param>
-        /// <exception cref="CepInvalidoException">Se o CEP estiver em um formato inválido.</exception>
+        /// <exception cref="CepInvalidoException">Se o Cep estiver em um formato inválido.</exception>
         private Cep(string cep)
         {
             _cep = Regex.IsMatch(cep, CepFormatedPattern) ? FormataCepSomenteNumeros(cep) : cep;
@@ -48,7 +48,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// </summary>
         /// <param name="cep">Uma string a ser convertida.</param>
         /// <returns>Uma objeto da tipo Cep equivalente ao contido em <code>cep</code>.</returns>
-        /// <exception cref="CepInvalidoException">Se o CEP estiver em um formato inválido.</exception>
+        /// <exception cref="CepInvalidoException">Se o Cep estiver em um formato inválido.</exception>
         public static Cep Parse(string cep)
         {
             if (!EhCepValido(cep))
@@ -58,7 +58,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         }
 
         /// <summary>
-        /// Testa se o CEP é válido.
+        /// Testa se o Cep é válido.
         /// </summary>
         /// <param name="cep">O cep.</param>
         /// <returns>true, se o cep está em um formato válido, caso contrário, false.</returns>
@@ -72,15 +72,15 @@ namespace MosaicoSolutions.ViaCep.Modelos
         private static string FormataCepSomenteNumeros(string cep) => cep.Replace("-", "");
 
         /// <summary>
-        /// Retorna o CEP no formato 00000-000.
+        /// Retorna o Cep no formato 00000-000.
         /// </summary>
-        /// <returns>O CEP no formato 00000-000.</returns>
+        /// <returns>O Cep no formato 00000-000.</returns>
         public string GetCepFormatado() => FormataCep();
 
         /// <summary>
-        /// Retorna o CEP no formato 00000-000.
+        /// Retorna o Cep no formato 00000-000.
         /// </summary>
-        /// <returns>O CEP formatado.</returns>
+        /// <returns>O Cep formatado.</returns>
         private string FormataCep()
         {
             var formatBuilder = new StringBuilder();
