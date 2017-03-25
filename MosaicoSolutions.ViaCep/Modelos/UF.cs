@@ -194,7 +194,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// </summary>
         /// <param name="codigo">O código do estado que se deseja obter.</param>
         /// <returns>A UF do estado pertencente ao código.</returns>
-        /// <exception cref="InvalidOperationException">Se não existe UF com este código de estado.</exception>
+        /// <exception cref="UFInexistenteException">Se não existe UF com este código de estado.</exception>
         public static UF EncontraPeloCodigo(int codigo)
         {
             try
@@ -212,7 +212,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// </summary>
         /// <param name="sigla">A sigla do estado que se deseja obter.</param>
         /// <returns>A UF do estado pertencente a sigla</returns>
-        /// <exception cref="InvalidOperationException">Se não existe UF com esta sigla.</exception>
+        /// <exception cref="UFInexistenteException">Se não existe UF com esta sigla.</exception>
         public static UF EncontraPelaSigla(string sigla)
         {
             try
