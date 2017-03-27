@@ -1,34 +1,20 @@
-﻿using MosaicoSolutions.ViaCep.Modelos;
+﻿using System;
+using MosaicoSolutions.ViaCep.Modelos;
 
 namespace MosaicoSolutions.ViaCep.Net
 {
-    public sealed class ViaCepRequisicaoPorCep : IViaCepRequisicao
+    /// <summary>
+    /// Representa uma requisição por Cep.
+    /// </summary>
+    public sealed class ViaCepRequisicaoPorPorCep : ViaCepRequisicaoPor<Cep>
     {
-        public Cep Cep { get; }
-        public ViaCepTipoResposta TipoDaResposta { get; }
-
-        private ViaCepRequisicaoPorCep(Cep cep, ViaCepTipoResposta tipoDaResposta)
+        internal ViaCepRequisicaoPorPorCep(Cep cep, ViaCepFormatoRequisicao formatoRequisicao) :base(cep, formatoRequisicao)
         {
-            Cep = cep;
-            TipoDaResposta = tipoDaResposta;
+            if (cep.IsEmpty)
+                throw new ArgumentException("O cep não pode estar vazio.");
         }
 
-        public string ObterUriDoRecurso()
-            => $"{Cep}/{Util.ViaCepUtil.ObterTipoRespostaComoString(TipoDaResposta)}";
-
-        public static ViaCepRequisicaoPorCep CriarRequisicaoJson(Cep cep)
-            => CriarRequisicao(cep, ViaCepTipoResposta.Json);
-
-        public static ViaCepRequisicaoPorCep CriarRequisicaoXml(Cep cep)
-            => CriarRequisicao(cep, ViaCepTipoResposta.Xml);
-
-        public static ViaCepRequisicaoPorCep CriarRequisicaoPiped(Cep cep)
-            => CriarRequisicao(cep, ViaCepTipoResposta.Piped);
-
-        public static ViaCepRequisicaoPorCep CriarRequisicaoQuerty(Cep cep)
-            => CriarRequisicao(cep, ViaCepTipoResposta.Querty);
-
-        private static ViaCepRequisicaoPorCep CriarRequisicao(Cep cep, ViaCepTipoResposta resposta)
-            => new ViaCepRequisicaoPorCep(cep, resposta);
+        public override string ObterUriComoString()
+            => $"{ObjetoDaRequisicao}/{FormatoRequisicao.Valor}";
     }
 }
