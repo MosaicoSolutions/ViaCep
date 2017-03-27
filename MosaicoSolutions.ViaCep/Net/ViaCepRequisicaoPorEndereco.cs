@@ -3,33 +3,21 @@ using MosaicoSolutions.ViaCep.Modelos;
 
 namespace MosaicoSolutions.ViaCep.Net
 {
-    public sealed class ViaCepRequisicaoPorEndereco : IViaCepRequisicao
+    /// <summary>
+    /// Representa uma requisição por endereço.
+    /// </summary>
+    public sealed class ViaCepRequisicaoPorPorEndereco : ViaCepRequisicaoPor<EnderecoRequisicao>
     {
-        public EnderecoRequisicao EnderecoRequisicao { get; }
-        public ViaCepTipoResposta TipoDaResposta { get; }
-
-        public ViaCepRequisicaoPorEndereco(EnderecoRequisicao enderecoRequisicao, ViaCepTipoResposta tipoDaResposta)
+        internal ViaCepRequisicaoPorPorEndereco(EnderecoRequisicao objetoDaRequisicao, ViaCepFormatoRequisicao formatoRequisicao) : base(objetoDaRequisicao, formatoRequisicao)
         {
-            if (!enderecoRequisicao.EhValido())
-                throw new ArgumentException("Requisicão por Endereço invalída. O nome da Cidade e do Logradouro deve ter ao menos 3 caracteres.");
-
-            EnderecoRequisicao = enderecoRequisicao;
-            TipoDaResposta = tipoDaResposta;
+            if (!objetoDaRequisicao.EhValido())
+                throw new ArgumentException("O objeto da requisição não é valido.");
         }
 
-        public string ObterUriDoRecurso()
-            => $"{UriDoEnderecoRequisicao()}/{Util.ViaCepUtil.ObterTipoRespostaComoString(TipoDaResposta)}";
+        public override string ObterUriComoString()
+            => $"{EnderecoRequisicaoParaUri()}/{FormatoRequisicao.Valor}";
 
-        private string UriDoEnderecoRequisicao()
-            => $"{Enum.GetName(typeof(UF), EnderecoRequisicao.UF)}/{EnderecoRequisicao.Cidade}/{EnderecoRequisicao.Logradouro}";
-
-        public static ViaCepRequisicaoPorEndereco CriarRequisicaoJson(EnderecoRequisicao enderecoRequisicao)
-            => CriarRequisicao(enderecoRequisicao, ViaCepTipoResposta.Json);
-
-        public static ViaCepRequisicaoPorEndereco CriarRequisicaoXml(EnderecoRequisicao enderecoRequisicao)
-            => CriarRequisicao(enderecoRequisicao, ViaCepTipoResposta.Xml);
-
-        private static ViaCepRequisicaoPorEndereco CriarRequisicao(EnderecoRequisicao enderecoRequisicao, ViaCepTipoResposta tipoDaResposta)
-            => new ViaCepRequisicaoPorEndereco(enderecoRequisicao, tipoDaResposta);
+        private string EnderecoRequisicaoParaUri()
+            => $"{ObjetoDaRequisicao.UF.Sigla}/{ObjetoDaRequisicao.Cidade}/{ObjetoDaRequisicao.Logradouro}";
     }
 }
