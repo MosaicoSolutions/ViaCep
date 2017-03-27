@@ -1,11 +1,10 @@
-﻿using MosaicoSolutions.ViaCep.Modelos;
-
-namespace MosaicoSolutions.ViaCep.Net
+﻿namespace MosaicoSolutions.ViaCep.Net
 {
     /// <summary>
     /// Define uma requisição Json.
     /// </summary>
-    /// <typeparam name="T">O tipo do objeto contendo os dados da requisição. <see cref="Cep"/> ou <see cref="EnderecoRequisicao"/></typeparam>
+    /// <typeparam name="T">O tipo do objeto contendo os dados da requisição. <see cref="MosaicoSolutions.ViaCep.Modelos.Cep"/> ou <see cref="MosaicoSolutions.ViaCep.Modelos.EnderecoRequisicao"/>
+    /// </typeparam>
     public interface IViaCepRequisicaoJsonDe<T>
     {
         /// <summary>
