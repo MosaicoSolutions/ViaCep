@@ -4,17 +4,22 @@ using System.Threading.Tasks;
 
 namespace MosaicoSolutions.ViaCep.Net
 {
-    internal static class ViaCepCliente
+    /// <summary>
+    /// Cliente responsável por retornar a resposta de uma requisição a partir do Uri do recurso.
+    /// </summary>
+    public sealed class ViaCepCliente : IViaCepCliente
     {
-        private static HttpClient _instancia;
+        private readonly HttpClient _cliente;
 
-        internal static HttpClient Instancia
-            => _instancia ?? (_instancia = new HttpClient {BaseAddress = new Uri("http://viacep.com.br/ws/")});
+        public ViaCepCliente()
+        {
+            _cliente = new HttpClient { BaseAddress = new Uri("http://viacep.com.br/ws/") };
+        }
 
-        internal static async Task<ViaCepResposta> ObterResponseMessageAsync(IViaCepRequisicao requisicao)
-            => new ViaCepResposta(await Instancia.GetAsync(requisicao.ObterUriDoRecurso()));
+        public async Task<IViaCepResposta> ObterRespostaAsync(IViaCepUri uri)
+            => new ViaCepResposta(await _cliente.GetAsync(uri.ObterUriComoString()));
 
-        internal static ViaCepResposta ObterResponseMessage(IViaCepRequisicao requisicao)
-            => new ViaCepResposta(Instancia.GetAsync(requisicao.ObterUriDoRecurso()).Result);
+        public IViaCepResposta ObterResposta(IViaCepUri uri)
+            => new ViaCepResposta(_cliente.GetAsync(uri.ObterUriComoString()).Result);
     }
 }
