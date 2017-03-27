@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Net.Http;
 using System.Xml.Linq;
 
@@ -8,10 +7,28 @@ namespace MosaicoSolutions.ViaCep.Net
     /// <summary>
     /// Representa o conteúdo de uma requisisão.
     /// </summary>
-    public class ViaCepConteudo
+    public class ViaCepConteudo : IViaCepConteudo
     {
-
         private readonly string _conteudo;
+
+        public bool PodeSerLidoComoXml
+        {
+            get
+            {
+                try
+                {
+                    // ReSharper disable once ReturnValueOfPureMethodIsNotUsed
+                    XDocument.Parse(_conteudo);
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
+
+        public bool PossuiErro => _conteudo.Contains("erro");
 
         internal ViaCepConteudo(HttpContent httpContent)
         {
@@ -25,7 +42,7 @@ namespace MosaicoSolutions.ViaCep.Net
         /// <exception cref="InvalidOperationException">Se não for possivel ler o conteúdo como xml.</exception>
         public XDocument LerComoXml()
         {
-            if (!_conteudo.Contains("xmlcep"))
+            if (!PodeSerLidoComoXml)
                 throw new InvalidOperationException("Não é possivel ler o conteúdo como xml.");
 
             return XDocument.Parse(_conteudo);
@@ -36,12 +53,6 @@ namespace MosaicoSolutions.ViaCep.Net
         /// </summary>
         /// <returns>Uma string que representa o conteúdo da requisição.</returns>
         public string LerComoString() => _conteudo;
-
-        /// <summary>
-        /// Testa se o conteúdo possui erro.
-        /// </summary>
-        /// <returns>true, se possuir erro, caso contrário, false.</returns>
-        public bool PossuiErro() => _conteudo.Contains("erro");
 
     }
 }
