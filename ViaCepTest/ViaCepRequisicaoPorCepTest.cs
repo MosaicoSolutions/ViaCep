@@ -24,7 +24,7 @@ namespace ViaCepTest
         [Test]
         public void DeveSerUmaRequisicaoJsonValida()
         {
-            var requisicaoCepJson = _requisicaoPorCepFactory.novaRequisicaoJson(_cep);
+            var requisicaoCepJson = _requisicaoPorCepFactory.NovaRequisicaoJson(_cep);
 
             var resposta = _cliente.ObterResposta(requisicaoCepJson);
 
@@ -35,7 +35,7 @@ namespace ViaCepTest
         [Test]
         public void DeveSerUmaRequisicaoXmlValida()
         {
-            var requisicaoCepXml = _requisicaoPorCepFactory.novaRequisicaoXml(_cep);
+            var requisicaoCepXml = _requisicaoPorCepFactory.NovaRequisicaoXml(_cep);
 
             var resposta = _cliente.ObterResposta(requisicaoCepXml);
 
@@ -46,7 +46,7 @@ namespace ViaCepTest
         [Test]
         public void DeveSerUmaRequisicaoPipedValida()
         {
-            var requisicaoCepPiped = _requisicaoPorCepFactory.novaRequisicaoPiped(_cep);
+            var requisicaoCepPiped = _requisicaoPorCepFactory.NovaRequisicaoPiped(_cep);
 
             var resposta = _cliente.ObterResposta(requisicaoCepPiped);
 
@@ -57,7 +57,7 @@ namespace ViaCepTest
         [Test]
         public void DeveSerUmaRequisicaoQuertyValida()
         {
-            var requisicaoCepQuerty = _requisicaoPorCepFactory.novaRequisicaoQuerty(_cep);
+            var requisicaoCepQuerty = _requisicaoPorCepFactory.NovaRequisicaoQuerty(_cep);
 
             var resposta = _cliente.ObterResposta(requisicaoCepQuerty);
 
@@ -71,7 +71,7 @@ namespace ViaCepTest
                {
                    var cep = new Cep();
 
-                   var requisicaoCepQuerty = _requisicaoPorCepFactory.novaRequisicaoQuerty(cep);
+                   var requisicaoCepQuerty = _requisicaoPorCepFactory.NovaRequisicaoQuerty(cep);
                });
     }
 }

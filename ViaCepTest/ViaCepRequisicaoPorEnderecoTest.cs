@@ -30,7 +30,7 @@ namespace ViaCepTest
         [Test]
         public void DeveSerUmaRequisicaoJsonValida()
         {
-            var requisicaoJson = _requisicaoPorEnderecoFactory.novaRequisicaoJson(_enderecoRequisicao);
+            var requisicaoJson = _requisicaoPorEnderecoFactory.NovaRequisicaoJson(_enderecoRequisicao);
 
             var resposta = _cliente.ObterResposta(requisicaoJson);
 
@@ -41,7 +41,7 @@ namespace ViaCepTest
         [Test]
         public void DeveSerUmaRequisicaoXmlValida()
         {
-            var requisicaoXml = _requisicaoPorEnderecoFactory.novaRequisicaoXml(_enderecoRequisicao);
+            var requisicaoXml = _requisicaoPorEnderecoFactory.NovaRequisicaoXml(_enderecoRequisicao);
 
             var resposta = _cliente.ObterResposta(requisicaoXml);
 
@@ -62,7 +62,7 @@ namespace ViaCepTest
                         Logradouro = "ABC"
                     };
 
-                    var requisicaoXml = _requisicaoPorEnderecoFactory.novaRequisicaoXml(enderecoRequisicao);
+                    var requisicaoXml = _requisicaoPorEnderecoFactory.NovaRequisicaoXml(enderecoRequisicao);
 
                     var resposta = _cliente.ObterResposta(requisicaoXml);
 
