@@ -52,8 +52,11 @@
     <Compile Include="UFTest.cs" />
     <Compile Include="ViaCepClienteTest.cs" />
     <Compile Include="ViaCepConteudoTest.cs" />
+    <Compile Include="ViaCepFluentTest.cs" />
     <Compile Include="ViaCepFormatoRequisicaoTest.cs" />
     <Compile Include="ViaCepRequisicaoPorCepTest.cs" />
+    <Compile Include="ViaCepRequisicaoPorEnderecoTest.cs" />
+    <Compile Include="ViaCepTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MosaicoSolutions.ViaCep\MosaicoSolutions.ViaCep.csproj">
