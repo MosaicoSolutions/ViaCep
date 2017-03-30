@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CepInexistenteException.cs" />
     <Compile Include="Fluent\Callback\ViaCepFluentCallbackMethods.cs" />
     <Compile Include="Fluent\Interfaces\IViaCepFluentComoEndereco.cs" />
     <Compile Include="Fluent\Interfaces\IViaCepFluentComoJson.cs" />
@@ -60,19 +61,35 @@
     <Compile Include="Fluent\ViaCepFluent.cs" />
     <Compile Include="Fluent\ViaCepFluentPorCep.cs" />
     <Compile Include="Fluent\ViaCepFluentPorEndereco.cs" />
+    <Compile Include="IViaCep.cs" />
     <Compile Include="Modelos\Cep.cs" />
     <Compile Include="Modelos\CepInvalidoException.cs" />
+    <Compile Include="Modelos\ComparaUFPelaSigla.cs" />
+    <Compile Include="Modelos\ComparaUFPeloNomeDoEstado.cs" />
     <Compile Include="Modelos\Endereco.cs" />
-    <Compile Include="Modelos\EnderecoCompleto.cs" />
+    <Compile Include="Modelos\EnderecoRequisicao.cs" />
     <Compile Include="Modelos\UF.cs" />
-    <Compile Include="Net\EnderecoRequisicao.cs" />
-    <Compile Include="Net\IViaCepRequisicao.cs" />
+    <Compile Include="Modelos\UFInexistenteException.cs" />
+    <Compile Include="Net\IViaCepCliente.cs" />
+    <Compile Include="Net\IViaCepConteudo.cs" />
+    <Compile Include="Net\IViaCepRequisicaoJsonDe.cs" />
+    <Compile Include="Net\IViaCepRequisicaoPipedDe.cs" />
+    <Compile Include="Net\IViaCepRequisicaoPor.cs" />
+    <Compile Include="Net\IViaCepRequisicaoPorCepFactory.cs" />
+    <Compile Include="Net\IViaCepRequisicaoPorEnderecoFactory.cs" />
+    <Compile Include="Net\IViaCepRequisicaoQuertyDe.cs" />
+    <Compile Include="Net\IViaCepRequisicaoXmlDe.cs" />
+    <Compile Include="Net\IViaCepResposta.cs" />
+    <Compile Include="Net\IViaCepUri.cs" />
     <Compile Include="Net\ViaCepCliente.cs" />
     <Compile Include="Net\ViaCepConteudo.cs" />
+    <Compile Include="Net\ViaCepRequisicaoPor.cs" />
     <Compile Include="Net\ViaCepRequisicaoPorCep.cs" />
+    <Compile Include="Net\ViaCepRequisicaoPorCepFactory.cs" />
     <Compile Include="Net\ViaCepRequisicaoPorEndereco.cs" />
+    <Compile Include="Net\ViaCepRequisicaoPorEnderecoFactory.cs" />
     <Compile Include="Net\ViaCepResposta.cs" />
-    <Compile Include="Net\ViaCepTipoResposta.cs" />
+    <Compile Include="Net\ViaCepFormatoRequisicao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\EnderecoConvert.cs" />
     <Compile Include="Util\MensagensDeErro.cs" />

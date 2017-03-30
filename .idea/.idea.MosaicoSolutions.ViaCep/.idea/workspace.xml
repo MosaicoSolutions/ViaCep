@@ -1,8 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c51335b-8e9f-48e3-bf33-0261edf5831f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="3c51335b-8e9f-48e3-bf33-0261edf5831f" name="Default" comment=".csproj">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.MosaicoSolutions.ViaCep/.idea/contentModel.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepRequisicao.cs" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Debug/MosaicoSolutions.ViaCep.dll" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Debug/MosaicoSolutions.ViaCep.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Debug/MosaicoSolutions.ViaCep.pdb" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Debug/MosaicoSolutions.ViaCep.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Release/MosaicoSolutions.ViaCep.dll" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Release/MosaicoSolutions.ViaCep.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Release/MosaicoSolutions.ViaCep.pdb" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Release/MosaicoSolutions.ViaCep.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.csprojResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.dll" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.pdb" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Release/MosaicoSolutions.ViaCep.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Release/MosaicoSolutions.ViaCep.csprojResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Release/MosaicoSolutions.ViaCep.dll" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Release/MosaicoSolutions.ViaCep.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Release/MosaicoSolutions.ViaCep.pdb" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Release/MosaicoSolutions.ViaCep.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/bin/Debug/MosaicoSolutions.ViaCep.dll" afterPath="$PROJECT_DIR$/ViaCepTest/bin/Debug/MosaicoSolutions.ViaCep.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/bin/Debug/MosaicoSolutions.ViaCep.pdb" afterPath="$PROJECT_DIR$/ViaCepTest/bin/Debug/MosaicoSolutions.ViaCep.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/bin/Debug/ViaCepTest.dll" afterPath="$PROJECT_DIR$/ViaCepTest/bin/Debug/ViaCepTest.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/bin/Debug/ViaCepTest.pdb" afterPath="$PROJECT_DIR$/ViaCepTest/bin/Debug/ViaCepTest.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/bin/Release/MosaicoSolutions.ViaCep.dll" afterPath="$PROJECT_DIR$/ViaCepTest/bin/Release/MosaicoSolutions.ViaCep.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/bin/Release/MosaicoSolutions.ViaCep.pdb" afterPath="$PROJECT_DIR$/ViaCepTest/bin/Release/MosaicoSolutions.ViaCep.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/bin/Release/ViaCepTest.dll" afterPath="$PROJECT_DIR$/ViaCepTest/bin/Release/ViaCepTest.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/bin/Release/ViaCepTest.pdb" afterPath="$PROJECT_DIR$/ViaCepTest/bin/Release/ViaCepTest.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/obj/Debug/ViaCepTest.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/ViaCepTest/obj/Debug/ViaCepTest.csprojResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/obj/Debug/ViaCepTest.dll" afterPath="$PROJECT_DIR$/ViaCepTest/obj/Debug/ViaCepTest.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/obj/Debug/ViaCepTest.pdb" afterPath="$PROJECT_DIR$/ViaCepTest/obj/Debug/ViaCepTest.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/obj/Release/ViaCepTest.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/ViaCepTest/obj/Release/ViaCepTest.csprojResolveAssemblyReference.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/obj/Release/ViaCepTest.dll" afterPath="$PROJECT_DIR$/ViaCepTest/obj/Release/ViaCepTest.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViaCepTest/obj/Release/ViaCepTest.pdb" afterPath="$PROJECT_DIR$/ViaCepTest/obj/Release/ViaCepTest.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.MosaicoSolutions.ViaCep/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MosaicoSolutions.ViaCep/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.MosaicoSolutions.ViaCep/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MosaicoSolutions.ViaCep/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.MosaicoSolutions.ViaCep/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MosaicoSolutions.ViaCep/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.MosaicoSolutions.ViaCep/riderModule.iml" afterPath="$PROJECT_DIR$/.idea/.idea.MosaicoSolutions.ViaCep/riderModule.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/Callback/ViaCepFluentCallbackMethods.cs" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/Callback/ViaCepFluentCallbackMethods.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/ViaCepFluent.cs" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/ViaCepFluent.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/ViaCepFluentPorCep.cs" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/ViaCepFluentPorCep.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/ViaCepFluentPorEndereco.cs" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/ViaCepFluentPorEndereco.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/MosaicoSolutions.ViaCep.csproj" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/MosaicoSolutions.ViaCep.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Properties/AssemblyInfo.cs" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Properties/AssemblyInfo.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Util/ViaCepUtil.cs" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Util/ViaCepUtil.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Debug/MosaicoSolutions.ViaCep.XML" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Debug/MosaicoSolutions.ViaCep.XML" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Release/MosaicoSolutions.ViaCep.XML" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/bin/Release/MosaicoSolutions.ViaCep.XML" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Debug/MosaicoSolutions.ViaCep.csproj.FileListAbsolute.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Release/MosaicoSolutions.ViaCep.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/MosaicoSolutions.ViaCep/obj/Release/MosaicoSolutions.ViaCep.csproj.FileListAbsolute.txt" />
     </list>
     <ignored path="MosaicoSolutions.ViaCep.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,84 +57,116 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="MosaicoSolutions.ViaCep" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AssemblyInfo.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Properties/AssemblyInfo.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+              <folding>
+                <marker date="1490885749070" expanded="true" signature="6:62" ph="..." />
+                <marker date="1490885749070" expanded="true" signature="64:251" ph="/* General Information about an assembly is controlled through the following ... */" />
+                <marker date="1490885749070" expanded="true" signature="628:838" ph="/* Setting ComVisible to false makes the types in this assembly not visible ... */" />
+                <marker date="1490885749070" expanded="true" signature="1014:1341" ph="/* Version information for an assembly consists of the following four values: ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>PE</find>
+      <find>InnerException</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/CepInvalidoException.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Cep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Properties/AssemblyInfo.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/UF.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/EnderecoSimples.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/XmlResponse.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/JsonRequest.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequestJson.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/JsonResponse.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepJsonRequest.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepJsonRequestByCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepXmlRequestByCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepCliente.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaPorCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepJsonResponse.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepResponses.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/IViaCepRequest.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/IViaCepResponse.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepJsonRequisicaoByCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepXmlRequisicaoByCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/IViaCepRequisicao.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepJsonResposta.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/CepInvalidoException.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaJson.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaPiped.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaXml.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/QuertyResponse.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoJsonPorCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPipedPorCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoXmlPorCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoXmlPorEndereco.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/QuertyPorCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaQuerty.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostas.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoQuertyPorCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/ViaCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/EnderecoRequisicao.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Cep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Endereco.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Util/ViaCepUtil.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/IViaCepResposta.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoJsonPorEndereco.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorCep.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorEndereco.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/Program.cs" />
-        <option value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/MosaicoSolutions.ViaCep.csproj" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Modelos/UFInexistenteException.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/EnderecoRequisicao.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/EnderecoRequisicaoTest.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Modelos/EnderecoRequisicao.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/ViaCepFormatoRequisicaoTest.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepFormatoRequisicao.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/CepTest.cs" />
+        <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/ED4F3FF4-3588-49AD-BC4C-FF193998E298/aa/df97ec4a/MockRepository.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepUri.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepCliente.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/ViaCepRespostaTest.cs" />
+        <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/ED4F3FF4-3588-49AD-BC4C-FF193998E298/0a/46e1382d/RhinoMocksExtensions.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepCliente.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepResposta.cs" />
+        <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/ED4F3FF4-3588-49AD-BC4C-FF193998E298/e6/92dca55d/LastCall.cs" />
+        <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/D75A2298-0ED2-4BC5-BC88-29A9710ADB2B/59/9f884d7c/XDocument.cs" />
+        <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/9f/784d6c9d/StringReader.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/ServiceTest.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/ViaCepClienteTest.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepRequisicaoPor.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorCep.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorEndereco.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPor.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepRequisicaoPipedDe.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepRequisicaoQuertyDe.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepRequisicaoXmlDe.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepRequisicaoJsonDe.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepRequisicaoPorCepFactory.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepRequisicaoPorEnderecoFactory.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorCepFactory.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorEnderecoFactory.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/ViaCepRequisicaoPorCepTest.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/ViaCepRequisicaoPorEnderecoTest.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepConteudo.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepConteudo.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepResposta.cs" />
+        <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/24/fb6bf0cb/File.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/CepInexistenteException.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Modelos/Endereco.cs" />
+        <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/e3/d4430d15/Task.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/Callback/ViaCepFluentCallbackMethods.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/ViaCepFluentTest.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/ViaCepFluent.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/IViaCep.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/ViaCep.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/ViaCepException.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/ViaCepTest.cs" />
+        <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/4A0869D9-B0E8-4145-9F9E-7EBB6DD4E6BC/c5/7705c395/VBCodeProvider.cs" />
+        <option value="$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/4A0869D9-B0E8-4145-9F9E-7EBB6DD4E6BC/41/b924dab4/VBCodeGenerator.cs" />
+        <option value="$PROJECT_DIR$/ViaCepTest/ViaCepConteudoTest.cs" />
+        <option value="$PROJECT_DIR$/MosaicoSolutions.ViaCep/Properties/AssemblyInfo.cs" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1376" />
+    <option name="width" value="1364" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <flattenPackages />
@@ -118,7 +190,17 @@
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MosaicoSolutions.ViaCep (1 project)" />
+              <option name="myItemId" value="MosaicoSolutions.ViaCep (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MosaicoSolutions.ViaCep (2 projects)" />
               <option name="myItemType" value="com.jetbrains.resharper.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -127,19 +209,37 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-        <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
     </panes>
   </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager" selected=".NET Project.MosaicoSolutions.ViaCep.Test">
     <configuration default="false" name="MosaicoSolutions.ViaCep.Test" type="DotNetProject" factoryName=".NET Project" temporary="true">
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/MosaicoSolutions.ViaCep.Test.csproj" />
+      <option name="PROJECT_PATH" value="$USER_HOME$/MosaicoSolutions.ViaCep.Test/MosaicoSolutions.ViaCep.Test.csproj" />
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value="Default" />
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/bin/Debug/MosaicoSolutions.ViaCep.Test.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/MosaicoSolutions.ViaCep.Test/bin/Debug/MosaicoSolutions.ViaCep.Test.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/bin/Debug" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/MosaicoSolutions.ViaCep.Test/bin/Debug" />
       <option name="USE_MONO" value="0" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <envs />
@@ -157,13 +257,38 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="Default" type="DotNetProject" factoryName=".NET Project">
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/MosaicoSolutions.ViaCep.Test.csproj" />
+      <option name="PROJECT_PATH" value="$USER_HOME$/MosaicoSolutions.ViaCep.Test/MosaicoSolutions.ViaCep.Test.csproj" />
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value="Default" />
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/bin/Debug/MosaicoSolutions.ViaCep.Test.exe" />
+      <option name="EXE_PATH" value="$USER_HOME$/MosaicoSolutions.ViaCep.Test/bin/Debug/MosaicoSolutions.ViaCep.Test.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/bin/Debug" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/MosaicoSolutions.ViaCep.Test/bin/Debug" />
       <option name="USE_MONO" value="0" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <envs />
@@ -178,6 +303,18 @@
         <item index="0" class="java.lang.String" itemvalue=".NET Project.MosaicoSolutions.ViaCep.Test" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="RuntimeDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -198,19 +335,378 @@
       <workItem from="1481293135701" duration="3546000" />
       <workItem from="1481763228598" duration="13399000" />
       <workItem from="1481822298334" duration="4330000" />
+      <workItem from="1489943609064" duration="143000" />
+      <workItem from="1489943843267" duration="11040000" />
+      <workItem from="1489957162838" duration="59000" />
+      <workItem from="1489957238976" duration="755000" />
+      <workItem from="1489958013358" duration="452000" />
+      <workItem from="1489978819755" duration="435000" />
+      <workItem from="1489979378956" duration="5485000" />
+      <workItem from="1490060461283" duration="4171000" />
+      <workItem from="1490143073857" duration="7524000" />
+      <workItem from="1490397073948" duration="15438000" />
+      <workItem from="1490415419835" duration="20000" />
+      <workItem from="1490468523191" duration="3989000" />
+      <workItem from="1490555411893" duration="3108000" />
+      <workItem from="1490566270196" duration="7410000" />
+      <workItem from="1490575437831" duration="1696000" />
+      <workItem from="1490577173716" duration="3771000" />
+      <workItem from="1490615312533" duration="6765000" />
+      <workItem from="1490625286093" duration="8267000" />
+      <workItem from="1490664756425" duration="1211000" />
+      <workItem from="1490702896557" duration="1559000" />
+      <workItem from="1490707571177" duration="582000" />
+      <workItem from="1490714110605" duration="2511000" />
+      <workItem from="1490880105544" duration="6116000" />
     </task>
-    <task id="LOCAL-00001" summary="initial commit.">
-      <created>1481826674761</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00010" summary="Adição do Projeto de Teste.">
+      <created>1490413651479</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1481826674761</updated>
+      <updated>1490413651479</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00011" summary="Correção no xml-doc.">
+      <created>1490413964195</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1490413964195</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Comparador de UF's pela sigla.">
+      <created>1490414077115</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1490414077115</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Comparador de UF's pelo nome do Estado.">
+      <created>1490414099530</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1490414099530</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Ajuste no nome da propriedade Cep.">
+      <created>1490414610714</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1490414610714</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Ajustes no xml-docs.">
+      <created>1490414640917</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1490414640917</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Adição da classe UFInexistenteException">
+      <created>1490469935461</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1490469935461</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Correção no xml-docs e na mensagem de erro.">
+      <created>1490469984971</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1490469984971</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Teste Unitário para a classe EnderecoRequisicao.">
+      <created>1490471521239</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1490471521239</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Ajustes na Struct e mudança no namespace.">
+      <created>1490471876869</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1490471876869</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Adição da classe ViaCepFormatoRequisicao.">
+      <created>1490558311160</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1490558311160</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Teste Unitário para a calsse ViaCepFormatoRequisicao.">
+      <created>1490558400873</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1490558400873</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Teste Unitário para a classe Cep.">
+      <created>1490567174506</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1490567174506</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Adição da interface ViaCepUri.">
+      <created>1490580663814</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1490580663814</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Adição da interface IViaCepCliente.">
+      <created>1490580711020</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1490580711020</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Refatoração na classe.">
+      <created>1490580754395</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1490580754395</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Teste Unitário para a interface IViaCepCliente.">
+      <created>1490580844136</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1490580844136</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Adição do pacote RhinoMocks.">
+      <created>1490580877801</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1490580877801</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Adição do pacote RhinoMocks.">
+      <created>1490580918252</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1490580918252</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Adição da interface IViaCepRequisicaoPor&lt;out T&gt;.">
+      <created>1490618554141</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1490618554141</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Adição da classe abstrata ViaCepRequisicaoPor&lt;T&gt;.">
+      <created>1490619109103</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1490619109103</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Refatoração na classe ViaCepRequisicaoPorCep.">
+      <created>1490619203522</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1490619203522</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Refatoração na classe ViaCepRequisicaoPorEndereco.">
+      <created>1490619244903</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1490619244903</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Teste Unitário para a requisição por Cep.">
+      <created>1490619290942</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1490619290942</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Teste Unitário para a requisição por Endereço.">
+      <created>1490619319822</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1490619319822</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Adição da interface IViaCepRequisicaoJsonDe&lt;T&gt;.">
+      <created>1490619658808</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1490619658808</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Adição da interface IViaCepRequisicaoPipedDe&lt;T&gt;.">
+      <created>1490619870166</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1490619870166</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Adição da interface IViaCepRequisicaoQuertyDe&lt;T&gt;.">
+      <created>1490619931385</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1490619931385</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Ajustes no xml-docs.">
+      <created>1490620061528</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1490620061528</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Adição da interface IViaCepRequisicaoXmlDe&lt;T&gt;.">
+      <created>1490620086339</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1490620086339</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Adição da interface IViaCepRequisicaoPorCepFactory.">
+      <created>1490620165282</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1490620165282</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Adição da interface IViaCepRequisicaoPorEnderecoFactory.">
+      <created>1490620182450</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1490620182450</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Adição da classe ViaCepRequisicaoPorCepFactory.">
+      <created>1490620407344</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1490620407344</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Adição da classe ViaCepRequisicaoPorEnderecoFactory.">
+      <created>1490620437014</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1490620437014</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Ajustes no nome dos métodos.">
+      <created>1490620523104</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1490620523104</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Adição da interface IViaCepConteudo.">
+      <created>1490621891454</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1490621891454</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Adição da interface IViaCepResposta.">
+      <created>1490621909678</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1490621909678</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Refatoração nas classes.">
+      <created>1490621953311</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1490621953311</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Adição do método ToString().">
+      <created>1490715283000</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1490715283000</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Adição da classe CepInexistenteException.">
+      <created>1490883483778</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1490883483778</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Adição da interface IViaCep.">
+      <created>1490883671534</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1490883671535</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Refatoração na classe ViaCep.">
+      <created>1490883691908</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1490883691908</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Adição do construtor interno que recebe o código de status da requisição.">
+      <created>1490883845590</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1490883845590</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Teste Unitário para a classe ViaCep.">
+      <created>1490884042731</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1490884042731</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Teste Unitário para a Fluent Interface.">
+      <created>1490884409157</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1490884409157</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Teste Unitário para a interface IViaCepConteudo.">
+      <created>1490884609278</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1490884609279</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Adição do Pacote RhinoMocks.">
+      <created>1490885407428</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1490885407429</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Adição das dlls do projeto de teste.">
+      <created>1490885531422</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1490885531422</updated>
+    </task>
+    <task id="LOCAL-00058" summary="ViaCepTest.csproj">
+      <created>1490885587674</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1490885587674</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47638000" />
+    <option name="totallyTimeSpent" value="140145000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -222,554 +718,680 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1364" height="744" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5029412" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30555555" sideWeight="0.50303954" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30392158" sideWeight="0.40273556" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.4969605" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2602941" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.4970588" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.49088147" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2647059" sideWeight="0.5972644" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2868098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.48784193" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit." />
+    <MESSAGE value="Teste Unitário para a requisição por Endereço." />
+    <MESSAGE value="Adição da interface IViaCepRequisicaoJsonDe&lt;T&gt;." />
+    <MESSAGE value="Adição da interface IViaCepRequisicaoPipedDe&lt;T&gt;." />
+    <MESSAGE value="Adição da interface IViaCepRequisicaoQuertyDe&lt;T&gt;." />
+    <MESSAGE value="Ajustes no xml-docs." />
+    <MESSAGE value="Adição da interface IViaCepRequisicaoXmlDe&lt;T&gt;." />
+    <MESSAGE value="Adição da interface IViaCepRequisicaoPorCepFactory." />
+    <MESSAGE value="Adição da interface IViaCepRequisicaoPorEnderecoFactory." />
+    <MESSAGE value="Adição da classe ViaCepRequisicaoPorCepFactory." />
+    <MESSAGE value="Adição da classe ViaCepRequisicaoPorEnderecoFactory." />
+    <MESSAGE value="Ajustes no nome dos métodos." />
+    <MESSAGE value="Adição da interface IViaCepConteudo." />
+    <MESSAGE value="Adição da interface IViaCepResposta." />
+    <MESSAGE value="Refatoração nas classes." />
+    <MESSAGE value="Adição do método ToString()." />
+    <MESSAGE value="Adição da classe CepInexistenteException." />
+    <MESSAGE value="Adição da interface IViaCep." />
+    <MESSAGE value="Refatoração na classe ViaCep." />
+    <MESSAGE value="Adição do construtor interno que recebe o código de status da requisição." />
+    <MESSAGE value="Teste Unitário para a classe ViaCep." />
+    <MESSAGE value="Teste Unitário para a Fluent Interface." />
+    <MESSAGE value="Teste Unitário para a interface IViaCepConteudo." />
+    <MESSAGE value="Adição do Pacote RhinoMocks." />
+    <MESSAGE value="Adição das dlls do projeto de teste." />
+    <MESSAGE value="ViaCepTest.csproj" />
+    <option name="LAST_COMMIT_MESSAGE" value="ViaCepTest.csproj" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Endereco.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/D75A2298-0ED2-4BC5-BC88-29A9710ADB2B/59/9f884d7c/XDocument.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="2670">
+          <caret line="178" column="28" lean-forward="false" selection-start-line="178" selection-start-column="28" selection-end-line="178" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Util/ViaCepUtil.cs">
+    <entry file="file://$PROJECT_DIR$/ViaCepTest/ViaCepClienteTest.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="-166">
+          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Cep.cs">
+    <entry file="file://$PROJECT_DIR$/ViaCepTest/ViaCepRequisicaoPorCepTest.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="90" column="40" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
-          <folding>
-            <marker date="1481823714055" expanded="true" signature="6:70" ph="..." />
-            <marker date="1481823714055" expanded="true" signature="113:6214" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="120:193" ph="/// Representa o CEP de um endereço. ... " />
-            <marker date="1481823714055" expanded="true" signature="301:6212" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="317:603" ph="/// Inicializa uma nova instância da class &lt;code&gt;Cep&lt;/code&gt; com o valor do cep especificado. ... " />
-            <marker date="1481823714055" expanded="true" signature="634:837" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="847:1061" ph="/// Testa se o CEP é válido. ... " />
-            <marker date="1481823714055" expanded="true" signature="1157:1333" ph="/// Retira a máscara do Cep. ... " />
-            <marker date="1481823714055" expanded="true" signature="1435:1534" ph="/// Acessa o Cep. ... " />
-            <marker date="1481823714055" expanded="true" signature="1584:1727" ph="/// Retorna o CEP no formato 00000-000. ... " />
-            <marker date="1481823714055" expanded="true" signature="1794:1926" ph="/// Retorna o CEP no formato 00000-000. ... " />
-            <marker date="1481823714055" expanded="true" signature="1962:2231" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="2241:3116" ph="/// Compara a instância atual com outro objeto do mesmo tipo e retorna um inteiro que indica se a instância atual ... " />
-            <marker date="1481823714055" expanded="true" signature="3157:3397" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="3407:3942" ph="/// Compara o objeto atual com outro objeto do mesmo tipo. ... " />
-            <marker date="1481823714055" expanded="true" signature="4075:4258" ph="/// Cria um novo objeto que é uma cópia da instância atual. ... " />
-            <marker date="1481823714055" expanded="true" signature="4316:4618" ph="/// Determina se o objeto especificado é igual ao objeto atual. ... " />
-            <marker date="1481823714055" expanded="true" signature="4666:4828" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="4838:5137" ph="/// Indica se o objeto atual é igual a outro objeto do mesmo tipo. ... " />
-            <marker date="1481823714055" expanded="true" signature="5225:5365" ph="/// Retorna o código hash para esta instância. ... " />
-            <marker date="1481823714055" expanded="true" signature="5407:5597" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="5607:5715" ph="/// Expressão regular para CEP sem formato. Pattern: &quot;^\\d{8}$&quot; ... " />
-            <marker date="1481823714055" expanded="true" signature="5788:5903" ph="/// Expressão regular para CEP com formato. Pattern: &quot;^\\d{5}-\\d{3}$&quot; ... " />
-            <marker date="1481823714055" expanded="true" signature="5981:6076" ph="/// Expressão regular para CEP com ou sem formato. ... " />
-          </folding>
+        <state relative-caret-position="945">
+          <caret line="69" column="53" lean-forward="false" selection-start-line="69" selection-start-column="53" selection-end-line="69" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Endereco.cs">
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepResposta.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="300">
+          <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Cep.cs">
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepResposta.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="62" lean-forward="true" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Util/ViaCepUtil.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Modelos/Cep.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Modelos/ComparaUFPelaSigla.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1481823714055" expanded="true" signature="6:70" ph="..." />
-            <marker date="1481823714055" expanded="true" signature="113:6214" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="120:193" ph="/// Representa o CEP de um endereço. ... " />
-            <marker date="1481823714055" expanded="true" signature="301:6212" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="317:603" ph="/// Inicializa uma nova instância da class &lt;code&gt;Cep&lt;/code&gt; com o valor do cep especificado. ... " />
-            <marker date="1481823714055" expanded="true" signature="634:837" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="847:1061" ph="/// Testa se o CEP é válido. ... " />
-            <marker date="1481823714055" expanded="true" signature="1157:1333" ph="/// Retira a máscara do Cep. ... " />
-            <marker date="1481823714055" expanded="true" signature="1435:1534" ph="/// Acessa o Cep. ... " />
-            <marker date="1481823714055" expanded="true" signature="1584:1727" ph="/// Retorna o CEP no formato 00000-000. ... " />
-            <marker date="1481823714055" expanded="true" signature="1794:1926" ph="/// Retorna o CEP no formato 00000-000. ... " />
-            <marker date="1481823714055" expanded="true" signature="1962:2231" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="2241:3116" ph="/// Compara a instância atual com outro objeto do mesmo tipo e retorna um inteiro que indica se a instância atual ... " />
-            <marker date="1481823714055" expanded="true" signature="3157:3397" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="3407:3942" ph="/// Compara o objeto atual com outro objeto do mesmo tipo. ... " />
-            <marker date="1481823714055" expanded="true" signature="4075:4258" ph="/// Cria um novo objeto que é uma cópia da instância atual. ... " />
-            <marker date="1481823714055" expanded="true" signature="4316:4618" ph="/// Determina se o objeto especificado é igual ao objeto atual. ... " />
-            <marker date="1481823714055" expanded="true" signature="4666:4828" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="4838:5137" ph="/// Indica se o objeto atual é igual a outro objeto do mesmo tipo. ... " />
-            <marker date="1481823714055" expanded="true" signature="5225:5365" ph="/// Retorna o código hash para esta instância. ... " />
-            <marker date="1481823714055" expanded="true" signature="5407:5597" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="5607:5715" ph="/// Expressão regular para CEP sem formato. Pattern: &quot;^\\d{8}$&quot; ... " />
-            <marker date="1481823714055" expanded="true" signature="5788:5903" ph="/// Expressão regular para CEP com formato. Pattern: &quot;^\\d{5}-\\d{3}$&quot; ... " />
-            <marker date="1481823714055" expanded="true" signature="5981:6076" ph="/// Expressão regular para CEP com ou sem formato. ... " />
-          </folding>
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Class1.cs" />
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/C5EA14A2-BDD5-42D4-9796-00639BD6AD8B/5d/59cd0076/IFormattable.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/607E95F7-8559-4986-90F9-68784B884761/47/9123f392/JsonConvert.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="194">
+          <caret line="665" column="20" lean-forward="false" selection-start-line="665" selection-start-column="20" selection-end-line="665" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/C5EA14A2-BDD5-42D4-9796-00639BD6AD8B/77/8a350e94/ArgumentException.cs">
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Util/EnderecoConvert.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-710">
-          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+        <state relative-caret-position="75">
+          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/C5EA14A2-BDD5-42D4-9796-00639BD6AD8B/49/efb58a14/String.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="141" selection-start-line="24" selection-start-column="123" selection-end-line="24" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/C5EA14A2-BDD5-42D4-9796-00639BD6AD8B/1c/b4f49c32/Object.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/24/fb6bf0cb/File.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
+          <caret line="1155" column="64" lean-forward="false" selection-start-line="1155" selection-start-column="56" selection-end-line="1155" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/C5EA14A2-BDD5-42D4-9796-00639BD6AD8B/16/307911d6/Int32.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/f8/4fdbb619/Version.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        <state relative-caret-position="1605">
+          <caret line="107" column="11" lean-forward="false" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Endereco.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/70/d6cb68c9/Environment.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+        <state relative-caret-position="239">
+          <caret line="214" column="24" lean-forward="false" selection-start-line="214" selection-start-column="24" selection-end-line="214" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/0d/7779bd07/Exception.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="89" column="35" lean-forward="false" selection-start-line="89" selection-start-column="21" selection-end-line="89" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Util/MensagensDeErro.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="17" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepCliente.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/Interfaces/IViaCepFluentComoEndereco.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/Interfaces/IViaCepFluentComoJson.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/Interfaces/IViaCepFluentComoPiped.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/Interfaces/IViaCepFluentPorCep.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Modelos/EnderecoRequisicao.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="32" column="81" lean-forward="false" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Modelos/UF.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Modelos/Endereco.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/11/9f7d64ba/AsyncCallback.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/JsonRequest.cs" />
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/XmlResposta.cs" />
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepJsonRequisicaoByCep.cs" />
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepXmlRequisicaoByCep.cs" />
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepJsonResposta.cs" />
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepResponses.cs" />
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/C5EA14A2-BDD5-42D4-9796-00639BD6AD8B/cc/187da1f1/_Exception.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/b1/f6f3a9ce/IAsyncResult.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/C5EA14A2-BDD5-42D4-9796-00639BD6AD8B/3d/c518fe03/Exception.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/QuertyResponse.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/9D40932B-6A38-40D3-886E-FCBAAFE5FD7C/25/cdedcf01/CodeStatement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/9D40932B-6A38-40D3-886E-FCBAAFE5FD7C/58/98064e1c/CodeThrowExceptionStatement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v07/DecompilerCache/decompiler/C5EA14A2-BDD5-42D4-9796-00639BD6AD8B/67/1198689d/NullReferenceException.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaQuerty.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="49" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-          <folding>
-            <marker date="1481775280354" expanded="true" signature="95:157" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/QuertyPorCep.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaJson.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="17" />
-          <folding>
-            <marker date="1481822305803" expanded="true" signature="94:154" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Cep.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2192">
-          <caret line="137" column="28" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
-          <folding>
-            <marker date="1481823714055" expanded="true" signature="6:70" ph="..." />
-            <marker date="1481823714055" expanded="true" signature="113:6214" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="120:193" ph="/// Representa o CEP de um endereço. ... " />
-            <marker date="1481823714055" expanded="true" signature="301:6212" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="317:603" ph="/// Inicializa uma nova instância da class &lt;code&gt;Cep&lt;/code&gt; com o valor do cep especificado. ... " />
-            <marker date="1481823714055" expanded="true" signature="634:837" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="847:1061" ph="/// Testa se o CEP é válido. ... " />
-            <marker date="1481823714055" expanded="true" signature="1157:1333" ph="/// Retira a máscara do Cep. ... " />
-            <marker date="1481823714055" expanded="true" signature="1435:1534" ph="/// Acessa o Cep. ... " />
-            <marker date="1481823714055" expanded="true" signature="1584:1727" ph="/// Retorna o CEP no formato 00000-000. ... " />
-            <marker date="1481823714055" expanded="true" signature="1794:1926" ph="/// Retorna o CEP no formato 00000-000. ... " />
-            <marker date="1481823714055" expanded="true" signature="1962:2231" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="2241:3116" ph="/// Compara a instância atual com outro objeto do mesmo tipo e retorna um inteiro que indica se a instância atual ... " />
-            <marker date="1481823714055" expanded="true" signature="3157:3397" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="3407:3942" ph="/// Compara o objeto atual com outro objeto do mesmo tipo. ... " />
-            <marker date="1481823714055" expanded="true" signature="4075:4258" ph="/// Cria um novo objeto que é uma cópia da instância atual. ... " />
-            <marker date="1481823714055" expanded="true" signature="4316:4618" ph="/// Determina se o objeto especificado é igual ao objeto atual. ... " />
-            <marker date="1481823714055" expanded="true" signature="4666:4828" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="4838:5137" ph="/// Indica se o objeto atual é igual a outro objeto do mesmo tipo. ... " />
-            <marker date="1481823714055" expanded="true" signature="5225:5365" ph="/// Retorna o código hash para esta instância. ... " />
-            <marker date="1481823714055" expanded="true" signature="5407:5597" ph="{...}" />
-            <marker date="1481823714055" expanded="true" signature="5607:5715" ph="/// Expressão regular para CEP sem formato. Pattern: &quot;^\\d{8}$&quot; ... " />
-            <marker date="1481823714055" expanded="true" signature="5788:5903" ph="/// Expressão regular para CEP com formato. Pattern: &quot;^\\d{5}-\\d{3}$&quot; ... " />
-            <marker date="1481823714055" expanded="true" signature="5981:6076" ph="/// Expressão regular para CEP com ou sem formato. ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/CepInvalidoException.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="718">
-          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
-          <folding>
-            <marker date="1481768985461" expanded="true" signature="6:49" ph="..." />
-            <marker date="1481768985461" expanded="true" signature="92:2178" ph="{...}" />
-            <marker date="1481768985461" expanded="true" signature="99:205" ph="/// A exceção que é lançada quando o Cep está em um formato inválido. ... " />
-            <marker date="1481768985461" expanded="true" signature="274:2176" ph="{...}" />
-            <marker date="1481768985461" expanded="true" signature="289:411" ph="/// Inicializa uma nova instância da class &lt;code&gt;CepInvalidoException&lt;/code&gt;. ... " />
-            <marker date="1481768985461" expanded="true" signature="574:594" ph="{...}" />
-            <marker date="1481768985461" expanded="true" signature="604:856" ph="/// Inicializa uma nova instância da class &lt;code&gt;CepInvalidoException&lt;/code&gt; com a mensagem de erro especificada. ... " />
-            <marker date="1481768985461" expanded="true" signature="924:944" ph="{...}" />
-            <marker date="1481768985461" expanded="true" signature="954:1564" ph="/// Inicializa uma nova instância da class &lt;code&gt;CepInvalidoException&lt;/code&gt; com a mensagem de erro especificada. ... " />
-            <marker date="1481768985461" expanded="true" signature="1674:1694" ph="{...}" />
-            <marker date="1481768985461" expanded="true" signature="1704:2039" ph="/// Inicializa uma nova instância da classe &lt;code&gt;CepInvalidoException&lt;/code&gt; com dados serializados. ... " />
-            <marker date="1481768985461" expanded="true" signature="2150:2170" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/Endereco.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Modelos/UF.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/497E7C03-5433-4AE6-B257-9B219192BCF0/a2/a7e0d7cb/TestDelegate.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/497E7C03-5433-4AE6-B257-9B219192BCF0/07/2efae6e9/Assert.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="2459" column="42" lean-forward="false" selection-start-line="2459" selection-start-column="42" selection-end-line="2459" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/4b/3aa33b47/Action`1.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/e3/d4430d15/Task.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="1570" column="16" lean-forward="false" selection-start-line="1570" selection-start-column="16" selection-end-line="1570" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorEndereco.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
           <folding>
-            <marker date="1481295550158" expanded="true" signature="56:498" ph="{...}" />
-            <marker date="1481295550158" expanded="true" signature="63:123" ph="/// Unidade Federativa. ... " />
-            <marker date="1481295550158" expanded="true" signature="161:496" ph="{...}" />
+            <marker date="1490618504462" expanded="true" signature="6:52" ph="..." />
+            <marker date="1490618504462" expanded="true" signature="91:907" ph="{...}" />
+            <marker date="1490618504462" expanded="true" signature="98:178" ph="/// Representa uma requisição por endereço. ... " />
+            <marker date="1490618504462" expanded="true" signature="275:905" ph="{...}" />
+            <marker date="1490618504462" expanded="true" signature="457:610" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Util/ViaCepUtil.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/9D907BAB-D966-4DC6-98F7-808B5C9D2357/13/ea62b182/ArgumentException.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="81" column="61" lean-forward="false" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/ViaCepFluentPorCep.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <marker date="1490414966231" expanded="true" signature="6:211" ph="..." />
+            <marker date="1490414966231" expanded="true" signature="253:1559" ph="{...}" />
+            <marker date="1490414966231" expanded="true" signature="313:1557" ph="{...}" />
+            <marker date="1490414966231" expanded="true" signature="442:522" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/ViaCepFluent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding>
+            <marker date="1490882917813" expanded="true" signature="6:87" ph="..." />
+            <marker date="1490882917813" expanded="true" signature="129:717" ph="{...}" />
+            <marker date="1490882917813" expanded="true" signature="168:715" ph="{...}" />
+            <marker date="1490882917813" expanded="true" signature="231:361" ph="{...}" />
+            <marker date="1490882917813" expanded="true" signature="454:709" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/ViaCepFluentPorEndereco.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding>
+            <marker date="1490414966245" expanded="true" signature="6:209" ph="..." />
+            <marker date="1490414966245" expanded="true" signature="251:1369" ph="{...}" />
+            <marker date="1490414966245" expanded="true" signature="321:1367" ph="{...}" />
+            <marker date="1490414966245" expanded="true" signature="515:625" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/Interfaces/IViaCepFluentPorEndereco.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <marker date="1489943602703" expanded="true" signature="51:195" ph="{...}" />
+            <marker date="1489943602703" expanded="true" signature="180:193" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/Callback/ViaCepFluentCallbackMethods.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+          <folding>
+            <marker date="1490882578276" expanded="true" signature="6:188" ph="..." />
+            <marker date="1490882578276" expanded="true" signature="239:2850" ph="{...}" />
+            <marker date="1490882578276" expanded="true" signature="293:2848" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Fluent/Interfaces/IViaCepFluentComoListaDeEnderecos.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <marker date="1489943602660" expanded="true" signature="6:102" ph="..." />
+            <marker date="1489943602660" expanded="true" signature="155:345" ph="{...}" />
+            <marker date="1489943602660" expanded="true" signature="212:343" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ViaCepTest/ViaCepFluentTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="117" column="80" lean-forward="false" selection-start-line="117" selection-start-column="80" selection-end-line="117" selection-end-column="80" />
+          <folding>
+            <marker date="1490882616095" expanded="true" signature="6:176" ph="..." />
+            <marker date="1490882616095" expanded="true" signature="198:5613" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="252:5611" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="267:2822" ph="FluentPorCep" />
+            <marker date="1490882616095" expanded="true" signature="401:823" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="955:1432" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="1559:2139" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="1647:1684" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="1756:1793" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="1864:1901" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="1974:2011" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="2085:2122" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="2236:2802" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="2327:2356" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="2435:2464" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="2542:2571" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="2651:2680" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="2761:2790" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="2832:5605" ph="FluentPorEndereco" />
+            <marker date="1490882616095" expanded="true" signature="2976:3482" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="3071:3202" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="3619:4157" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="3714:3845" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="4248:4914" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="4296:4902" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="4391:4522" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="4614:4651" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="4732:4769" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="4849:4886" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="5014:5585" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="5097:5212" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="5311:5340" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="5428:5457" ph="{...}" />
+            <marker date="1490882616095" expanded="true" signature="5544:5573" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/ViaCepException.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="33" lean-forward="false" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding>
+            <marker date="1490883812995" expanded="true" signature="6:67" ph="..." />
+            <marker date="1490883812995" expanded="true" signature="103:2878" ph="{...}" />
+            <marker date="1490883812995" expanded="true" signature="110:238" ph="/// A exceção que é lançada quando o ocorre algum erro em uma requisição ao serviço ViaCep. ... " />
+            <marker date="1490883812995" expanded="true" signature="302:2876" ph="{...}" />
+            <marker date="1490883812995" expanded="true" signature="360:472" ph="/// Inicializa uma nova instância de &lt;see cref=&quot;ViaCepException&quot;/&gt;. ... " />
+            <marker date="1490883812995" expanded="true" signature="505:587" ph="{...}" />
+            <marker date="1490883812995" expanded="true" signature="597:839" ph="/// Inicializa uma nova instância de &lt;see cref=&quot;ViaCepException&quot;/&gt; com a mensagem de erro especificada. ... " />
+            <marker date="1490883812995" expanded="true" signature="886:938" ph="{...}" />
+            <marker date="1490883812995" expanded="true" signature="948:1564" ph="/// Inicializa uma nova instância da class &lt;code&gt;ViaCepException&lt;/code&gt; com a mensagem de erro especificada. ... " />
+            <marker date="1490883812995" expanded="true" signature="1669:1689" ph="{...}" />
+            <marker date="1490883812995" expanded="true" signature="1699:2023" ph="/// Inicializa uma nova instância de &lt;see cref=&quot;ViaCepException&quot;/&gt; com dados serializados. ... " />
+            <marker date="1490883812995" expanded="true" signature="2129:2149" ph="{...}" />
+            <marker date="1490883812995" expanded="true" signature="2214:2801" ph="{...}" />
+            <marker date="1490883812995" expanded="true" signature="2330:2791" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/IViaCep.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <marker date="1490883579898" expanded="true" signature="6:160" ph="..." />
+            <marker date="1490883579898" expanded="true" signature="195:7402" ph="{...}" />
+            <marker date="1490883579898" expanded="true" signature="202:315" ph="/// Define um cliente responsável por retornar a resposta de uma requisição. ... " />
+            <marker date="1490883579898" expanded="true" signature="344:7400" ph="{...}" />
+            <marker date="1490883579898" expanded="true" signature="359:605" ph="/// Obtém o endereço do cep espeficado. ... " />
+            <marker date="1490883579898" expanded="true" signature="656:924" ph="/// Obtém o endereço, de forma assíncrona, do cep espeficado. ... " />
+            <marker date="1490883579898" expanded="true" signature="986:1249" ph="/// Obtém o endereço, como json, do cep especificado. ... " />
+            <marker date="1490883579898" expanded="true" signature="1317:1601" ph="/// Obtém o endereço, como json, de forma assíncrona, do cep especificado. ... " />
+            <marker date="1490883579898" expanded="true" signature="1658:1944" ph="/// Obtém o endereço, como piped, de forma assíncrona, do cep especificado. ... " />
+            <marker date="1490883579898" expanded="true" signature="2013:2278" ph="/// Obtém o endereço, como piped, do cep especificado. ... " />
+            <marker date="1490883579898" expanded="true" signature="2336:2624" ph="/// Obtém o endereço, como querty, de forma assíncrona, do cep especificado. ... " />
+            <marker date="1490883579898" expanded="true" signature="2694:2961" ph="/// Obtém o endereço, como querty, do cep especificado. ... " />
+            <marker date="1490883579898" expanded="true" signature="3020:3288" ph="/// Obtém o endereço, como xml, de forma assíncrona, do cep especificado. ... " />
+            <marker date="1490883579898" expanded="true" signature="3358:3605" ph="/// Obtém o endereço, como xml, do cep especificado. ... " />
+            <marker date="1490883579898" expanded="true" signature="3664:3981" ph="/// Obtém os endereços, de forma assíncrona, da requisicao especificada. ... " />
+            <marker date="1490883579898" expanded="true" signature="4087:4383" ph="/// Obtém os endereços, da requisicao especificada. ... " />
+            <marker date="1490883579898" expanded="true" signature="4478:4797" ph="/// Obtém os endereços, de forma assíncrona, da requisicao especificada como json. ... " />
+            <marker date="1490883579898" expanded="true" signature="4896:5194" ph="/// Obtém os endereços, da requisicao especificada como json. ... " />
+            <marker date="1490883579898" expanded="true" signature="5282:5592" ph="/// Obtém os endereços, de forma assíncrona, da requisicao especificada como xml. ... " />
+            <marker date="1490883579898" expanded="true" signature="5693:5982" ph="/// Obtém os endereços, da requisicao especificada como xml. ... " />
+            <marker date="1490883579898" expanded="true" signature="6072:6329" ph="/// Obtém o conteúdo de uma requisição. ... " />
+            <marker date="1490883579898" expanded="true" signature="6394:6672" ph="/// Obtém o conteúdo de uma requisição, de forma assíncrona. ... " />
+            <marker date="1490883579898" expanded="true" signature="6748:7005" ph="/// Obtém a resposta de uma requisição. ... " />
+            <marker date="1490883579898" expanded="true" signature="7070:7327" ph="/// Obtém a resposta de uma requisição. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/ViaCep.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding>
+            <marker date="1490883586044" expanded="true" signature="0:950" ph="/* ================================================================ ... */" />
+            <marker date="1490883586044" expanded="true" signature="958:1162" ph="..." />
+            <marker date="1490883586044" expanded="true" signature="1197:8990" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="1204:1307" ph="/// Cliente responsável por retornar a resposta de uma requisição. ... " />
+            <marker date="1490883586044" expanded="true" signature="1348:8988" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="1710:1730" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="1899:2463" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="2511:2643" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="2708:2851" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="2922:3136" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="3190:3393" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="3465:3680" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="3735:3939" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="4012:4228" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="4284:4489" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="4562:4772" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="4828:5027" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="5136:5303" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="5395:5551" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="5653:5887" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="5972:6195" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="6299:6529" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="6616:6835" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="6903:7084" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="7169:7363" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="7457:7567" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="7635:7804" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="7889:8069" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="8163:8296" ph="{...}" />
+            <marker date="1490883586044" expanded="true" signature="8867:8982" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Modelos/CepInvalidoException.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1490469825908" expanded="true" signature="6:49" ph="..." />
+            <marker date="1490469825908" expanded="true" signature="92:2270" ph="{...}" />
+            <marker date="1490469825908" expanded="true" signature="99:205" ph="/// A exceção que é lançada quando o Cep está em um formato inválido. ... " />
+            <marker date="1490469825908" expanded="true" signature="274:2268" ph="{...}" />
+            <marker date="1490469825908" expanded="true" signature="459:586" ph="/// Inicializa uma nova instância da classe &lt;see cref=&quot;CepInexistenteException&quot;/&gt;. ... " />
+            <marker date="1490469825908" expanded="true" signature="652:672" ph="{...}" />
+            <marker date="1490469825908" expanded="true" signature="682:939" ph="/// Inicializa uma nova instância da classe &lt;see cref=&quot;CepInexistenteException&quot;/&gt; com a mensagem de erro especifi ... " />
+            <marker date="1490469825908" expanded="true" signature="1007:1027" ph="{...}" />
+            <marker date="1490469825908" expanded="true" signature="1037:1652" ph="/// Inicializa uma nova instância da classe &lt;see cref=&quot;CepInexistenteException&quot;/&gt; com a mensagem de erro especifi ... " />
+            <marker date="1490469825908" expanded="true" signature="1762:1782" ph="{...}" />
+            <marker date="1490469825908" expanded="true" signature="1792:2131" ph="/// Inicializa uma nova instância da classe &lt;see cref=&quot;CepInexistenteException&quot;/&gt; com dados serializados. ... " />
+            <marker date="1490469825908" expanded="true" signature="2242:2262" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/4A0869D9-B0E8-4145-9F9E-7EBB6DD4E6BC/b7/20ca209b/LanguageOptions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Properties/AssemblyInfo.cs">
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/4A0869D9-B0E8-4145-9F9E-7EBB6DD4E6BC/41/b924dab4/VBCodeGenerator.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1481292316986" expanded="true" signature="6:62" ph="..." />
-            <marker date="1481292316986" expanded="true" signature="64:251" ph="/* General Information about an assembly is controlled through the following ... */" />
-            <marker date="1481292316986" expanded="true" signature="628:838" ph="/* Setting ComVisible to false makes the types in this assembly not visible ... */" />
-            <marker date="1481292316986" expanded="true" signature="1014:1341" ph="/* Version information for an assembly consists of the following four values: ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/EnderecoRequisicao.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="93" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
-          <folding>
-            <marker date="1481822305687" expanded="true" signature="6:52" ph="..." />
-            <marker date="1481822305687" expanded="true" signature="91:731" ph="{...}" />
-            <marker date="1481822305687" expanded="true" signature="130:729" ph="{...}" />
-            <marker date="1481822305687" expanded="true" signature="211:318" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/IViaCepResposta.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1481768648408" expanded="true" signature="37:129" ph="{...}" />
-            <marker date="1481768648408" expanded="true" signature="76:127" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepCliente.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="111" selection-start-line="12" selection-start-column="111" selection-end-line="12" selection-end-column="111" />
-          <folding>
-            <marker date="1481767044939" expanded="true" signature="6:105" ph="..." />
-            <marker date="1481767044939" expanded="true" signature="144:570" ph="{...}" />
-            <marker date="1481767044939" expanded="true" signature="184:568" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoJsonPorEndereco.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="44" />
-          <folding>
-            <marker date="1481772186003" expanded="true" signature="37:372" ph="{...}" />
-            <marker date="1481772186003" expanded="true" signature="118:370" ph="{...}" />
-            <marker date="1481772186003" expanded="true" signature="237:302" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPipedPorCep.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-          <folding>
-            <marker date="1481769935921" expanded="true" signature="77:362" ph="{...}" />
-            <marker date="1481769935921" expanded="true" signature="156:360" ph="{...}" />
-            <marker date="1481769935921" expanded="true" signature="226:292" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoQuertyPorCep.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding>
-            <marker date="1481775592284" expanded="true" signature="77:358" ph="{...}" />
-            <marker date="1481775592284" expanded="true" signature="150:356" ph="{...}" />
-            <marker date="1481775592284" expanded="true" signature="221:288" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaXml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-          <folding>
-            <marker date="1481768748296" expanded="true" signature="37:154" ph="{...}" />
-            <marker date="1481768748296" expanded="true" signature="93:152" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoXmlPorEndereco.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1481772247507" expanded="true" signature="37:369" ph="{...}" />
-            <marker date="1481772247507" expanded="true" signature="117:367" ph="{...}" />
-            <marker date="1481772247507" expanded="true" signature="235:299" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoXmlPorCep.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1481769932317" expanded="true" signature="78:357" ph="{...}" />
-            <marker date="1481769932317" expanded="true" signature="155:355" ph="{...}" />
-            <marker date="1481769932317" expanded="true" signature="211:251" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoJsonPorCep.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1481769721828" expanded="true" signature="77:359" ph="{...}" />
-            <marker date="1481769721828" expanded="true" signature="155:357" ph="{...}" />
-            <marker date="1481769721828" expanded="true" signature="212:252" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorEndereco.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="73" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="73" />
-          <folding>
-            <marker date="1481824722818" expanded="true" signature="6:93" ph="..." />
-            <marker date="1481824722818" expanded="true" signature="132:995" ph="{...}" />
-            <marker date="1481824722818" expanded="true" signature="208:993" ph="{...}" />
-            <marker date="1481824722818" expanded="true" signature="299:568" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/IViaCepRequisicao.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1481822305773" expanded="true" signature="37:128" ph="{...}" />
-            <marker date="1481822305773" expanded="true" signature="78:126" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRequisicaoPorCep.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-          <folding>
-            <marker date="1481824496012" expanded="true" signature="6:52" ph="..." />
-            <marker date="1481824496012" expanded="true" signature="91:571" ph="{...}" />
-            <marker date="1481824496012" expanded="true" signature="162:569" ph="{...}" />
-            <marker date="1481824496012" expanded="true" signature="218:366" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostas.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          <folding>
-            <marker date="1481822305786" expanded="true" signature="37:742" ph="{...}" />
-            <marker date="1481822305786" expanded="true" signature="79:740" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/Net/ViaCepRespostaPiped.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-          <folding>
-            <marker date="1481768745888" expanded="true" signature="37:158" ph="{...}" />
-            <marker date="1481768745888" expanded="true" signature="95:156" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/ViaCep.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding>
-            <marker date="1481775885670" expanded="true" signature="0:1071" ph="/* ================================================================ ... */" />
-            <marker date="1481775885670" expanded="true" signature="1106:1201" ph="{...}" />
-            <marker date="1481775885670" expanded="true" signature="1186:1199" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep.Test/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="5" selection-start-line="9" selection-start-column="4" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="570">
+          <caret line="257" column="13" lean-forward="false" selection-start-line="257" selection-start-column="13" selection-end-line="257" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../MosaicoSolutions.ViaCep/MosaicoSolutions.ViaCep.csproj">
+    <entry file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/v08/DecompilerCache/decompiler/4A0869D9-B0E8-4145-9F9E-7EBB6DD4E6BC/c5/7705c395/VBCodeProvider.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="50" column="31" lean-forward="false" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/ViaCepConteudo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <marker date="1490621694187" expanded="true" signature="6:59" ph="..." />
+            <marker date="1490621694187" expanded="true" signature="98:1663" ph="{...}" />
+            <marker date="1490621694187" expanded="true" signature="105:186" ph="/// Representa o conteúdo de uma requisisão. ... " />
+            <marker date="1490621694187" expanded="true" signature="236:1661" ph="{...}" />
+            <marker date="1490621694187" expanded="true" signature="325:709" ph="{...}" />
+            <marker date="1490621694187" expanded="true" signature="351:699" ph="{...}" />
+            <marker date="1490621694187" expanded="true" signature="385:581" ph="{...}" />
+            <marker date="1490621694187" expanded="true" signature="615:685" ph="{...}" />
+            <marker date="1490621694187" expanded="true" signature="830:914" ph="{...}" />
+            <marker date="1490621694187" expanded="true" signature="924:1182" ph="/// Lê o conteúdo como xml. ... " />
+            <marker date="1490621694187" expanded="true" signature="1220:1421" ph="{...}" />
+            <marker date="1490621694187" expanded="true" signature="1431:1602" ph="/// Lê o conteúdo como &lt;code&gt;string&lt;/code&gt;. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Net/IViaCepConteudo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="18" lean-forward="false" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <marker date="1490621580093" expanded="true" signature="61:891" ph="{...}" />
+            <marker date="1490621580093" expanded="true" signature="68:157" ph="/// Define o conteúdo da resposta de uma requisição. ... " />
+            <marker date="1490621580093" expanded="true" signature="194:889" ph="{...}" />
+            <marker date="1490621580093" expanded="true" signature="209:302" ph="/// Avalia se o conteúdo pode ser lido como Xml. ... " />
+            <marker date="1490621580093" expanded="true" signature="353:435" ph="/// Avalia se o conteúdo possui erro. ... " />
+            <marker date="1490621580093" expanded="true" signature="478:643" ph="/// Lê o conteúdo como Xml. ... " />
+            <marker date="1490621580093" expanded="true" signature="685:850" ph="/// Lê o conteúdo como string. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ViaCepTest/ViaCepConteudoTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="50" column="31" lean-forward="false" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+          <folding>
+            <marker date="1490884573527" expanded="true" signature="6:99" ph="..." />
+            <marker date="1490884573527" expanded="true" signature="121:2030" ph="{...}" />
+            <marker date="1490884573527" expanded="true" signature="177:2028" ph="{...}" />
+            <marker date="1490884573527" expanded="true" signature="1036:1179" ph="{...}" />
+            <marker date="1490884573527" expanded="true" signature="1236:2022" ph="{...}" />
+            <marker date="1490884573527" expanded="true" signature="1942:2010" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ViaCepTest/ViaCepTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="170" column="39" lean-forward="false" selection-start-line="170" selection-start-column="39" selection-end-line="170" selection-end-column="39" />
+          <folding>
+            <marker date="1490883959935" expanded="true" signature="6:122" ph="..." />
+            <marker date="1490883959935" expanded="true" signature="144:6085" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="192:6083" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="332:580" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="448:569" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="590:1974" ph="ObterEnderecoComoXml" />
+            <marker date="1490883959935" expanded="true" signature="692:1306" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="1369:1950" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="1984:2948" ph="ObterEnderecoComoQuerty" />
+            <marker date="1490883959935" expanded="true" signature="2092:2488" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="2554:2928" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="2958:3779" ph="ObterEnderecoComoPiped" />
+            <marker date="1490883959935" expanded="true" signature="3064:3388" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="3453:3755" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="3789:4984" ph="ObterEnderecoComoJson" />
+            <marker date="1490883959935" expanded="true" signature="3893:4411" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="4475:4960" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="4994:6077" ph="ObterEndereco" />
+            <marker date="1490883959935" expanded="true" signature="5082:5446" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="5502:5833" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="5898:6057" ph="{...}" />
+            <marker date="1490883959935" expanded="true" signature="5965:6045" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/CepInexistenteException.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <marker date="1490703364366" expanded="true" signature="6:49" ph="..." />
+            <marker date="1490703364366" expanded="true" signature="84:2099" ph="{...}" />
+            <marker date="1490703364366" expanded="true" signature="91:190" ph="/// A exceção que é lançada quando o cep informado não existe. ... " />
+            <marker date="1490703364366" expanded="true" signature="262:2097" ph="{...}" />
+            <marker date="1490703364366" expanded="true" signature="277:397" ph="/// Inicializa uma nova instância de &lt;see cref=&quot;CepInexistenteException&quot;/&gt;. ... " />
+            <marker date="1490703364366" expanded="true" signature="482:502" ph="{...}" />
+            <marker date="1490703364366" expanded="true" signature="512:762" ph="/// Inicializa uma nova instância de &lt;see cref=&quot;CepInexistenteException&quot;/&gt; com a mensagem de erro especificada. ... " />
+            <marker date="1490703364366" expanded="true" signature="833:853" ph="{...}" />
+            <marker date="1490703364366" expanded="true" signature="863:1482" ph="/// Inicializa uma nova instância de &lt;see cref=&quot;CepInexistenteException&quot;/&gt; com a mensagem de erro especificada. ... " />
+            <marker date="1490703364366" expanded="true" signature="1595:1615" ph="{...}" />
+            <marker date="1490703364366" expanded="true" signature="1625:1957" ph="/// Inicializa uma nova instância de &lt;see cref=&quot;CepInexistenteException&quot;/&gt; com dados serializados. ... " />
+            <marker date="1490703364366" expanded="true" signature="2071:2091" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MosaicoSolutions.ViaCep/Properties/AssemblyInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
+          <folding>
+            <marker date="1490885749070" expanded="true" signature="6:62" ph="..." />
+            <marker date="1490885749070" expanded="true" signature="64:251" ph="/* General Information about an assembly is controlled through the following ... */" />
+            <marker date="1490885749070" expanded="true" signature="628:838" ph="/* Setting ComVisible to false makes the types in this assembly not visible ... */" />
+            <marker date="1490885749070" expanded="true" signature="1014:1341" ph="/* Version information for an assembly consists of the following four values: ... */" />
+          </folding>
         </state>
       </provider>
     </entry>

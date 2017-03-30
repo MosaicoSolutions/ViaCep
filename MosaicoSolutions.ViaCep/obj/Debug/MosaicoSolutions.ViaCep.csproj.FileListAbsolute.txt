@@ -8,3 +8,13 @@ C:\Users\BrunoXavier\Documents\GitHub\MosaicoSolutions.ViaCep\MosaicoSolutions.V
 C:\Users\BrunoXavier\Documents\GitHub\MosaicoSolutions.ViaCep\MosaicoSolutions.ViaCep\bin\Debug\Newtonsoft.Json.dll
 C:\Users\BrunoXavier\Documents\GitHub\MosaicoSolutions.ViaCep\MosaicoSolutions.ViaCep\bin\Debug\Newtonsoft.Json.xml
 C:\Users\BrunoXavier\Documents\GitHub\MosaicoSolutions.ViaCep\MosaicoSolutions.ViaCep\bin\Debug\MosaicoSolutions.ViaCep.XML
+C:\Users\BrunoXavier\RiderProjects\ViaCep\MosaicoSolutions.ViaCep\bin\Debug\MosaicoSolutions.ViaCep.XML
+C:\Users\BrunoXavier\RiderProjects\ViaCep\MosaicoSolutions.ViaCep\bin\Debug\MosaicoSolutions.ViaCep.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\MosaicoSolutions.ViaCep\bin\Debug\MosaicoSolutions.ViaCep.pdb
+C:\Users\BrunoXavier\RiderProjects\ViaCep\MosaicoSolutions.ViaCep\bin\Debug\Newtonsoft.Json.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\MosaicoSolutions.ViaCep\bin\Debug\System.Xml.Linq.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\MosaicoSolutions.ViaCep\bin\Debug\Newtonsoft.Json.xml
+C:\Users\BrunoXavier\RiderProjects\ViaCep\MosaicoSolutions.ViaCep\bin\Debug\pt-BR\System.Xml.Linq.resources.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\MosaicoSolutions.ViaCep\obj\Debug\MosaicoSolutions.ViaCep.csprojResolveAssemblyReference.cache
+C:\Users\BrunoXavier\RiderProjects\ViaCep\MosaicoSolutions.ViaCep\obj\Debug\MosaicoSolutions.ViaCep.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\MosaicoSolutions.ViaCep\obj\Debug\MosaicoSolutions.ViaCep.pdb
