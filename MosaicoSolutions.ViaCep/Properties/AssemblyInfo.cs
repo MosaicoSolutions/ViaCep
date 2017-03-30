@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("MosaicoSolutions.ViaCep")]
-[assembly: AssemblyDescription("Uma API para consulta de endereços via CEP.")]
+[assembly: AssemblyDescription("Uma API para consulta de endereços via Cep.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Mosaico Solutions")]
 [assembly: AssemblyProduct("ViaCep")]
@@ -35,5 +35,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyVersion("2.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
