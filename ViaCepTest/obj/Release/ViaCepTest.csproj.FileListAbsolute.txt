@@ -1,0 +1,14 @@
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\ViaCepTest.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\ViaCepTest.pdb
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\MosaicoSolutions.ViaCep.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\nunit.framework.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\Rhino.Mocks.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\Newtonsoft.Json.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\MosaicoSolutions.ViaCep.pdb
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\MosaicoSolutions.ViaCep.xml
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\nunit.framework.xml
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\Rhino.Mocks.xml
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\bin\Release\Newtonsoft.Json.xml
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\obj\Release\ViaCepTest.csprojResolveAssemblyReference.cache
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\obj\Release\ViaCepTest.dll
+C:\Users\BrunoXavier\RiderProjects\ViaCep\ViaCepTest\obj\Release\ViaCepTest.pdb
