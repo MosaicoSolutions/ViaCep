@@ -2,6 +2,7 @@
 using System.Xml.Linq;
 using MosaicoSolutions.ViaCep.Fluent.Interfaces;
 using MosaicoSolutions.ViaCep.Modelos;
+using MosaicoSolutions.ViaCep.Net;
 using MosaicoSolutions.ViaCep.Util;
 
 namespace MosaicoSolutions.ViaCep.Fluent
@@ -9,40 +10,42 @@ namespace MosaicoSolutions.ViaCep.Fluent
     public class ViaCepFluentPorCep : IViaCepFluentPorCep
     {
         private readonly Cep _cep;
+        private readonly IViaCep _viaCep;
 
         internal ViaCepFluentPorCep(Cep cep)
         {
             _cep = cep;
+            _viaCep = new ViaCep();
         }
 
         public Endereco ComoEndereco()
             => EnderecoConvert.DeJsonParaEndereco(ComoJson());
 
         public string ComoJson()
-            => ViaCep.ObterEnderecoComoJson(_cep);
+            => _viaCep.ObterEnderecoComoJson(_cep);
 
         public XDocument ComoXml()
-            => ViaCep.ObterEnderecoComoXml(_cep);
+            => _viaCep.ObterEnderecoComoXml(_cep);
 
         public string ComoPiped()
-            => ViaCep.ObterEnderecoComoPiped(_cep);
+            => _viaCep.ObterEnderecoComoPiped(_cep);
 
         public string ComoQuerty()
-            => ViaCep.ObterEnderecoComoQuerty(_cep);
+            => _viaCep.ObterEnderecoComoQuerty(_cep);
 
         public async Task<string> ComoJsonAsync()
-            => await ViaCep.ObterEnderecoComoJsonAsync(_cep);
+            => await _viaCep.ObterEnderecoComoJsonAsync(_cep);
 
         public async Task<XDocument> ComoXmlAsync()
-            => await ViaCep.ObterEnderecoComoXmlAsync(_cep);
+            => await _viaCep.ObterEnderecoComoXmlAsync(_cep);
 
         public async Task<string> ComoPipedAsync()
-            => await ViaCep.ObterEnderecoComoPipedAsync(_cep);
+            => await _viaCep.ObterEnderecoComoPipedAsync(_cep);
 
         public async Task<string> ComoQuertyAsync()
-            => await ViaCep.ObterEnderecoComoQuertyAsync(_cep);
+            => await _viaCep.ObterEnderecoComoQuertyAsync(_cep);
 
         public async Task<Endereco> ComoEnderecoAsync()
-            => await ViaCep.ObterEnderecoAsync(_cep);
+            => await _viaCep.ObterEnderecoAsync(_cep);
     }
 }

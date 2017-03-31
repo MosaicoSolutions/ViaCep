@@ -10,28 +10,30 @@ namespace MosaicoSolutions.ViaCep.Fluent
     public class ViaCepFluentPorEndereco : IViaCepFluentPorEndereco
     {
         private readonly EnderecoRequisicao _enderecoRequisicao;
+        private readonly IViaCep _viaCep;
 
         internal ViaCepFluentPorEndereco(EnderecoRequisicao enderecoRequisicao)
         {
             _enderecoRequisicao = enderecoRequisicao;
+            _viaCep = new ViaCep();
         }
 
         public string ComoJson()
-            => ViaCep.ObterEnderecosComoJson(_enderecoRequisicao);
+            => _viaCep.ObterEnderecosComoJson(_enderecoRequisicao);
 
         public XDocument ComoXml()
-            => ViaCep.ObterEnderecosComoXml(_enderecoRequisicao);
+            => _viaCep.ObterEnderecosComoXml(_enderecoRequisicao);
 
         public IEnumerable<Endereco> ComoListaDeEnderecos()
-            => ViaCep.ObterEnderecos(_enderecoRequisicao);
+            => _viaCep.ObterEnderecos(_enderecoRequisicao);
 
         public async Task<string> ComoJsonAsync()
-            => await ViaCep.ObterEnderecosComoJsonAsync(_enderecoRequisicao);
+            => await _viaCep.ObterEnderecosComoJsonAsync(_enderecoRequisicao);
 
         public async Task<XDocument> ComoXmlAsync()
-            => await ViaCep.ObterEnderecosComoXmlAsync(_enderecoRequisicao);
+            => await _viaCep.ObterEnderecosComoXmlAsync(_enderecoRequisicao);
 
         public async Task<IEnumerable<Endereco>> ComoListaDeEnderecosAsync()
-            => await ViaCep.ObterEnderecosAsync(_enderecoRequisicao);
+            => await _viaCep.ObterEnderecosAsync(_enderecoRequisicao);
     }
 }
