@@ -20,13 +20,13 @@ Crie um objeto do tipo `Cep` ou use uma `string` se preferir.
 var viaCep = new ViaCep();
 Cep cep = "01001000";
 
-var endereco = viaCep.ObterEndereco(cep); // ViaCep.ObterEndereco("01001000");
+var endereco = viaCep.ObterEndereco(cep); // viaCep.ObterEndereco("01001000");
 ```
 Nesse caso o endereço será retornado como um objeto do tipo [Endereco](MosaicoSolutions.ViaCep/Modelos/Endereco.cs).
 Se desejar retornar como outros formatos:
 
 ``` c#
-var enderecoJson = viaCep.ObterEnderecoComoJson(cep); //ViaCep.ObterEnderecoComoJson("01001000");
+var enderecoJson = viaCep.ObterEnderecoComoJson(cep); //viaCep.ObterEnderecoComoJson("01001000");
 ```
 Você ainda pode retornar com `Xml`, `Piped`, ou `Querty` utilizando os métodos `ObterEnderecoComoXml` , `ObterEnderecoComoPiped` e 
 `ObterEnderecoComoQuerty`, respectivamente, ambos métodos da classe [ViaCep](MosaicoSolutions.ViaCep/ViaCep.cs).
