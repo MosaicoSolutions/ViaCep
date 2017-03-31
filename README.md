@@ -17,16 +17,16 @@ Existem duas formas de consultar endereços.
 Crie um objeto do tipo `Cep` ou use uma `string` se preferir.
 
 ``` c#
+var viaCep = new ViaCep();
 Cep cep = "01001000";
 
-var endereco = ViaCep.ObterEndereco(cep); // ViaCep.ObterEndereco("01001000");
-
+var endereco = viaCep.ObterEndereco(cep); // ViaCep.ObterEndereco("01001000");
 ```
 Nesse caso o endereço será retornado como um objeto do tipo [Endereco](MosaicoSolutions.ViaCep/Modelos/Endereco.cs).
 Se desejar retornar como outros formatos:
 
 ``` c#
-var endereco = ViaCep.ObterEnderecoComoJson(cep); //ViaCep.ObterEnderecoComoJson("01001000");
+var enderecoJson = viaCep.ObterEnderecoComoJson(cep); //ViaCep.ObterEnderecoComoJson("01001000");
 ```
 Você ainda pode retornar com `Xml`, `Piped`, ou `Querty` utilizando os métodos `ObterEnderecoComoXml` , `ObterEnderecoComoPiped` e 
 `ObterEnderecoComoQuerty`, respectivamente, ambos métodos da classe [ViaCep](MosaicoSolutions.ViaCep/ViaCep.cs).
@@ -40,9 +40,9 @@ var requisicao = new EnderecoRequisicao {
                     UF = UF.RS,
                     Cidade = "Porto Alegre",
                     Logradouro = "Olavo"
-                }
+                };
 
-var enderecos = ViaCep.ObterEnderecos(requisicao);
+var enderecos = viaCep.ObterEnderecos(requisicao);
 ```
 Neste exemplo será pesquisado na cidade de "Porto Algre/RS" por todos os logradouros que contenham "Olavo" em seu nome. 
 Quando o nome da cidade ou do logradouro não contiver ao menos três caracteres será lançado uma Exception;
@@ -55,7 +55,7 @@ Use os métodos `ObterEnderecosComoJson` e `ObterEnderecosComoXml`, ambos da cla
 A classe [ViaCep](MosaicoSolutions.ViaCep/ViaCep.cs) também fornece métodos assíncronos.
 
 ``` c#
-var xml = await ViaCep.ObterEnderecoComoXmlAsync("01001000");
+var xml = await viaCep.ObterEnderecoComoXmlAsync("01001000");
 ```
 
 * Fluent Interface
@@ -72,17 +72,17 @@ var requisicao = new EnderecoRequisicao {
                     UF = UF.RS,
                     Cidade = "Porto Alegre",
                     Logradouro = "Olavo"
-                }
+                };
 
-ViaCepFluent.ObterEnderecos(requisicao)
-            .ComoListaDeEnderecos((enderecos) => {
+ViaCepFluent.Obter(requisicao)
+            .ComoListaDeEnderecos(enderecos => {
                 foreach(var endereco in enderecos)
                 {
-                  Console.WriteLine("CEP: " + endereco.CEP);
+                  Console.WriteLine("Cep: " + endereco.Cep);
                   Console.WriteLine("Cidade: " + endereco.Localidade);
                   Console.WriteLine("Logradouro: " + endereco.Logradouro);
                 }
-             })
+             });
 ```
 
 Você pode consultar mais sobre fluent [aqui](MosaicoSolutions.ViaCep/Fluent).
