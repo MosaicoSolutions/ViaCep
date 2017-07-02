@@ -10,13 +10,10 @@ namespace MosaicoSolutions.ViaCep.Fluent
     public class ViaCepFluentPorEndereco : IViaCepFluentPorEndereco
     {
         private readonly EnderecoRequisicao _enderecoRequisicao;
-        private readonly IViaCep _viaCep;
+        private readonly IViaCep _viaCep = new ViaCep();
 
-        internal ViaCepFluentPorEndereco(EnderecoRequisicao enderecoRequisicao)
-        {
-            _enderecoRequisicao = enderecoRequisicao;
-            _viaCep = new ViaCep();
-        }
+        internal ViaCepFluentPorEndereco(EnderecoRequisicao enderecoRequisicao) 
+            => _enderecoRequisicao = enderecoRequisicao;
 
         public string ComoJson()
             => _viaCep.ObterEnderecosComoJson(_enderecoRequisicao);

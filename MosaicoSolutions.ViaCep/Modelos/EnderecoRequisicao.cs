@@ -8,15 +8,15 @@ namespace MosaicoSolutions.ViaCep.Modelos
     [Serializable]
     public struct EnderecoRequisicao
     {
-        public UF UF { get; set; }
-        public string Cidade { get; set; }
-        public string Logradouro { get; set; }
-
         /// <summary>
         /// Para que uma requisição por endereço seja válida a <see cref="Cidade"/> e o <see cref="Logradouro"/>
         /// precisam ter no mínimo três caraceres.
         /// </summary>
         private const int QuantidadeMinimaDeCaracteres = 3;
+        
+        public UF UF { get; set; }
+        public string Cidade { get; set; }
+        public string Logradouro { get; set; }
 
         public EnderecoRequisicao(UF uf, string cidade, string logradouro)
         {

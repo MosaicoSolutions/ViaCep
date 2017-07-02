@@ -166,13 +166,11 @@ namespace ViaCepTest
         }
 
         [Test]
-        public void DeveFalharPoisCepNaoExiste()
-        {
-            Assert.Throws<CepInexistenteException>(() =>
+        public void DeveFalharPoisCepNaoExiste() 
+            => Assert.Throws<CepInexistenteException>(() =>
             {
                 _viaCep.ObterEndereco("00000-000");
             });
-        }
 
         #endregion
     }

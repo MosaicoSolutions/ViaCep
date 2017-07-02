@@ -14,6 +14,6 @@ namespace MosaicoSolutions.ViaCep.Net
             => NovaRequisicao(enderecoRequisicao, ViaCepFormatoRequisicao.Xml);
 
         private IViaCepRequisicaoPor<EnderecoRequisicao> NovaRequisicao(EnderecoRequisicao enderecoRequisicao, ViaCepFormatoRequisicao formato)
-            => new ViaCepRequisicaoPorPorEndereco(enderecoRequisicao, formato);
+            => new ViaCepRequisicaoPorEndereco(enderecoRequisicao, formato);
     }
 }

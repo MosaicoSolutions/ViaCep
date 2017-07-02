@@ -6,9 +6,10 @@ namespace MosaicoSolutions.ViaCep.Net
     /// <summary>
     /// Representa uma requisição por endereço.
     /// </summary>
-    public sealed class ViaCepRequisicaoPorPorEndereco : ViaCepRequisicaoPor<EnderecoRequisicao>
+    public sealed class ViaCepRequisicaoPorEndereco : ViaCepRequisicaoPor<EnderecoRequisicao>
     {
-        internal ViaCepRequisicaoPorPorEndereco(EnderecoRequisicao objetoDaRequisicao, ViaCepFormatoRequisicao formatoRequisicao) : base(objetoDaRequisicao, formatoRequisicao)
+        internal ViaCepRequisicaoPorEndereco(EnderecoRequisicao objetoDaRequisicao, ViaCepFormatoRequisicao formatoRequisicao) 
+            : base(objetoDaRequisicao, formatoRequisicao)
         {
             if (!objetoDaRequisicao.EhValido())
                 throw new ArgumentException("O objeto da requisição não é valido.");

@@ -14,10 +14,7 @@ namespace MosaicoSolutions.ViaCep.Net
 
         public bool EhCodigoDeSucesso => CodigoDeStatus == HttpStatusCode.OK;
 
-        internal ViaCepResposta(HttpResponseMessage responseMessage)
-        {
-            _responseMessage = responseMessage;
-        }
+        internal ViaCepResposta(HttpResponseMessage responseMessage) => _responseMessage = responseMessage;
 
         public IViaCepConteudo ObterConteudo() => new ViaCepConteudo(_responseMessage.Content);
     }

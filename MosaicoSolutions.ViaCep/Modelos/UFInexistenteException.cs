@@ -4,8 +4,8 @@ using System.Runtime.Serialization;
 namespace MosaicoSolutions.ViaCep.Modelos
 {
     /// <summary>
-    /// Exception lançada quando o método <see cref="MosaicoSolutions.ViaCep.Modelos.UF.EncontraPeloCodigo(System.Int32)"/>
-    /// ou <see cref="MosaicoSolutions.ViaCep.Modelos.UF.EncontraPelaSigla(System.String)"/> não encontra a UF com os
+    /// Exception lançada quando o método <see cref="UF.PeloCodigo"/>
+    /// ou <see cref="UF.PelaSigla"/> não encontra a UF com os
     /// parâmetros especificados.
     /// </summary>
     [Serializable]

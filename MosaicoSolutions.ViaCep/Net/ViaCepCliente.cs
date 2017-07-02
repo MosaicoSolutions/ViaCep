@@ -9,12 +9,7 @@ namespace MosaicoSolutions.ViaCep.Net
     /// </summary>
     public sealed class ViaCepCliente : IViaCepCliente
     {
-        private readonly HttpClient _cliente;
-
-        public ViaCepCliente()
-        {
-            _cliente = new HttpClient { BaseAddress = new Uri("http://viacep.com.br/ws/") };
-        }
+        private readonly HttpClient _cliente = new HttpClient { BaseAddress = new Uri("http://viacep.com.br/ws/") };
 
         public async Task<IViaCepResposta> ObterRespostaAsync(IViaCepUri uri)
             => new ViaCepResposta(await _cliente.GetAsync(uri.ObterUriComoString()));

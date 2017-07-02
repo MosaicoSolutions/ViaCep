@@ -32,10 +32,8 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// </summary>
         /// <param name="cep">O cep.</param>
         /// <exception cref="CepInvalidoException">Se o Cep estiver em um formato inválido.</exception>
-        private Cep(string cep)
-        {
-            _cep = Regex.IsMatch(cep, CepFormatedPattern) ? FormataCepSomenteNumeros(cep) : cep;
-        }
+        private Cep(string cep) 
+            => _cep = Regex.IsMatch(cep, CepFormatedPattern) ? FormataCepSomenteNumeros(cep) : cep;
 
         public static implicit operator string(Cep cep)
             => cep._cep;
@@ -49,13 +47,8 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// <param name="cep">Uma string a ser convertida.</param>
         /// <returns>Uma objeto da tipo Cep equivalente ao contido em <code>cep</code>.</returns>
         /// <exception cref="CepInvalidoException">Se o Cep estiver em um formato inválido.</exception>
-        public static Cep Parse(string cep)
-        {
-            if (!EhCepValido(cep))
-                throw new CepInvalidoException();
-
-            return new Cep(cep);
-        }
+        public static Cep Parse(string cep) 
+            => EhCepValido(cep) ? new Cep(cep) : throw new CepInvalidoException();
 
         /// <summary>
         /// Testa se o Cep é válido.
@@ -75,20 +68,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// Retorna o Cep no formato 00000-000.
         /// </summary>
         /// <returns>O Cep no formato 00000-000.</returns>
-        public string GetCepFormatado() => FormataCep();
-
-        /// <summary>
-        /// Retorna o Cep no formato 00000-000.
-        /// </summary>
-        /// <returns>O Cep formatado.</returns>
-        private string FormataCep()
-        {
-            var formatBuilder = new StringBuilder();
-            formatBuilder.Append(_cep.Substring(0, 5));
-            formatBuilder.Append("-");
-            formatBuilder.Append(_cep.Substring(5, 3));
-            return formatBuilder.ToString();
-        }
+        public string GetCepFormatado() => $"{_cep.Substring(0, 5)}-{_cep.Substring(5, 3)}";
 
         /// <summary>
         /// Compara a instância atual com outro objeto do mesmo tipo e retorna um inteiro que indica se a instância atual precede,
@@ -101,16 +81,10 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// Zero Esta instância ocorre na mesma posição na ordem de classificação como obj.
         /// Maior que zero Esta instância segue obj na ordem de classificação.</returns>
         /// <exception cref="ArgumentException">obj não é do mesmo tipo que esta instância.</exception>
-        public int CompareTo(object obj)
-        {
-            if (obj == null)
-                return 1;
-
-            if (!(obj is Cep))
-                throw new ArgumentException("Argumento deve ser do tipo Cep.");
-
-            return CompareTo((Cep)obj);
-        }
+        public int CompareTo(object obj) 
+            => obj == null ? 
+                1 : obj is Cep ? 
+                   CompareTo((Cep) obj) : throw new ArgumentException("Argumento deve ser do tipo Cep.");
 
         /// <summary>
         /// Compara o objeto atual com outro objeto do mesmo tipo.

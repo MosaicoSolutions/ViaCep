@@ -21,10 +21,7 @@ namespace MosaicoSolutions.ViaCep.Net
 
         public static readonly ViaCepFormatoRequisicao Querty = new ViaCepFormatoRequisicao("querty");
 
-        private ViaCepFormatoRequisicao(string value)
-        {
-            Valor = value;
-        }
+        private ViaCepFormatoRequisicao(string value) => Valor = value;
 
         public override bool Equals(object obj)
             => obj is ViaCepFormatoRequisicao && Equals((ViaCepFormatoRequisicao)obj);

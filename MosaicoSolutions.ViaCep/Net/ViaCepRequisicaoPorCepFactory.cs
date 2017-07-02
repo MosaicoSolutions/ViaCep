@@ -8,18 +8,18 @@ namespace MosaicoSolutions.ViaCep.Net
     public sealed class ViaCepRequisicaoPorCepFactory : IViaCepRequisicaoPorCepFactory
     {
         public IViaCepRequisicaoPor<Cep> NovaRequisicaoJson(Cep cep)
-            => novaRequisicao(cep, ViaCepFormatoRequisicao.Json);
+            => NovaRequisicao(cep, ViaCepFormatoRequisicao.Json);
 
         public IViaCepRequisicaoPor<Cep> NovaRequisicaoXml(Cep cep)
-            => novaRequisicao(cep, ViaCepFormatoRequisicao.Xml);
+            => NovaRequisicao(cep, ViaCepFormatoRequisicao.Xml);
 
         public IViaCepRequisicaoPor<Cep> NovaRequisicaoPiped(Cep cep)
-            => novaRequisicao(cep, ViaCepFormatoRequisicao.Piped);
+            => NovaRequisicao(cep, ViaCepFormatoRequisicao.Piped);
 
         public IViaCepRequisicaoPor<Cep> NovaRequisicaoQuerty(Cep cep)
-            => novaRequisicao(cep, ViaCepFormatoRequisicao.Querty);
+            => NovaRequisicao(cep, ViaCepFormatoRequisicao.Querty);
 
-        private IViaCepRequisicaoPor<Cep> novaRequisicao(Cep cep, ViaCepFormatoRequisicao formato)
-            => new ViaCepRequisicaoPorPorCep(cep, formato);
+        private IViaCepRequisicaoPor<Cep> NovaRequisicao(Cep cep, ViaCepFormatoRequisicao formato)
+            => new ViaCepRequisicaoPorCep(cep, formato);
     }
 }

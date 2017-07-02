@@ -37,23 +37,23 @@ namespace ViaCepTest
         public void FluentPorCepComCallbackNaoDeveLancarException()
             => Assert.DoesNotThrow(() =>
             {
-                ViaCepFluent.Obter("01001000").ComoEndereco((endereco) =>
+                ViaCepFluent.Obter("01001000").ComoEndereco(endereco =>
                 {
 
                 });
-                ViaCepFluent.Obter("01001000").ComoJson((endereco) =>
+                ViaCepFluent.Obter("01001000").ComoJson(endereco =>
                 {
 
                 });
-                ViaCepFluent.Obter("01001000").ComoXml((endereco) =>
+                ViaCepFluent.Obter("01001000").ComoXml(endereco =>
                 {
 
                 });
-                ViaCepFluent.Obter("01001000").ComoPiped((endereco) =>
+                ViaCepFluent.Obter("01001000").ComoPiped(endereco =>
                 {
 
                 });
-                ViaCepFluent.Obter("01001000").ComoQuerty((endereco) =>
+                ViaCepFluent.Obter("01001000").ComoQuerty(endereco =>
                 {
 
                 });
@@ -61,29 +61,30 @@ namespace ViaCepTest
             });
 
         [Test]
-        public async Task FluentPorCepComCallbackNaoDeveLancarExceptionAsync()
-        {
-            await ViaCepFluent.Obter("01001000").ComoEnderecoAsync((endereco) =>
+        public void FluentPorCepComCallbackNaoDeveLancarExceptionAsync() 
+            => Assert.DoesNotThrowAsync(async () =>
             {
-
+                await ViaCepFluent.Obter("01001000").ComoEnderecoAsync(endereco =>
+                {
+    
+                });
+                await ViaCepFluent.Obter("01001000").ComoJsonAsync(endereco =>
+                {
+    
+                });
+                await ViaCepFluent.Obter("01001000").ComoXmlAsync(endereco =>
+                {
+    
+                });
+                await ViaCepFluent.Obter("01001000").ComoPipedAsync(endereco =>
+                {
+    
+                });
+                await ViaCepFluent.Obter("01001000").ComoQuertyAsync((endereco) =>
+                {
+    
+                });
             });
-            await ViaCepFluent.Obter("01001000").ComoJsonAsync((endereco) =>
-            {
-
-            });
-            await ViaCepFluent.Obter("01001000").ComoXmlAsync((endereco) =>
-            {
-
-            });
-            await ViaCepFluent.Obter("01001000").ComoPipedAsync((endereco) =>
-            {
-
-            });
-            await ViaCepFluent.Obter("01001000").ComoQuertyAsync((endereco) =>
-            {
-
-            });
-        }
 
         #endregion
 
@@ -122,8 +123,7 @@ namespace ViaCepTest
 
         [Test]
         public void FluentPorEnderecoComCallbackNaoDeveLancarException()
-        {
-            Assert.DoesNotThrow(() =>
+            => Assert.DoesNotThrow(() =>
             {
                 var enderecoRequisicao = new EnderecoRequisicao
                 {
@@ -131,43 +131,44 @@ namespace ViaCepTest
                     Cidade = "Recife",
                     Logradouro = "Praça"
                 };
-                ViaCepFluent.Obter(enderecoRequisicao).ComoListaDeEnderecos((enderecos) =>
+                ViaCepFluent.Obter(enderecoRequisicao).ComoListaDeEnderecos(enderecos =>
                 {
 
                 });
-                ViaCepFluent.Obter(enderecoRequisicao).ComoJson((enderecos) =>
+                ViaCepFluent.Obter(enderecoRequisicao).ComoJson(enderecos =>
                 {
 
                 });
-                ViaCepFluent.Obter(enderecoRequisicao).ComoXml((enderecos) =>
+                ViaCepFluent.Obter(enderecoRequisicao).ComoXml(enderecos =>
                 {
 
                 });
             });
-        }
 
         [Test]
-        public async Task FluentPorEnderecoComCallbackNaoDeveLancarExceptionAsync()
-        {
-            var enderecoRequisicao = new EnderecoRequisicao
+        public void FluentPorEnderecoComCallbackNaoDeveLancarExceptionAsync()
+            => Assert.DoesNotThrowAsync(async () =>
             {
-                UF = UF.PE,
-                Cidade = "Recife",
-                Logradouro = "Praça"
-            };
-            await ViaCepFluent.Obter(enderecoRequisicao).ComoListaDeEnderecosAsync((enderecos) =>
-            {
+                var enderecoRequisicao = new EnderecoRequisicao
+                {
+                    UF = UF.PE,
+                    Cidade = "Recife",
+                    Logradouro = "Praça"
+                };
+                await ViaCepFluent.Obter(enderecoRequisicao).ComoListaDeEnderecosAsync(enderecos =>
+                {
 
-            });
-            await ViaCepFluent.Obter(enderecoRequisicao).ComoJsonAsync((enderecos) =>
-            {
+                });
+                await ViaCepFluent.Obter(enderecoRequisicao).ComoJsonAsync(enderecos =>
+                {
 
-            });
-            await ViaCepFluent.Obter(enderecoRequisicao).ComoXmlAsync((enderecos) =>
-            {
+                });
+                await ViaCepFluent.Obter(enderecoRequisicao).ComoXmlAsync(enderecos =>
+                {
 
+                });
             });
-        }
+        
 
         #endregion
     }

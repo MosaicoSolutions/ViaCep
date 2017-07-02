@@ -16,19 +16,16 @@ namespace MosaicoSolutions.ViaCep.Modelos
         public string IBGE { get; set; }
         public string GIA { get; set; }
 
-        public override string ToString()
-        {
-            const string separador = " : ";
-            var stringBuilder = new StringBuilder();
-            stringBuilder.Append(nameof(Cep)).Append(separador).Append(Cep).Append(Environment.NewLine);
-            stringBuilder.Append(nameof(Logradouro)).Append(separador).Append(Logradouro).Append(Environment.NewLine);
-            stringBuilder.Append(nameof(Complemento)).Append(separador).Append(Complemento).Append(Environment.NewLine);
-            stringBuilder.Append(nameof(Localidade)).Append(separador).Append(Localidade).Append(Environment.NewLine);
-            stringBuilder.Append(nameof(UF)).Append(separador).Append(UF).Append(Environment.NewLine);
-            stringBuilder.Append(nameof(Unidade)).Append(separador).Append(Unidade).Append(Environment.NewLine);
-            stringBuilder.Append(nameof(IBGE)).Append(separador).Append(IBGE).Append(Environment.NewLine);
-            stringBuilder.Append(nameof(GIA)).Append(separador).Append(GIA).Append(Environment.NewLine);
-            return stringBuilder.ToString();
-        }
+        public override string ToString() 
+            => new StringBuilder()
+                  .Append(nameof(Cep)).Append(" : ").Append(Cep).Append(Environment.NewLine)
+                  .Append(nameof(Logradouro)).Append(" : ").Append(Logradouro).Append(Environment.NewLine)
+                  .Append(nameof(Complemento)).Append(" : ").Append(Complemento).Append(Environment.NewLine)
+                  .Append(nameof(Localidade)).Append(" : ").Append(Localidade).Append(Environment.NewLine)
+                  .Append(nameof(UF)).Append(" : ").Append(UF).Append(Environment.NewLine)
+                  .Append(nameof(Unidade)).Append(" : ").Append(Unidade).Append(Environment.NewLine)
+                  .Append(nameof(IBGE)).Append(" : ").Append(IBGE).Append(Environment.NewLine)
+                  .Append(nameof(GIA)).Append(" : ").Append(GIA).Append(Environment.NewLine)
+                  .ToString();
     }
 }

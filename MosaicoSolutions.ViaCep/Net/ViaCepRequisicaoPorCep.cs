@@ -6,9 +6,9 @@ namespace MosaicoSolutions.ViaCep.Net
     /// <summary>
     /// Representa uma requisição por Cep.
     /// </summary>
-    public sealed class ViaCepRequisicaoPorPorCep : ViaCepRequisicaoPor<Cep>
+    public sealed class ViaCepRequisicaoPorCep : ViaCepRequisicaoPor<Cep>
     {
-        internal ViaCepRequisicaoPorPorCep(Cep cep, ViaCepFormatoRequisicao formatoRequisicao) :base(cep, formatoRequisicao)
+        internal ViaCepRequisicaoPorCep(Cep cep, ViaCepFormatoRequisicao formatoRequisicao) :base(cep, formatoRequisicao)
         {
             if (cep.IsEmpty)
                 throw new ArgumentException("O cep não pode estar vazio.");
