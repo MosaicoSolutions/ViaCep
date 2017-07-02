@@ -1,5 +1,4 @@
 using System;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace MosaicoSolutions.ViaCep.Modelos
@@ -35,11 +34,9 @@ namespace MosaicoSolutions.ViaCep.Modelos
         private Cep(string cep) 
             => _cep = Regex.IsMatch(cep, CepFormatedPattern) ? FormataCepSomenteNumeros(cep) : cep;
 
-        public static implicit operator string(Cep cep)
-            => cep._cep;
+        public static implicit operator string(Cep cep) => cep._cep;
 
-        public static implicit operator Cep(string cep)
-            => Parse(cep);
+        public static implicit operator Cep(string cep) => Parse(cep);
 
         /// <summary>
         /// Converte uma string em um objeto do tipo <code>Cep</code>.
@@ -94,24 +91,21 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// O valor de retorno tem os seguintes significados: Valor Significado Menos que zero Este objeto é menor que o outro parâmetro.
         /// Zero Este objeto é igual a outro. Maior que zero Este objeto é maior que outro.
         /// </returns>
-        public int CompareTo(Cep other)
-            => string.Compare(_cep, other._cep, StringComparison.Ordinal);
+        public int CompareTo(Cep other) => string.Compare(_cep, other._cep, StringComparison.Ordinal);
 
         /// <summary>
         /// Determina se o objeto especificado é igual ao objeto atual.
         /// </summary>
         /// <param name="obj">O objeto a ser comparado com o objeto atual.</param>
         /// <returns>true se o objeto especificado for igual ao objeto atual; Caso contrário, false.</returns>
-        public override bool Equals(object obj)
-            => obj is Cep && Equals((Cep)obj);
+        public override bool Equals(object obj) => obj is Cep && Equals((Cep)obj);
 
         /// <summary>
         /// Indica se o objeto atual é igual a outro objeto do mesmo tipo.
         /// </summary>
         /// <param name="other">true se o objeto atual for igual ao outro parâmetro; Caso contrário, false.</param>
         /// <returns>Um objeto para comparar com este objeto.</returns>
-        public bool Equals(Cep other)
-            => _cep == other._cep;
+        public bool Equals(Cep other) => _cep == other._cep;
 
         /// <summary>
         /// Retorna o código hash para esta instância.
@@ -131,13 +125,11 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// Retorna o valor do cep deste objeto.
         /// </summary>
         /// <returns>Uma string que representa o cep.</returns>
-        public override string ToString()
-            => _cep;
+        public override string ToString() => _cep;
 
         /// <summary>
         /// Avalia para True, se o objeto está vazio (o cep não foi informado), caso contrário, False.
         /// </summary>
-        public bool IsEmpty
-            => _cep == null;
+        public bool IsEmpty => _cep == null;
     }
 }

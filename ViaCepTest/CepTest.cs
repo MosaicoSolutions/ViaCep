@@ -16,6 +16,7 @@ namespace ViaCepTest
         [Test]
         public void DeveSerInvalido()
         {
+            #pragma warning disable 219
             Assert.Throws<CepInvalidoException>(() =>
             {
                 Cep cep = "";
@@ -35,8 +36,10 @@ namespace ViaCepTest
 
             Assert.Throws<CepInvalidoException>(() =>
             {
+
                 Cep cep = "54dasd1";
             });
+            #pragma warning restore 219
         }
 
         [Test]
@@ -61,9 +64,9 @@ namespace ViaCepTest
         }
 
         [Test]
-        public void DeveEstarVazio()
-        {
-            Assert.True(new Cep().IsEmpty);
-        }
+        public void DeveEstarVazio() => Assert.True(new Cep().IsEmpty);
+
+        [Test]
+        public void CepDeveEstarFormatado() => Assert.AreEqual(Cep.Parse("01001000").GetCepFormatado(), "01001-000");
     }
 }
