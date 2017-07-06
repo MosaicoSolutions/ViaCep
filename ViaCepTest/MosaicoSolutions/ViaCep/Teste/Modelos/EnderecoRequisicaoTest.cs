@@ -1,7 +1,7 @@
 ﻿using MosaicoSolutions.ViaCep.Modelos;
 using NUnit.Framework;
 
-namespace ViaCepTest
+namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Modelos
 {
     [TestFixture]
     public class EnderecoRequisicaoTest
@@ -57,6 +57,8 @@ namespace ViaCepTest
                 Cidade = "Porto Alegre",
                 Logradouro = "Olavo"
             };
+
+            Assert.True(enderecoRequisicao.EhValido());
         }
     }
 }
