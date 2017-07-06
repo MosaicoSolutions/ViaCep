@@ -11,7 +11,12 @@ namespace MosaicoSolutions.ViaCep.Net
         /// Obtém o código de status da requisição.
         /// </summary>
         HttpStatusCode CodigoDeStatus { get; }
-
+        
+        /// <summary>
+        /// A Reason Phrase da resposta.
+        /// </summary>
+        string ReasonPhrase { get; }
+        
         /// <summary>
         /// Avalia se é código de sucesso. <see cref="HttpStatusCode.OK"/> => 200.
         /// </summary>
