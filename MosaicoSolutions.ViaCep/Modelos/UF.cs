@@ -8,25 +8,10 @@ namespace MosaicoSolutions.ViaCep.Modelos
     /// Unidade Federativa.
     /// </summary>
     [Serializable]
-    public sealed class UF : IComparable<UF>, IComparable, IEquatable<UF>
+    public sealed class UF : IEquatable<UF>
     {
         private static readonly IEnumerable<UF> Ufs;
         
-        /// <summary>
-        /// O código da UF
-        /// </summary>
-        public int Codigo { get; }
-
-        /// <summary>
-        /// Sigla
-        /// </summary>
-        public string Sigla { get; }
-
-        /// <summary>
-        /// O nome do estado.
-        /// </summary>
-        public string NomeEstado { get; }
-
         #region Estados
 
         public static UF RO => PelaSigla("RO");
@@ -84,6 +69,12 @@ namespace MosaicoSolutions.ViaCep.Modelos
         public static UF DF => PelaSigla("DF");
 
         #endregion
+        
+        public int Codigo { get; }
+
+        public string Sigla { get; }
+
+        public string NomeEstado { get; }
 
         private UF(int codigo, string nomeEstado, string sigla)
         {
@@ -112,7 +103,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// Retorna todas as UF's;
         /// </summary>
         /// <returns>Um <see cref="IEnumerable{UF}"/> contendo todas as UF's</returns>
-        public static IEnumerable<UF> Todas() => Ufs;
+        public static IEnumerable<UF> Todas => Ufs;
         
         /// <summary>
         /// Encontra uma UF a partir do código do estado.
@@ -129,6 +120,24 @@ namespace MosaicoSolutions.ViaCep.Modelos
             catch (Exception e)
             {
                 throw new UFInexistenteException($"Não existe nenhum estado com este código: {codigo}", e);
+            }
+        }
+    
+        /// <summary>
+        /// Encontra uma UF a partir do nome do estado.
+        /// </summary>
+        /// <param name="nome">O nome do estado que se deseja obter.</param>
+        /// <returns>A UF do estado pertencente ao nome.</returns>
+        /// <exception cref="UFInexistenteException">Se não existe UF com este nome.</exception>
+        public static UF PeloNomeDoEstado(string nome)
+        {
+            try
+            {
+                return Ufs.First(uf => uf.NomeEstado == nome);
+            }
+            catch (Exception e)
+            {
+                throw new UFInexistenteException($"Não existe nenhum estado com este nome: {nome}", e);
             }
         }
 
@@ -155,29 +164,38 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// </summary>
         /// <param name="predicado">Um <see cref="Predicate{UF}"/> que determina a condição.</param>
         /// <returns>Um <see cref="IEnumerable{UF}"/> contendo todas as UF's que satisfaçam a condição do predicado.</returns>
-        public IEnumerable<UF> Onde(Predicate<UF> predicado)
+        public static IEnumerable<UF> Onde(Predicate<UF> predicado)
             => predicado != null ? 
-                Ufs.Where(uf => predicado(uf)) : throw new ArgumentNullException(nameof(predicado));
+                from uf in Ufs where predicado(uf) select uf : throw new ArgumentNullException(nameof(predicado));
+
+        /// <summary>
+        /// Aplica uma função de mapeamento para cada UF.
+        /// </summary>
+        /// <param name="map">Uma função função que recebe uma <see cref="UF"/> como argumento e 
+        /// retorna um <see cref="TResult"/>.</param>
+        /// <typeparam name="TResult">O Tipo de destino do mapeamento.</typeparam>
+        /// <returns>Uma <see cref="IEnumerable{TResult}"/> que representa o resultado do mapeamento.</returns>
+        public static IEnumerable<TResult> Map<TResult>(Func<UF, TResult> map)
+            => map != null ? 
+                from uf in Ufs select map(uf) : throw new ArgumentNullException(nameof(map));
         
         /// <summary>
-        /// Retorna uma coleção de UF's que atendam a uma determinada condição.
+        /// Retorna todos os códigos das UF's.
         /// </summary>
-        /// <param name="predicado">Um <see cref="Func{UF}"/> que determina a condição.</param>
-        /// <returns>Um <see cref="IEnumerable{UF}"/> contendo todas as UF's que satisfaçam a condição do predicado.</returns>
-        public IEnumerable<UF> Onde(Func<UF, bool> predicado)
-            => predicado != null ? 
-                Ufs.Where(predicado) : throw new ArgumentNullException(nameof(predicado));
+        /// <returns>Um <see cref="IEnumerable{Int32}"/> contendo todos os códigos.</returns>
+        public static IEnumerable<int> TodosOsCodigos() => Map(uf => uf.Codigo);
         
-        public int CompareTo(object obj) 
-            => ReferenceEquals(null, obj) ? 
-                1 : ReferenceEquals(this, obj) ? 
-                    0 : obj is UF ? 
-                        CompareTo((UF) obj) : throw new ArgumentException($"Objeto deve ser do tipo {nameof(UF)}");
-
-        public int CompareTo(UF other) 
-            => ReferenceEquals(this, other) ? 
-                0 : ReferenceEquals(null, other) ? 
-                    1 : Codigo.CompareTo(other.Codigo);
+        /// <summary>
+        /// Retorna todos as siglas das UF's.
+        /// </summary>
+        /// <returns>Um <see cref="IEnumerable{Int32}"/> contendo todos as siglas.</returns>
+        public static IEnumerable<string> TodasAsSiglas() => Map(uf => uf.Sigla);
+        
+        /// <summary>
+        /// Retorna todos os nomes das UF's.
+        /// </summary>
+        /// <returns>Um <see cref="IEnumerable{Int32}"/> contendo todos os nomes.</returns>
+        public static IEnumerable<string> TodosOsNomes() => Map(uf => uf.NomeEstado);
 
         public override bool Equals(object obj)
         {
@@ -187,9 +205,9 @@ namespace MosaicoSolutions.ViaCep.Modelos
             return ReferenceEquals(this, obj) || obj is UF && Equals((UF) obj);
         }
 
-        public bool Equals(UF other) 
-            => !ReferenceEquals(null, other) && Codigo == other.Codigo;
+        public bool Equals(UF other) => !ReferenceEquals(null, other) && Codigo == other.Codigo;
 
         public override int GetHashCode() => Codigo;
+        
     }
 }
