@@ -11,11 +11,11 @@ namespace MosaicoSolutions.ViaCep.Net
         /// <summary>
         /// Objeto contendo os dados da requisição.
         /// </summary>
-        T ObjetoDaRequisicao { get; }
+        T Dados { get; }
 
         /// <summary>
         /// O formato desta requisição.
         /// </summary>
-        ViaCepFormatoRequisicao FormatoRequisicao { get; }
+        ViaCepFormatoRequisicao Formato { get; }
     }
 }

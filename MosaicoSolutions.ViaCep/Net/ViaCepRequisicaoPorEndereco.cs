@@ -6,19 +6,22 @@ namespace MosaicoSolutions.ViaCep.Net
     /// <summary>
     /// Representa uma requisição por endereço.
     /// </summary>
-    public sealed class ViaCepRequisicaoPorEndereco : ViaCepRequisicaoPor<EnderecoRequisicao>
+    public sealed class ViaCepRequisicaoPorEndereco : IViaCepRequisicaoPor<EnderecoRequisicao>
     {
-        internal ViaCepRequisicaoPorEndereco(EnderecoRequisicao objetoDaRequisicao, ViaCepFormatoRequisicao formatoRequisicao) 
-            : base(objetoDaRequisicao, formatoRequisicao)
+        public EnderecoRequisicao Dados { get; }
+        public ViaCepFormatoRequisicao Formato { get; }
+        
+        internal ViaCepRequisicaoPorEndereco(EnderecoRequisicao dados, ViaCepFormatoRequisicao formato) 
         {
-            if (!objetoDaRequisicao.EhValido())
+            if (!dados.EhValido())
                 throw new ArgumentException("O objeto da requisição não é valido.");
+
+            Dados = dados;
+            Formato = formato;
         }
 
-        public override string ObterUriComoString()
-            => $"{EnderecoRequisicaoParaUri()}/{FormatoRequisicao.Valor}";
+        public string ObterUriComoString() => $"{EnderecoRequisicaoParaUri()}/{Formato.Valor}";
 
-        private string EnderecoRequisicaoParaUri()
-            => $"{ObjetoDaRequisicao.UF.Sigla}/{ObjetoDaRequisicao.Cidade}/{ObjetoDaRequisicao.Logradouro}";
+        private string EnderecoRequisicaoParaUri() => $"{Dados.UF.Sigla}/{Dados.Cidade}/{Dados.Logradouro}";
     }
 }

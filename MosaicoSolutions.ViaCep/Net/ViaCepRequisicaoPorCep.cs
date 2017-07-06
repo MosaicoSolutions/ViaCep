@@ -6,15 +6,20 @@ namespace MosaicoSolutions.ViaCep.Net
     /// <summary>
     /// Representa uma requisição por Cep.
     /// </summary>
-    public sealed class ViaCepRequisicaoPorCep : ViaCepRequisicaoPor<Cep>
+    public sealed class ViaCepRequisicaoPorCep : IViaCepRequisicaoPor<Cep>
     {
-        internal ViaCepRequisicaoPorCep(Cep cep, ViaCepFormatoRequisicao formatoRequisicao) :base(cep, formatoRequisicao)
+        public Cep Dados { get; }
+        public ViaCepFormatoRequisicao Formato { get; }
+        
+        internal ViaCepRequisicaoPorCep(Cep cep, ViaCepFormatoRequisicao formato)
         {
             if (cep.IsEmpty)
                 throw new ArgumentException("O cep não pode estar vazio.");
+
+            Dados = cep;
+            Formato = formato;
         }
 
-        public override string ObterUriComoString()
-            => $"{ObjetoDaRequisicao}/{FormatoRequisicao.Valor}";
+        public string ObterUriComoString() => $"{Dados}/{Formato}";
     }
 }

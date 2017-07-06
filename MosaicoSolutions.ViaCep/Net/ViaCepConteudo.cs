@@ -7,7 +7,7 @@ namespace MosaicoSolutions.ViaCep.Net
     /// <summary>
     /// Representa o conteúdo de uma requisisão.
     /// </summary>
-    public class ViaCepConteudo : IViaCepConteudo
+    public sealed class ViaCepConteudo : IViaCepConteudo
     {
         private readonly string _conteudo;
 
