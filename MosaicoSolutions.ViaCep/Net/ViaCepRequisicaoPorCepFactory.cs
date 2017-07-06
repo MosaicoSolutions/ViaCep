@@ -19,7 +19,7 @@ namespace MosaicoSolutions.ViaCep.Net
         public IViaCepRequisicaoPor<Cep> NovaRequisicaoQuerty(Cep cep)
             => NovaRequisicao(cep, ViaCepFormatoRequisicao.Querty);
 
-        private IViaCepRequisicaoPor<Cep> NovaRequisicao(Cep cep, ViaCepFormatoRequisicao formato)
+        private static IViaCepRequisicaoPor<Cep> NovaRequisicao(Cep cep, ViaCepFormatoRequisicao formato)
             => new ViaCepRequisicaoPorCep(cep, formato);
     }
 }
