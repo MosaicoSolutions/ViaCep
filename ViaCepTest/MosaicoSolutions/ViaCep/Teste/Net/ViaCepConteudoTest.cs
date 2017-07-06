@@ -3,7 +3,7 @@ using MosaicoSolutions.ViaCep.Net;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace ViaCepTest
+namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
 {
     [TestFixture]
     public class ViaCepConteudoTest
@@ -46,10 +46,7 @@ namespace ViaCepTest
 
             Assert.AreEqual(XmlContent, _conteudo.LerComoString());
 
-            Assert.DoesNotThrow(() =>
-            {
-                _conteudo.LerComoXml();
-            });
+            Assert.DoesNotThrow(() => _conteudo.LerComoXml());
         }
     }
 }
