@@ -15,17 +15,13 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// <summary>
         /// Inicializa uma nova instância da classe <see cref="CepInexistenteException"/>.
         /// </summary>
-        public CepInvalidoException() : base(CepInexistenteError)
-        {
-        }
+        public CepInvalidoException() : base(CepInexistenteError) { }
 
         /// <summary>
         /// Inicializa uma nova instância da classe <see cref="CepInexistenteException"/> com a mensagem de erro especificada.
         /// </summary>
         /// <param name="message">A mensagem de erro que explica o motivo da exceção.</param>
-        public CepInvalidoException(string message) : base(message)
-        {
-        }
+        public CepInvalidoException(string message) : base(message) { }
 
         /// <summary>
         /// Inicializa uma nova instância da classe <see cref="CepInexistenteException"/> com a mensagem de erro especificada.
@@ -36,17 +32,13 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// Se o <code>innerException</code> parâmetro não é uma referência nula,
         /// a exceção atual é gerada em um bloco catch que manipula a exceção interna.
         /// </param>
-        public CepInvalidoException(string message, Exception innerException) : base(message, innerException)
-        {
-        }
+        public CepInvalidoException(string message, Exception innerException) : base(message, innerException) { }
 
         /// <summary>
         /// Inicializa uma nova instância da classe <see cref="CepInexistenteException"/> com dados serializados.
         /// </summary>
         /// <param name="info">O objeto que contém os dados do objeto serializado.</param>
         /// <param name="context">As informações contextuais sobre a origem ou o destino.</param>
-        protected CepInvalidoException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
+        protected CepInvalidoException(SerializationInfo info, StreamingContext context) : base(info, context) { }
     }
 }
