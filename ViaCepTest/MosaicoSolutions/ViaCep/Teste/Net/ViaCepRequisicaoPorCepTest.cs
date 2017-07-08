@@ -4,7 +4,7 @@ using MosaicoSolutions.ViaCep.Modelos;
 using MosaicoSolutions.ViaCep.Net;
 using NUnit.Framework;
 
-namespace ViaCepTest
+namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
 {
     [TestFixture]
     public class ViaCepRequisicaoPorCepTest

@@ -3,7 +3,7 @@ using MosaicoSolutions.ViaCep.Net;
 using NUnit.Framework;
 using Rhino.Mocks;
 
-namespace ViaCepTest
+namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
 {
     [TestFixture]
     public class ViaCepClienteTest
