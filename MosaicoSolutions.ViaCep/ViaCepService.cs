@@ -1,9 +1,9 @@
 /*
 ================================================================
-ViaCep - Um módulo para a consulta de endereços da API ViaCep
+ViaCepService - Um módulo para a consulta de endereços da API ViaCepService
 ================================================================
 
-ViaCep - https://viacep.com.br
+ViaCepService - https://viacep.com.br
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -25,7 +25,6 @@ Authors: Bruno Xavier de Moura - https://github.com/brunoSpeedrun
 
 */
 
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -38,30 +37,26 @@ namespace MosaicoSolutions.ViaCep
     /// <summary>
     /// Cliente responsável por retornar a resposta de uma requisição.
     /// </summary>
-    public sealed class ViaCep : IViaCep
+    public sealed class ViaCepService : IViaCepService
     {
         private readonly IViaCepCliente _cliente;
         private readonly IViaCepRequisicaoPorCepFactory _requisicaoPorCepFactory;
         private readonly IViaCepRequisicaoPorEnderecoFactory _requisicaoPorEnderecoFactory;
-
-        public ViaCep() : this(new ViaCepCliente(), new ViaCepRequisicaoPorCepFactory(), new ViaCepRequisicaoPorEnderecoFactory())
+        private readonly IEnderecoConvert _enderecoConvert;
+        
+        public ViaCepService()
         {
-        }
-
-        public ViaCep(IViaCepCliente cliente, 
-                      IViaCepRequisicaoPorCepFactory requisicaoPorCepFactory, 
-                      IViaCepRequisicaoPorEnderecoFactory requisicaoPorEnderecoFactory)
-        {
-            _cliente = cliente ?? throw new ArgumentNullException(nameof(cliente));
-            _requisicaoPorCepFactory = requisicaoPorCepFactory ?? throw new ArgumentNullException(nameof(requisicaoPorCepFactory));
-            _requisicaoPorEnderecoFactory = requisicaoPorEnderecoFactory ?? throw new ArgumentNullException(nameof(requisicaoPorEnderecoFactory));
+            _cliente = new ViaCepCliente();
+            _enderecoConvert = new EnderecoConvert();
+            _requisicaoPorCepFactory = new ViaCepRequisicaoPorCepFactory();
+            _requisicaoPorEnderecoFactory = new ViaCepRequisicaoPorEnderecoFactory();
         }
 
         public Endereco ObterEndereco(Cep cep) 
-            => EnderecoConvert.DeJsonParaEndereco(ObterEnderecoComoJson(cep));
+            => _enderecoConvert.DeJsonParaEndereco(ObterEnderecoComoJson(cep));
 
         public async Task<Endereco> ObterEnderecoAsync(Cep cep) 
-            => EnderecoConvert.DeJsonParaEndereco(await ObterEnderecoComoJsonAsync(cep));
+            => _enderecoConvert.DeJsonParaEndereco(await ObterEnderecoComoJsonAsync(cep));
 
         public async Task<string> ObterEnderecoComoJsonAsync(Cep cep) 
             => await ObterComoStringAsync(cep, ViaCepFormatoRequisicao.Json);
@@ -110,10 +105,10 @@ namespace MosaicoSolutions.ViaCep
         }
 
         public async Task<IEnumerable<Endereco>> ObterEnderecosAsync(EnderecoRequisicao enderecoRequisicao) 
-            => EnderecoConvert.DeJsonParaListaDeEnderecos(await ObterEnderecosComoJsonAsync(enderecoRequisicao));
+            => _enderecoConvert.DeJsonParaListaDeEnderecos(await ObterEnderecosComoJsonAsync(enderecoRequisicao));
 
         public IEnumerable<Endereco> ObterEnderecos(EnderecoRequisicao enderecoRequisicao) 
-            => EnderecoConvert.DeJsonParaListaDeEnderecos(ObterEnderecosComoJson(enderecoRequisicao));
+            => _enderecoConvert.DeJsonParaListaDeEnderecos(ObterEnderecosComoJson(enderecoRequisicao));
 
         public async Task<string> ObterEnderecosComoJsonAsync(EnderecoRequisicao enderecoRequisicao)
         {
@@ -202,7 +197,7 @@ namespace MosaicoSolutions.ViaCep
             return conteudo.LerComoString();
         }
         
-        private static ViaCepRequisicaoPor<Cep> NovaRequisicao(Cep cep, ViaCepFormatoRequisicao formatoRequisicao) 
+        private static IViaCepRequisicaoPor<Cep> NovaRequisicao(Cep cep, ViaCepFormatoRequisicao formatoRequisicao) 
             => new ViaCepRequisicaoPorCep(cep, formatoRequisicao);
         
         private static void GaranteCodigoDeSucessoOuLancaException(IViaCepResposta resposta)

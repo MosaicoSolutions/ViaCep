@@ -9,7 +9,7 @@ namespace MosaicoSolutions.ViaCep
     /// <summary>
     /// Define um cliente responsável por retornar a resposta de uma requisição.
     /// </summary>
-    public interface IViaCep
+    public interface IViaCepService
     {
         /// <summary>
         /// Obtém o endereço do cep espeficado.
