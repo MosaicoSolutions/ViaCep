@@ -10,38 +10,42 @@ namespace MosaicoSolutions.ViaCep.Fluent
     public class ViaCepFluentPorCep : IViaCepFluentPorCep
     {
         private readonly Cep _cep;
-        private readonly IViaCep _viaCep = new ViaCep();
+        private readonly IViaCepService _viaCepService;
 
-        internal ViaCepFluentPorCep(Cep cep) => _cep = cep;
+        internal ViaCepFluentPorCep(Cep cep)
+        {
+            _cep = cep;
+            _viaCepService = new ViaCepService();
+        }
 
         public Endereco ComoEndereco()
-            => EnderecoConvert.DeJsonParaEndereco(ComoJson());
+            => _viaCepService.ObterEndereco(_cep);
 
         public string ComoJson()
-            => _viaCep.ObterEnderecoComoJson(_cep);
+            => _viaCepService.ObterEnderecoComoJson(_cep);
 
         public XDocument ComoXml()
-            => _viaCep.ObterEnderecoComoXml(_cep);
+            => _viaCepService.ObterEnderecoComoXml(_cep);
 
         public string ComoPiped()
-            => _viaCep.ObterEnderecoComoPiped(_cep);
+            => _viaCepService.ObterEnderecoComoPiped(_cep);
 
         public string ComoQuerty()
-            => _viaCep.ObterEnderecoComoQuerty(_cep);
+            => _viaCepService.ObterEnderecoComoQuerty(_cep);
 
         public async Task<string> ComoJsonAsync()
-            => await _viaCep.ObterEnderecoComoJsonAsync(_cep);
+            => await _viaCepService.ObterEnderecoComoJsonAsync(_cep);
 
         public async Task<XDocument> ComoXmlAsync()
-            => await _viaCep.ObterEnderecoComoXmlAsync(_cep);
+            => await _viaCepService.ObterEnderecoComoXmlAsync(_cep);
 
         public async Task<string> ComoPipedAsync()
-            => await _viaCep.ObterEnderecoComoPipedAsync(_cep);
+            => await _viaCepService.ObterEnderecoComoPipedAsync(_cep);
 
         public async Task<string> ComoQuertyAsync()
-            => await _viaCep.ObterEnderecoComoQuertyAsync(_cep);
+            => await _viaCepService.ObterEnderecoComoQuertyAsync(_cep);
 
         public async Task<Endereco> ComoEnderecoAsync()
-            => await _viaCep.ObterEnderecoAsync(_cep);
+            => await _viaCepService.ObterEnderecoAsync(_cep);
     }
 }
