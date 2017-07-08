@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("MosaicoSolutions.ViaCep")]
-[assembly: AssemblyDescription("Uma API para consulta de endereços via Cep.")]
+[assembly: AssemblyDescription("Uma API para consulta de endereços utilizando o serviço ViaCep.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Mosaico Solutions")]
 [assembly: AssemblyProduct("ViaCep")]
