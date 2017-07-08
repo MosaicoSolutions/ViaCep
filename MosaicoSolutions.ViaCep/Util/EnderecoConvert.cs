@@ -3,12 +3,12 @@ using MosaicoSolutions.ViaCep.Modelos;
 
 namespace MosaicoSolutions.ViaCep.Util
 {
-    public static class EnderecoConvert
+    public sealed class EnderecoConvert : IEnderecoConvert
     {
-        public static Endereco DeJsonParaEndereco(string json)
+        public Endereco DeJsonParaEndereco(string json)
             => Newtonsoft.Json.JsonConvert.DeserializeObject<Endereco>(json);
 
-        public static IEnumerable<Endereco> DeJsonParaListaDeEnderecos(string json)
+        public IEnumerable<Endereco> DeJsonParaListaDeEnderecos(string json)
             => Newtonsoft.Json.JsonConvert.DeserializeObject<List<Endereco>>(json);
     }
 }
