@@ -3,18 +3,18 @@ using MosaicoSolutions.ViaCep;
 using MosaicoSolutions.ViaCep.Modelos;
 using NUnit.Framework;
 
-namespace ViaCepTest
+namespace ViaCepTest.MosaicoSolutions.ViaCep
 {
     [TestFixture]
     public class ViaCepTest
     {
-        private IViaCep _viaCep;
+        private IViaCepService _viaCepService;
         private EnderecoRequisicao _enderecoRequisicao;
 
         [SetUp]
         public void SetUp()
         {
-            _viaCep = new ViaCep();
+            _viaCepService = new ViaCepService();
             _enderecoRequisicao = new EnderecoRequisicao
             {
                 UF = UF.RS,
@@ -28,15 +28,15 @@ namespace ViaCepTest
         [Test]
         public async Task DeveObterEnderecoComoXmlAsync()
         {
-            var enderecoXml = await _viaCep.ObterEnderecoComoXmlAsync("01001000");
+            var enderecoXml = await _viaCepService.ObterEnderecoComoXmlAsync("01001000");
             Assert.NotNull(enderecoXml);
             Assert.True(enderecoXml.ToString().Contains("<xmlcep>"));
 
-            enderecoXml = await _viaCep.ObterEnderecoComoXmlAsync("01001-000");
+            enderecoXml = await _viaCepService.ObterEnderecoComoXmlAsync("01001-000");
             Assert.NotNull(enderecoXml);
             Assert.True(enderecoXml.ToString().Contains("<xmlcep>"));
 
-            var enderecosXml = await _viaCep.ObterEnderecosComoXmlAsync(_enderecoRequisicao);
+            var enderecosXml = await _viaCepService.ObterEnderecosComoXmlAsync(_enderecoRequisicao);
             Assert.NotNull(enderecosXml);
             Assert.True(enderecosXml.ToString().Contains("<xmlcep>"));
         }
@@ -44,15 +44,15 @@ namespace ViaCepTest
         [Test]
         public void DeveObterEnderecoComoXml()
         {
-            var enderecoXml = _viaCep.ObterEnderecoComoXml("01001000");
+            var enderecoXml = _viaCepService.ObterEnderecoComoXml("01001000");
             Assert.NotNull(enderecoXml);
             Assert.True(enderecoXml.ToString().Contains("<xmlcep>"));
 
-            enderecoXml = _viaCep.ObterEnderecoComoXml("01001-000");
+            enderecoXml = _viaCepService.ObterEnderecoComoXml("01001-000");
             Assert.NotNull(enderecoXml);
             Assert.True(enderecoXml.ToString().Contains("<xmlcep>"));
 
-            var enderecosXml = _viaCep.ObterEnderecosComoXml(_enderecoRequisicao);
+            var enderecosXml = _viaCepService.ObterEnderecosComoXml(_enderecoRequisicao);
             Assert.NotNull(enderecosXml);
             Assert.True(enderecosXml.ToString().Contains("<xmlcep>"));
         }
@@ -64,20 +64,20 @@ namespace ViaCepTest
         [Test]
         public async Task DeveObterEnderecoComoQuertyAsync()
         {
-            var quertyEndereco = await _viaCep.ObterEnderecoComoQuertyAsync("01001000");
+            var quertyEndereco = await _viaCepService.ObterEnderecoComoQuertyAsync("01001000");
             Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a+da+S%C3%A9"));
 
-            quertyEndereco = await _viaCep.ObterEnderecoComoQuertyAsync("01001-000");
+            quertyEndereco = await _viaCepService.ObterEnderecoComoQuertyAsync("01001-000");
             Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a+da+S%C3%A9"));
         }
 
         [Test]
         public void DeveObterEnderecoComoQuerty()
         {
-            var quertyEndereco = _viaCep.ObterEnderecoComoQuerty("01001000");
+            var quertyEndereco = _viaCepService.ObterEnderecoComoQuerty("01001000");
             Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a+da+S%C3%A9"));
 
-            quertyEndereco = _viaCep.ObterEnderecoComoQuerty("01001-000");
+            quertyEndereco = _viaCepService.ObterEnderecoComoQuerty("01001-000");
             Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a+da+S%C3%A9"));
         }
 
@@ -88,20 +88,20 @@ namespace ViaCepTest
         [Test]
         public async Task DeveObterEnderecoComoPipedAsync()
         {
-            var pipedEndereco = await _viaCep.ObterEnderecoComoPipedAsync("01001000");
+            var pipedEndereco = await _viaCepService.ObterEnderecoComoPipedAsync("01001000");
             Assert.True(pipedEndereco.Contains("cep:01001-000"));
 
-            pipedEndereco = await _viaCep.ObterEnderecoComoPipedAsync("01001-000");
+            pipedEndereco = await _viaCepService.ObterEnderecoComoPipedAsync("01001-000");
             Assert.True(pipedEndereco.Contains("cep:01001-000"));
         }
 
         [Test]
         public void DeveObterEnderecoComoPiped()
         {
-            var pipedEndereco = _viaCep.ObterEnderecoComoPiped("01001000");
+            var pipedEndereco = _viaCepService.ObterEnderecoComoPiped("01001000");
             Assert.True(pipedEndereco.Contains("cep:01001-000"));
 
-            pipedEndereco = _viaCep.ObterEnderecoComoPiped("01001-000");
+            pipedEndereco = _viaCepService.ObterEnderecoComoPiped("01001-000");
             Assert.True(pipedEndereco.Contains("cep:01001-000"));
         }
 
@@ -112,26 +112,26 @@ namespace ViaCepTest
         [Test]
         public async Task DeveObterEnderecoComoJsonAsync()
         {
-            var jsonEndereco = await _viaCep.ObterEnderecoComoJsonAsync("01001000");
+            var jsonEndereco = await _viaCepService.ObterEnderecoComoJsonAsync("01001000");
             Assert.True(jsonEndereco.Contains("\"cep\": \"01001-000\""));
 
-            jsonEndereco = await _viaCep.ObterEnderecoComoJsonAsync("01001-000");
+            jsonEndereco = await _viaCepService.ObterEnderecoComoJsonAsync("01001-000");
             Assert.True(jsonEndereco.Contains("\"cep\": \"01001-000\""));
 
-            var jsonEnderecos = await _viaCep.ObterEnderecosComoJsonAsync(_enderecoRequisicao);
+            var jsonEnderecos = await _viaCepService.ObterEnderecosComoJsonAsync(_enderecoRequisicao);
             Assert.True(jsonEnderecos.Contains("\"localidade\": \"Porto Alegre\""));
         }
 
         [Test]
         public void DeveObterEnderecoComoJson()
         {
-            var jsonEndereco = _viaCep.ObterEnderecoComoJson("01001000");
+            var jsonEndereco = _viaCepService.ObterEnderecoComoJson("01001000");
             Assert.True(jsonEndereco.Contains("\"cep\": \"01001-000\""));
 
-            jsonEndereco = _viaCep.ObterEnderecoComoJson("01001-000");
+            jsonEndereco = _viaCepService.ObterEnderecoComoJson("01001-000");
             Assert.True(jsonEndereco.Contains("\"cep\": \"01001-000\""));
 
-            var jsonEnderecos = _viaCep.ObterEnderecosComoJson(_enderecoRequisicao);
+            var jsonEnderecos = _viaCepService.ObterEnderecosComoJson(_enderecoRequisicao);
             Assert.True(jsonEnderecos.Contains("\"localidade\": \"Porto Alegre\""));
         }
 
@@ -142,26 +142,26 @@ namespace ViaCepTest
         [Test]
         public async Task DeveObterEnderecoAsync()
         {
-            var endereco = await _viaCep.ObterEnderecoAsync("01001000");
+            var endereco = await _viaCepService.ObterEnderecoAsync("01001000");
             Assert.NotNull(endereco);
 
-            endereco = await _viaCep.ObterEnderecoAsync("01001-000");
+            endereco = await _viaCepService.ObterEnderecoAsync("01001-000");
             Assert.NotNull(endereco);
 
-            var enderecos = await _viaCep.ObterEnderecosAsync(_enderecoRequisicao);
+            var enderecos = await _viaCepService.ObterEnderecosAsync(_enderecoRequisicao);
             Assert.NotNull(enderecos);
         }
 
         [Test]
         public void DeveObterEndereco()
         {
-            var endereco = _viaCep.ObterEndereco("01001000");
+            var endereco = _viaCepService.ObterEndereco("01001000");
             Assert.NotNull(endereco);
 
-            endereco = _viaCep.ObterEndereco("01001-000");
+            endereco = _viaCepService.ObterEndereco("01001-000");
             Assert.NotNull(endereco);
 
-            var enderecos = _viaCep.ObterEnderecos(_enderecoRequisicao);
+            var enderecos = _viaCepService.ObterEnderecos(_enderecoRequisicao);
             Assert.NotNull(enderecos);
         }
 
@@ -169,7 +169,7 @@ namespace ViaCepTest
         public void DeveFalharPoisCepNaoExiste() 
             => Assert.Throws<CepInexistenteException>(() =>
             {
-                _viaCep.ObterEndereco("00000-000");
+                _viaCepService.ObterEndereco("00000-000");
             });
 
         #endregion
