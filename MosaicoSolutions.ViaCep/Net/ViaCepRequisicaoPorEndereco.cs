@@ -20,8 +20,6 @@ namespace MosaicoSolutions.ViaCep.Net
             Formato = formato;
         }
 
-        public string ObterUriComoString() => $"{EnderecoRequisicaoParaUri()}/{Formato.Valor}";
-
-        private string EnderecoRequisicaoParaUri() => $"{Dados.UF.Sigla}/{Dados.Cidade}/{Dados.Logradouro}";
+        public string ObterUriComoString() => $"{Dados.UF.Sigla}/{Dados.Cidade}/{Dados.Logradouro}/{Formato}";
     }
 }
