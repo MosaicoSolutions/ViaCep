@@ -10,6 +10,12 @@ Um módulo para a consulta de endereços usando o Web Service da ViaCep.
 
 ## Como Utilizar
 
+Primeiro você precisa instanciar um objeto da classe `ViaCepService`.
+
+``` c#
+var viaCepService = new ViaCepService();
+```
+
 Existem duas formas de consultar endereços.
 
 * Consultando por Cep.
@@ -17,19 +23,18 @@ Existem duas formas de consultar endereços.
 Crie um objeto do tipo `Cep` ou use uma `string` se preferir.
 
 ``` c#
-var viaCep = new ViaCep();
 Cep cep = "01001000";
 
-var endereco = viaCep.ObterEndereco(cep); // viaCep.ObterEndereco("01001000");
+var endereco = viaCepService.ObterEndereco(cep); // viaCep.ObterEndereco("01001000");
 ```
 Nesse caso o endereço será retornado como um objeto do tipo [Endereco](MosaicoSolutions.ViaCep/Modelos/Endereco.cs).
 Se desejar retornar como outros formatos:
 
 ``` c#
-var enderecoJson = viaCep.ObterEnderecoComoJson(cep); //viaCep.ObterEnderecoComoJson("01001000");
+var enderecoJson = viaCepService.ObterEnderecoComoJson(cep); //viaCep.ObterEnderecoComoJson("01001000");
 ```
 Você ainda pode retornar com `Xml`, `Piped`, ou `Querty` utilizando os métodos `ObterEnderecoComoXml` , `ObterEnderecoComoPiped` e 
-`ObterEnderecoComoQuerty`, respectivamente, ambos métodos da classe [ViaCep](MosaicoSolutions.ViaCep/ViaCep.cs).
+`ObterEnderecoComoQuerty`, respectivamente, ambos métodos da classe [ViaCepService](MosaicoSolutions.ViaCep/ViaCepService.cs).
 
 * Consultando por Endereco
 
@@ -42,20 +47,20 @@ var requisicao = new EnderecoRequisicao {
                     Logradouro = "Olavo"
                 };
 
-var enderecos = viaCep.ObterEnderecos(requisicao);
+var enderecos = viaCepService.ObterEnderecos(requisicao);
 ```
 Neste exemplo será pesquisado na cidade de "Porto Algre/RS" por todos os logradouros que contenham "Olavo" em seu nome. 
-Quando o nome da cidade ou do logradouro não contiver ao menos três caracteres será lançado uma Exception;
+Quando o nome da cidade ou do logradouro não contiver ao menos três caracteres será lançado uma *Exception*;
 
 O resultado desta consulta é um `IEnumerable<Endereco>` contendo todos os resultados. Caso nenhum endereço seja encontrado uma lista vazia será retornada.
 
-Use os métodos `ObterEnderecosComoJson` e `ObterEnderecosComoXml`, ambos da classe `ViaCep`, para retornar os resultados nos formatos 
+Use os métodos `ObterEnderecosComoJson` e `ObterEnderecosComoXml`, ambos da classe `ViaCepService`, para retornar os resultados nos formatos 
 `Json` e `Xml`, respectivamente.
 
-A classe [ViaCep](MosaicoSolutions.ViaCep/ViaCep.cs) também fornece métodos assíncronos.
+A classe [ViaCepService](MosaicoSolutions.ViaCep/ViaCepService.cs) também fornece métodos assíncronos.
 
 ``` c#
-var xml = await viaCep.ObterEnderecoComoXmlAsync("01001000");
+var xml = await viaCepService.ObterEnderecoComoXmlAsync("01001000");
 ```
 
 * Fluent Interface
@@ -74,13 +79,14 @@ var requisicao = new EnderecoRequisicao {
                     Logradouro = "Olavo"
                 };
 
-ViaCepFluent.Obter(requisicao)
+ViaCepFluent.De(requisicao)
             .ComoListaDeEnderecos(enderecos => {
                 foreach(var endereco in enderecos)
                 {
-                  Console.WriteLine("Cep: " + endereco.Cep);
-                  Console.WriteLine("Cidade: " + endereco.Localidade);
-                  Console.WriteLine("Logradouro: " + endereco.Logradouro);
+                      Console.WriteLine($"Cep: {endereco.Cep}");
+                      Console.WriteLine($"Cidade: {endereco.Localidade}");
+                      Console.WriteLine($"Logradouro: {endereco.Logradouro}");
+                      Console.WriteLine(Environment.NewLine);
                 }
              });
 ```
