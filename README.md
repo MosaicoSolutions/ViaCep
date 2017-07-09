@@ -68,7 +68,7 @@ var xml = await viaCepService.ObterEnderecoComoXmlAsync("01001000");
 Para facilitar ainda mais as consultas utilize a *Fluent Interface* veja como é simples.
 
 ``` c#
-var json = ViaCepFluent.Obter("01001000").ComoJson();
+var json = ViaCepFluent.De("01001000").ComoJson();
 ```
 Se desejar utilizar callbacks adicione o namespace `MosaicoSolutions.ViaCep.Fluent.Callback`.
 
