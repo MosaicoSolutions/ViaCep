@@ -84,7 +84,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// O valor de retorno tem os seguintes significados: Valor Significado Menos que zero Este objeto é menor que o outro parâmetro.
         /// Zero Este objeto é igual a outro. Maior que zero Este objeto é maior que outro.
         /// </returns>
-        public int CompareTo(Cep other) => string.Compare(_cep, other._cep, StringComparison.Ordinal);
+        public int CompareTo(Cep other) => string.Compare(_cep, other._cep);
 
         /// <summary>
         /// Determina se o objeto especificado é igual ao objeto atual.
