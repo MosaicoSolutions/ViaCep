@@ -37,12 +37,12 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Modelos
             var pernambuco = UF.PE;
             var sergipe = UF.SE;
             var ceara = UF.CE;
-            
-            var comparer = new ComparaUFPelaSigla();
 
-            Assert.AreEqual(comparer.Compare(pernambuco, sergipe), -1);
-            Assert.AreEqual(comparer.Compare(pernambuco, pernambuco), 0);
-            Assert.AreEqual(comparer.Compare(pernambuco, ceara), 1);
+            var comparer = ComparadoresUF.PelaSigla;
+
+            Assert.AreEqual(comparer(pernambuco, sergipe), -1);
+            Assert.AreEqual(comparer(pernambuco, pernambuco), 0);
+            Assert.AreEqual(comparer(pernambuco, ceara), 1);
             
         }
         
@@ -52,12 +52,12 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Modelos
             var pernambuco = UF.PE;
             var matoGrosso = UF.MT;
             var matoGrossoDoSul = UF.MS;
-            
-            var comparer = new ComparaUFPeloNomeDoEstado();
 
-            Assert.AreEqual(comparer.Compare(pernambuco, matoGrosso), 1);
-            Assert.AreEqual(comparer.Compare(pernambuco, pernambuco), 0);
-            Assert.AreEqual(comparer.Compare(matoGrossoDoSul, matoGrosso), 1);
+            var comparer = ComparadoresUF.PeloNomeDoEstado;
+
+            Assert.AreEqual(comparer(pernambuco, matoGrosso), 1);
+            Assert.AreEqual(comparer(pernambuco, pernambuco), 0);
+            Assert.AreEqual(comparer(matoGrossoDoSul, matoGrosso), 1);
         }
 
         [Test]
@@ -66,12 +66,12 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Modelos
             var pernambuco = UF.PE;
             var maranhao = UF.MA;
             var alagoas = UF.AL;
+
+            var comparer = ComparadoresUF.PeloCodigo;
             
-            var comparer = new ComparaUFPeloCodigo();
-            
-            Assert.AreEqual(comparer.Compare(pernambuco, maranhao), 1);
-            Assert.AreEqual(comparer.Compare(pernambuco, pernambuco), 0);
-            Assert.AreEqual(comparer.Compare(alagoas, pernambuco), 1);
+            Assert.AreEqual(comparer(pernambuco, maranhao), 1);
+            Assert.AreEqual(comparer(pernambuco, pernambuco), 0);
+            Assert.AreEqual(comparer(alagoas, pernambuco), 1);
         }
 
         [Test]

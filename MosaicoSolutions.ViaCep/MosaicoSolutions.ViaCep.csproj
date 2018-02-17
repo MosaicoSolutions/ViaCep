@@ -64,9 +64,7 @@
     <Compile Include="IViaCepService.cs" />
     <Compile Include="Modelos\Cep.cs" />
     <Compile Include="Modelos\CepInvalidoException.cs" />
-    <Compile Include="Modelos\ComparaUFPelaSigla.cs" />
-    <Compile Include="Modelos\ComparaUFPeloCodigo.cs" />
-    <Compile Include="Modelos\ComparaUFPeloNomeDoEstado.cs" />
+    <Compile Include="Modelos\ComparadoresUF.cs" />
     <Compile Include="Modelos\Endereco.cs" />
     <Compile Include="Modelos\EnderecoRequisicao.cs" />
     <Compile Include="Modelos\Regiao.cs" />
