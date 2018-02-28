@@ -60,5 +60,22 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Modelos
 
             Assert.True(enderecoRequisicao.EhValido());
         }
+
+        [Test]
+        public void DeconstructEnderecoRequisicao()
+        {
+            var enderecoRequisicao = new EnderecoRequisicao
+            {
+                UF = UF.RS,
+                Cidade = "Porto Alegre",
+                Logradouro = "Olavo"
+            };
+
+            var (uf, cidade, logradouro) = enderecoRequisicao;
+
+            Assert.AreEqual(uf, enderecoRequisicao.UF);
+            Assert.AreEqual(cidade, enderecoRequisicao.Cidade);
+            Assert.AreEqual(logradouro, enderecoRequisicao.Logradouro);
+        }
     }
 }
