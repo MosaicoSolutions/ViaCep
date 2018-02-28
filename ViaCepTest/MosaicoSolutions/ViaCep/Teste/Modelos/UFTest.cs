@@ -43,7 +43,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Modelos
             Assert.AreEqual(comparer(pernambuco, sergipe), -1);
             Assert.AreEqual(comparer(pernambuco, pernambuco), 0);
             Assert.AreEqual(comparer(pernambuco, ceara), 1);
-            
+            Assert.AreEqual(comparer(pernambuco, null), 1);
         }
         
         [Test]
@@ -58,6 +58,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Modelos
             Assert.AreEqual(comparer(pernambuco, matoGrosso), 1);
             Assert.AreEqual(comparer(pernambuco, pernambuco), 0);
             Assert.AreEqual(comparer(matoGrossoDoSul, matoGrosso), 1);
+            Assert.AreEqual(comparer(null, matoGrosso), -1);
         }
 
         [Test]
@@ -72,6 +73,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Modelos
             Assert.AreEqual(comparer(pernambuco, maranhao), 1);
             Assert.AreEqual(comparer(pernambuco, pernambuco), 0);
             Assert.AreEqual(comparer(alagoas, pernambuco), 1);
+            Assert.AreEqual(comparer(alagoas, null), 1);
         }
 
         [Test]

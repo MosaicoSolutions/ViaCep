@@ -16,10 +16,10 @@ namespace MosaicoSolutions.ViaCep.Modelos
                 if (ReferenceEquals(uf1, uf2))
                     return 0;
 
-                if (ReferenceEquals(null, uf1))
+                if (uf1 is null)
                     return -1;
 
-                if (ReferenceEquals(null, uf2))
+                if (uf2 is null)
                     return 1;
 
                 return string.Compare(uf1.Sigla, uf2.Sigla);
@@ -34,10 +34,10 @@ namespace MosaicoSolutions.ViaCep.Modelos
                 if (ReferenceEquals(uf1, uf2))
                     return 0;
 
-                if (ReferenceEquals(null, uf1))
+                if (uf1 is null)
                     return -1;
 
-                if (ReferenceEquals(null, uf2))
+                if (uf2 is null)
                     return 1;
 
                 return uf1.Codigo.CompareTo(uf2.Codigo);
@@ -52,10 +52,10 @@ namespace MosaicoSolutions.ViaCep.Modelos
                 if (ReferenceEquals(uf1, uf2))
                     return 0;
 
-                if (ReferenceEquals(null, uf1))
+                if (uf1 is null)
                     return -1;
 
-                if (ReferenceEquals(null, uf2))
+                if (uf2 is null)
                     return 1;
 
                 return uf1.NomeEstado.CompareTo(uf2.NomeEstado);
