@@ -1,35 +1,38 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using MosaicoSolutions.ViaCep.Modelos;
-using MosaicoSolutions.ViaCep.Net;
 
 namespace MosaicoSolutions.ViaCep
 {
     /// <summary>
-    /// Define um cliente responsável por retornar a resposta de uma requisição.
+    /// Define um serviço responsável por realizar requisições ViaCep.
     /// </summary>
-    public interface IViaCepService
+    public interface IViaCepService : IDisposable
     {
-        /// <summary>
-        /// Obtém o endereço do cep espeficado.
-        /// </summary>
-        /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
-        /// <returns>Um objeto do tipo <see cref="Endereco"/> contendo os dados.</returns>
-        Endereco ObterEndereco(Cep cep);
-
         /// <summary>
         /// Obtém o endereço, de forma assíncrona, do cep espeficado.
         /// </summary>
         /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
         /// <returns>Um objeto do tipo <see cref="Endereco"/> contendo os dados.</returns>
+        /// <exception cref="System.ArgumentException">Se o cep estiver vazio.</exception>
         Task<Endereco> ObterEnderecoAsync(Cep cep);
+        
+        /// <summary>
+        /// Obtém o endereço do cep espeficado.
+        /// </summary>
+        /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
+        /// <returns>Um objeto do tipo <see cref="Endereco"/> contendo os dados.</returns>
+        /// <exception cref="System.ArgumentException">Se o cep estiver vazio.</exception>
+        Endereco ObterEndereco(Cep cep);
 
         /// <summary>
         /// Obtém o endereço, como json, do cep especificado.
         /// </summary>
         /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
         /// <returns>Uma <see cref="System.String"/> contendo o endereço como json.</returns>
+        /// <exception cref="System.ArgumentException">Se o cep estiver vazio.</exception>
         Task<string> ObterEnderecoComoJsonAsync(Cep cep);
 
         /// <summary>
@@ -37,6 +40,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
         /// <returns>Uma <see cref="System.String"/> contendo o endereço como json.</returns>
+        /// <exception cref="System.ArgumentException">Se o cep estiver vazio.</exception>
         string ObterEnderecoComoJson(Cep cep);
 
         /// <summary>
@@ -44,6 +48,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
         /// <returns>Uma <see cref="System.String"/> contendo o endereço como piped.</returns>
+        /// <exception cref="System.ArgumentException">Se o cep estiver vazio.</exception>
         Task<string> ObterEnderecoComoPipedAsync(Cep cep);
 
         /// <summary>
@@ -51,6 +56,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
         /// <returns>Uma <see cref="System.String"/> contendo o endereço como piped.</returns>
+        /// <exception cref="System.ArgumentException">Se o cep estiver vazio.</exception>
         string ObterEnderecoComoPiped(Cep cep);
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
         /// <returns>Uma <see cref="System.String"/> contendo o endereço como querty.</returns>
+        /// <exception cref="System.ArgumentException">Se o cep estiver vazio.</exception>
         Task<string> ObterEnderecoComoQuertyAsync(Cep cep);
 
         /// <summary>
@@ -65,6 +72,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
         /// <returns>Uma <see cref="System.String"/> contendo o endereço como querty.</returns>
+        /// <exception cref="System.ArgumentException">Se o cep estiver vazio.</exception>
         string ObterEnderecoComoQuerty(Cep cep);
 
         /// <summary>
@@ -72,6 +80,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
         /// <returns>Um <see cref="XDocument"/> contendo o endereço.</returns>
+        /// <exception cref="System.ArgumentException">Se o cep estiver vazio.</exception>
         Task<XDocument> ObterEnderecoComoXmlAsync(Cep cep);
 
         /// <summary>
@@ -79,6 +88,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="cep">O <see cref="Cep"/> do endereço.</param>
         /// <returns>Um <see cref="XDocument"/> contendo o endereço.</returns>
+        /// <exception cref="System.ArgumentException">Se o cep estiver vazio.</exception>
         XDocument ObterEnderecoComoXml(Cep cep);
 
         /// <summary>
@@ -86,6 +96,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="enderecoRequisicao">O <see cref="EnderecoRequisicao"/> dos endereços.</param>
         /// <returns>Um objeto do tipo <see cref="IEnumerable{T}"/> contendo os dados.</returns>
+        /// <exception cref="System.ArgumentException">Se enderecoRequisicao for inválido.</exception>
         Task<IEnumerable<Endereco>> ObterEnderecosAsync(EnderecoRequisicao enderecoRequisicao);
 
         /// <summary>
@@ -93,6 +104,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="enderecoRequisicao">O <see cref="EnderecoRequisicao"/> dos endereços.</param>
         /// <returns>Um objeto do tipo <see cref="IEnumerable{T}"/> contendo os dados.</returns>
+        /// <exception cref="System.ArgumentException">Se enderecoRequisicao for inválido.</exception>
         IEnumerable<Endereco> ObterEnderecos(EnderecoRequisicao enderecoRequisicao);
 
         /// <summary>
@@ -100,6 +112,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="enderecoRequisicao">O <see cref="EnderecoRequisicao"/> dos endereços.</param>
         /// <returns>Uma <see cref="string"/> contendo os endereços como json.</returns>
+        /// <exception cref="System.ArgumentException">Se enderecoRequisicao for inválido.</exception>
         Task<string> ObterEnderecosComoJsonAsync(EnderecoRequisicao enderecoRequisicao);
 
         /// <summary>
@@ -107,6 +120,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="enderecoRequisicao">O <see cref="EnderecoRequisicao"/> dos endereços.</param>
         /// <returns>Uma <see cref="string"/> contendo os endereços como json.</returns>
+        /// <exception cref="System.ArgumentException">Se enderecoRequisicao for inválido.</exception>
         string ObterEnderecosComoJson(EnderecoRequisicao enderecoRequisicao);
 
         /// <summary>
@@ -114,6 +128,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="enderecoRequisicao">O <see cref="EnderecoRequisicao"/> dos endereços.</param>
         /// <returns>Um <see cref="XDocument"/> contendo os endereços.</returns>
+        /// <exception cref="System.ArgumentException">Se enderecoRequisicao for inválido.</exception>
         Task<XDocument> ObterEnderecosComoXmlAsync(EnderecoRequisicao enderecoRequisicao);
 
         /// <summary>
@@ -121,35 +136,7 @@ namespace MosaicoSolutions.ViaCep
         /// </summary>
         /// <param name="enderecoRequisicao">O <see cref="EnderecoRequisicao"/> dos endereços.</param>
         /// <returns>Um <see cref="XDocument"/> contendo os endereços.</returns>
+        /// <exception cref="System.ArgumentException">Se enderecoRequisicao for inválido.</exception>
         XDocument ObterEnderecosComoXml(EnderecoRequisicao enderecoRequisicao);
-
-        /// <summary>
-        /// Obtém o conteúdo de uma requisição.
-        /// </summary>
-        /// <param name="uri">O <see cref="IViaCepUri"/> da requisição.</param>
-        /// <returns>Um <see cref="IViaCepConteudo"/> que representa a requisição.</returns>
-        IViaCepConteudo ObterConteudo(IViaCepUri uri);
-
-        /// <summary>
-        /// Obtém o conteúdo de uma requisição, de forma assíncrona.
-        /// </summary>
-        /// <param name="uri">O <see cref="IViaCepUri"/> da requisição.</param>
-        /// <returns>Um <see cref="IViaCepConteudo"/> que representa a requisição.</returns>
-        Task<IViaCepConteudo> ObterConteudoAsync(IViaCepUri uri);
-
-        /// <summary>
-        /// Obtém a resposta de uma requisição.
-        /// </summary>
-        /// <param name="uri">O <see cref="IViaCepUri"/> da requisição.</param>
-        /// <returns>Um <see cref="IViaCepResposta"/> que representa a requisição.</returns>
-        IViaCepResposta ObterResposta(IViaCepUri uri);
-
-        /// <summary>
-        /// Obtém a resposta de uma requisição.
-        /// </summary>
-        /// <param name="uri">O <see cref="IViaCepUri"/> da requisição.</param>
-        /// <returns>Um <see cref="IViaCepResposta"/> que representa a requisição.</returns>
-        Task<IViaCepResposta> ObterRespostaAsync(IViaCepUri uri);
-
     }
 }
