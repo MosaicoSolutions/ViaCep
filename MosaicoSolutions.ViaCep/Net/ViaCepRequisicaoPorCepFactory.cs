@@ -2,20 +2,22 @@
 
 namespace MosaicoSolutions.ViaCep.Net
 {
-    /// <summary>
-    /// Uma fábrica para a criação de requisições por Cep.
-    /// </summary>
+    /// <inheritdoc />
     public sealed class ViaCepRequisicaoPorCepFactory : IViaCepRequisicaoPorCepFactory
     {
+        /// <inheritdoc />
         public IViaCepRequisicaoPor<Cep> NovaRequisicaoJson(Cep cep)
             => NovaRequisicao(cep, ViaCepFormatoRequisicao.Json);
 
+        /// <inheritdoc />
         public IViaCepRequisicaoPor<Cep> NovaRequisicaoXml(Cep cep)
             => NovaRequisicao(cep, ViaCepFormatoRequisicao.Xml);
 
+        /// <inheritdoc />
         public IViaCepRequisicaoPor<Cep> NovaRequisicaoPiped(Cep cep)
             => NovaRequisicao(cep, ViaCepFormatoRequisicao.Piped);
 
+        /// <inheritdoc />
         public IViaCepRequisicaoPor<Cep> NovaRequisicaoQuerty(Cep cep)
             => NovaRequisicao(cep, ViaCepFormatoRequisicao.Querty);
 
