@@ -74,5 +74,8 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
             Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.NotFound);
             Assert.False(resposta.EhCodigoDeSucesso);
         }
+
+        [TearDown]
+        public void TearDown() => _cliente.Dispose();
     }
 }
