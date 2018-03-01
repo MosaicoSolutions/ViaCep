@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using MosaicoSolutions.ViaCep.Net;
 using NUnit.Framework;
 using Rhino.Mocks;
@@ -9,7 +10,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
     public class ViaCepClienteTest
     {
         private IViaCepCliente _cliente;
-        private IViaCepUri _uri;
+        private Func<string> _uri;
         private MockRepository _mockRepository;
 
         [SetUp]
@@ -17,16 +18,15 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
         {
             _mockRepository = new MockRepository();
             _cliente = new ViaCepCliente();
-            _uri = _mockRepository.Stub<IViaCepUri>();
+            _uri = _mockRepository.Stub<Func<string>>();
         }
 
         [Test]
         public void DeveRetornarUmaRespostaValidaComUmRequisicaoPorCep()
         {
             using (_mockRepository.Record())
-            {
-                SetupResult.For(_uri.ObterUriComoString()).Return("01001000/json");
-            }
+                SetupResult.For(_uri()).Return("01001000/json");
+
 
             var resposta = _cliente.ObterResposta(_uri);
 
@@ -38,9 +38,8 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
         public void DeveRetornarUmaRespostaValidaComUmRequisicaoPorEndereco()
         {
             using (_mockRepository.Record())
-            {
-                SetupResult.For(_uri.ObterUriComoString()).Return("RS/Porto Alegre/Olavo/json");
-            }
+                SetupResult.For(_uri()).Return("RS/Porto Alegre/Olavo/json");
+
 
             var resposta = _cliente.ObterResposta(_uri);
 
@@ -52,14 +51,13 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
         public void RequisicaoPorCepDeveFalhar()
         {
             using (_mockRepository.Record())
-            {
                 //Cep não possui um tamanho válido.
-                SetupResult.For(_uri.ObterUriComoString()).Return("0100100/json");
-            }
+                SetupResult.For(_uri()).Return("0100100/json");
+
 
             var resposta = _cliente.ObterResposta(_uri);
 
-            Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.BadRequest);
+            Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.NotFound);
             Assert.False(resposta.EhCodigoDeSucesso);
         }
 
@@ -67,14 +65,13 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
         public void RequisicaoPorEnderecoDeveFalhar()
         {
             using (_mockRepository.Record())
-            {
                 //O Nome do logradouro tem menos do que três caracteres.
-                SetupResult.For(_uri.ObterUriComoString()).Return("RS/Porto Alegre/Ol/json");
-            }
+                SetupResult.For(_uri()).Return("RS/Porto Alegre/Ol/json");
+
 
             var resposta = _cliente.ObterResposta(_uri);
 
-            Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.BadRequest);
+            Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.NotFound);
             Assert.False(resposta.EhCodigoDeSucesso);
         }
     }

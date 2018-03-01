@@ -4,17 +4,59 @@ using System.Threading.Tasks;
 
 namespace MosaicoSolutions.ViaCep.Net
 {
-    /// <summary>
-    /// Cliente responsável por retornar a resposta de uma requisição a partir do Uri do recurso.
-    /// </summary>
+    /// <inheritdoc />
     public sealed class ViaCepCliente : IViaCepCliente
     {
         private readonly HttpClient _cliente = new HttpClient { BaseAddress = new Uri("http://viacep.com.br/ws/") };
 
-        public async Task<IViaCepResposta> ObterRespostaAsync(IViaCepUri uri)
-            => new ViaCepResposta(await _cliente.GetAsync(uri.ObterUriComoString()));
+        /// <inheritdoc />
+        public Task<IViaCepResposta> ObterRespostaAsync(Func<string> uri)
+            => uri == null
+                ? throw new ArgumentNullException(nameof(uri))
+                : ObterRespostaAsync(uri());
 
-        public IViaCepResposta ObterResposta(IViaCepUri uri)
-            => new ViaCepResposta(_cliente.GetAsync(uri.ObterUriComoString()).Result);
+        /// <inheritdoc />
+        public Task<IViaCepResposta> ObterRespostaAsync(string uri)
+            => uri == null
+                ? throw new ArgumentNullException(nameof(uri))
+                : Task.Run(async () => ViaCepResposta.Of(await _cliente.GetAsync(uri)));
+
+        /// <inheritdoc />
+        public IViaCepResposta ObterResposta(Func<string> uri)
+            => uri == null
+                ? throw new ArgumentNullException(nameof(uri))
+                : ObterResposta(uri());
+
+        /// <inheritdoc />
+        public IViaCepResposta ObterResposta(string uri)
+            => uri == null
+                ? throw new ArgumentNullException(nameof(uri))
+                : ViaCepResposta.Of(_cliente.GetAsync(uri).Result);
+
+        #region IDisposable Support
+        private bool disposedValue = false;
+
+        void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    _cliente.Dispose();
+                }
+
+                disposedValue = true;
+            }
+        }
+
+        /// <inheritdoc />
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        #endregion
+
+
     }
 }
