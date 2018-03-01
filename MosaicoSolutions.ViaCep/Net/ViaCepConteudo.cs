@@ -4,33 +4,28 @@ using System.Xml.Linq;
 
 namespace MosaicoSolutions.ViaCep.Net
 {
-    /// <summary>
-    /// Representa o conteúdo de uma requisisão.
-    /// </summary>
+    /// <inheritdoc />
     public sealed class ViaCepConteudo : IViaCepConteudo
     {
-        private readonly string _conteudo;
+        internal static IViaCepConteudo Of(HttpContent httpContent) => new ViaCepConteudo(httpContent);
 
+        private readonly string _conteudo;
+        
+        private ViaCepConteudo(HttpContent httpContent) => _conteudo = httpContent.ReadAsStringAsync().Result;
+        
+        /// <inheritdoc />
         public bool PodeSerLidoComoXml => _conteudo.Contains("xmlcep");
 
+        /// <inheritdoc />
         public bool PossuiErro => _conteudo.Contains("erro");
 
-        internal ViaCepConteudo(HttpContent httpContent) => _conteudo = httpContent.ReadAsStringAsync().Result;
-
-        /// <summary>
-        /// Lê o conteúdo como xml.
-        /// </summary>
-        /// <returns>Um Objeto do tipo <code>XDocument</code>.</returns>
-        /// <exception cref="InvalidOperationException">Se não for possivel ler o conteúdo como xml.</exception>
+        /// <inheritdoc />
         public XDocument LerComoXml() 
-            => PodeSerLidoComoXml ? 
-                XDocument.Parse(_conteudo) : throw new InvalidOperationException("Não é possivel ler o conteúdo como xml.");
+            => PodeSerLidoComoXml 
+                ? XDocument.Parse(_conteudo) 
+                : throw new InvalidOperationException("Não é possivel ler o conteúdo como xml.");
 
-        /// <summary>
-        /// Lê o conteúdo como <code>string</code>.
-        /// </summary>
-        /// <returns>Uma string que representa o conteúdo da requisição.</returns>
+        /// <inheritdoc />
         public string LerComoString() => _conteudo;
-
     }
 }
