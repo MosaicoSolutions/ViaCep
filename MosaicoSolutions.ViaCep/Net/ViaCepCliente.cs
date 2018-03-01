@@ -34,19 +34,16 @@ namespace MosaicoSolutions.ViaCep.Net
                 : ViaCepResposta.Of(_cliente.GetAsync(uri).Result);
 
         #region IDisposable Support
-        private bool disposedValue = false;
+        private bool _disposedValue;
 
-        void Dispose(bool disposing)
+        private void Dispose(bool disposing)
         {
-            if (!disposedValue)
-            {
-                if (disposing)
-                {
-                    _cliente.Dispose();
-                }
+            if (_disposedValue) return;
 
-                disposedValue = true;
-            }
+            if (disposing)
+                _cliente.Dispose();
+
+            _disposedValue = true;
         }
 
         /// <inheritdoc />
