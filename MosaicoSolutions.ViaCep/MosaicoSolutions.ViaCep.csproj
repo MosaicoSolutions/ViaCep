@@ -49,18 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CepInexistenteException.cs" />
-    <Compile Include="Fluent\Callback\ViaCepFluentCallbackMethods.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoEndereco.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoJson.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoListaDeEnderecos.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoPiped.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoQuerty.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoXml.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentPorCep.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentPorEndereco.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepBuilderPorCep.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepBuilderPorEndereco.cs" />
+    <Compile Include="Fluent\ViaCepBuilderPorCep.cs" />
+    <Compile Include="Fluent\ViaCepBuilderPorEndereco.cs" />
     <Compile Include="Fluent\ViaCepFluent.cs" />
-    <Compile Include="Fluent\ViaCepFluentPorCep.cs" />
-    <Compile Include="Fluent\ViaCepFluentPorEndereco.cs" />
     <Compile Include="IViaCepService.cs" />
     <Compile Include="Modelos\Cep.cs" />
     <Compile Include="Modelos\CepInvalidoException.cs" />
@@ -80,7 +73,6 @@
     <Compile Include="Net\IViaCepRequisicaoQuertyDe.cs" />
     <Compile Include="Net\IViaCepRequisicaoXmlDe.cs" />
     <Compile Include="Net\IViaCepResposta.cs" />
-    <Compile Include="Net\IViaCepUri.cs" />
     <Compile Include="Net\ViaCepCliente.cs" />
     <Compile Include="Net\ViaCepConteudo.cs" />
     <Compile Include="Net\ViaCepRequisicaoPorCep.cs" />
@@ -93,8 +85,10 @@
     <Compile Include="Util\EnderecoConvert.cs" />
     <Compile Include="Util\IEnderecoConvert.cs" />
     <Compile Include="Util\MensagensDeErro.cs" />
+    <Compile Include="ViaCepService.Async.cs" />
     <Compile Include="ViaCepService.cs" />
     <Compile Include="ViaCepException.cs" />
+    <Compile Include="ViaCepService.Sync.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
