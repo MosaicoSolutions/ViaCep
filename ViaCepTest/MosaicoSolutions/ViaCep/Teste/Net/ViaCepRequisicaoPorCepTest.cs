@@ -26,7 +26,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
         {
             var requisicaoCepJson = _requisicaoPorCepFactory.NovaRequisicaoJson(_cep);
 
-            var resposta = _cliente.ObterResposta(requisicaoCepJson);
+            var resposta = _cliente.ObterResposta(requisicaoCepJson.ToUri);
 
             Assert.True(resposta.EhCodigoDeSucesso);
             Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.OK);
@@ -37,7 +37,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
         {
             var requisicaoCepXml = _requisicaoPorCepFactory.NovaRequisicaoXml(_cep);
 
-            var resposta = _cliente.ObterResposta(requisicaoCepXml);
+            var resposta = _cliente.ObterResposta(requisicaoCepXml.ToUri);
 
             Assert.True(resposta.EhCodigoDeSucesso);
             Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.OK);
@@ -48,7 +48,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
         {
             var requisicaoCepPiped = _requisicaoPorCepFactory.NovaRequisicaoPiped(_cep);
 
-            var resposta = _cliente.ObterResposta(requisicaoCepPiped);
+            var resposta = _cliente.ObterResposta(requisicaoCepPiped.ToUri);
 
             Assert.True(resposta.EhCodigoDeSucesso);
             Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.OK);
@@ -59,7 +59,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
         {
             var requisicaoCepQuerty = _requisicaoPorCepFactory.NovaRequisicaoQuerty(_cep);
 
-            var resposta = _cliente.ObterResposta(requisicaoCepQuerty);
+            var resposta = _cliente.ObterResposta(requisicaoCepQuerty.ToUri);
 
             Assert.True(resposta.EhCodigoDeSucesso);
             Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.OK);

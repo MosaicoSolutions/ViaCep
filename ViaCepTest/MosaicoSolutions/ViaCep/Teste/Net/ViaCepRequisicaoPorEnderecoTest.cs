@@ -32,7 +32,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
         {
             var requisicaoJson = _requisicaoPorEnderecoFactory.NovaRequisicaoJson(_enderecoRequisicao);
 
-            var resposta = _cliente.ObterResposta(requisicaoJson);
+            var resposta = _cliente.ObterResposta(requisicaoJson.ToUri);
 
             Assert.True(resposta.EhCodigoDeSucesso);
             Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.OK);
@@ -43,7 +43,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
         {
             var requisicaoXml = _requisicaoPorEnderecoFactory.NovaRequisicaoXml(_enderecoRequisicao);
 
-            var resposta = _cliente.ObterResposta(requisicaoXml);
+            var resposta = _cliente.ObterResposta(requisicaoXml.ToUri);
 
             Assert.True(resposta.EhCodigoDeSucesso);
             Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.OK);
@@ -64,7 +64,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
 
                     var requisicaoXml = _requisicaoPorEnderecoFactory.NovaRequisicaoXml(enderecoRequisicao);
 
-                    var resposta = _cliente.ObterResposta(requisicaoXml);
+                    var resposta = _cliente.ObterResposta(requisicaoXml.ToUri);
 
                     Assert.True(resposta.EhCodigoDeSucesso);
                     Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.OK);
