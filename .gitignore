@@ -5,3 +5,8 @@
 .vscode/
 .vs/
 .idea/
+
+*/bin
+*/obj
+*.dll
+*.pdb

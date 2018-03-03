@@ -1,11 +1,12 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 
 namespace MosaicoSolutions.ViaCep.Net
 {
     /// <summary>
-    /// Define a resposta de uma requisição.
+    /// Define a resposta de uma requisição ViaCep.
     /// </summary>
-    public interface IViaCepResposta
+    public interface IViaCepResposta : IDisposable
     {
         /// <summary>
         /// Obtém o código de status da requisição.
@@ -25,7 +26,7 @@ namespace MosaicoSolutions.ViaCep.Net
         /// <summary>
         /// Obtém o conteúdo da requisição.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Um <see cref="IViaCepConteudo"/> que representa o conteúdo da requisição.</returns>
         IViaCepConteudo ObterConteudo();
     }
 }

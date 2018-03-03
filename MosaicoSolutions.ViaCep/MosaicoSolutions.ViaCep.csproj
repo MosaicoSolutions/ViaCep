@@ -35,8 +35,8 @@
     <DocumentationFile>bin\Release\MosaicoSolutions.ViaCep.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,24 +49,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CepInexistenteException.cs" />
-    <Compile Include="Fluent\Callback\ViaCepFluentCallbackMethods.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoEndereco.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoJson.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoListaDeEnderecos.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoPiped.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoQuerty.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentComoXml.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentPorCep.cs" />
-    <Compile Include="Fluent\Interfaces\IViaCepFluentPorEndereco.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepBuilderPorCep.cs" />
+    <Compile Include="Fluent\Interfaces\IViaCepBuilderPorEndereco.cs" />
+    <Compile Include="Fluent\ViaCepBuilderPorCep.cs" />
+    <Compile Include="Fluent\ViaCepBuilderPorEndereco.cs" />
     <Compile Include="Fluent\ViaCepFluent.cs" />
-    <Compile Include="Fluent\ViaCepFluentPorCep.cs" />
-    <Compile Include="Fluent\ViaCepFluentPorEndereco.cs" />
     <Compile Include="IViaCepService.cs" />
     <Compile Include="Modelos\Cep.cs" />
     <Compile Include="Modelos\CepInvalidoException.cs" />
-    <Compile Include="Modelos\ComparaUFPelaSigla.cs" />
-    <Compile Include="Modelos\ComparaUFPeloCodigo.cs" />
-    <Compile Include="Modelos\ComparaUFPeloNomeDoEstado.cs" />
+    <Compile Include="Modelos\ComparadoresUF.cs" />
     <Compile Include="Modelos\Endereco.cs" />
     <Compile Include="Modelos\EnderecoRequisicao.cs" />
     <Compile Include="Modelos\Regiao.cs" />
@@ -82,7 +73,6 @@
     <Compile Include="Net\IViaCepRequisicaoQuertyDe.cs" />
     <Compile Include="Net\IViaCepRequisicaoXmlDe.cs" />
     <Compile Include="Net\IViaCepResposta.cs" />
-    <Compile Include="Net\IViaCepUri.cs" />
     <Compile Include="Net\ViaCepCliente.cs" />
     <Compile Include="Net\ViaCepConteudo.cs" />
     <Compile Include="Net\ViaCepRequisicaoPorCep.cs" />
@@ -95,11 +85,13 @@
     <Compile Include="Util\EnderecoConvert.cs" />
     <Compile Include="Util\IEnderecoConvert.cs" />
     <Compile Include="Util\MensagensDeErro.cs" />
+    <Compile Include="ViaCepService.Async.cs" />
     <Compile Include="ViaCepService.cs" />
     <Compile Include="ViaCepException.cs" />
+    <Compile Include="ViaCepService.Sync.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

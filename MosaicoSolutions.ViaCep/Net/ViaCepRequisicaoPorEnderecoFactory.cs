@@ -2,14 +2,14 @@
 
 namespace MosaicoSolutions.ViaCep.Net
 {
-    /// <summary>
-    /// Uma fábrica para a criação de requisições por Endereço.
-    /// </summary>
+    /// <inheritdoc />
     public class ViaCepRequisicaoPorEnderecoFactory : IViaCepRequisicaoPorEnderecoFactory
     {
+        /// <inheritdoc />
         public IViaCepRequisicaoPor<EnderecoRequisicao> NovaRequisicaoJson(EnderecoRequisicao enderecoRequisicao)
             => NovaRequisicao(enderecoRequisicao, ViaCepFormatoRequisicao.Json);
 
+        /// <inheritdoc />
         public IViaCepRequisicaoPor<EnderecoRequisicao> NovaRequisicaoXml(EnderecoRequisicao enderecoRequisicao)
             => NovaRequisicao(enderecoRequisicao, ViaCepFormatoRequisicao.Xml);
 

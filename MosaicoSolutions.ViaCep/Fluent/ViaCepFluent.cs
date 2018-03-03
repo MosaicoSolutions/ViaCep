@@ -1,18 +1,20 @@
-using System;
 using MosaicoSolutions.ViaCep.Fluent.Interfaces;
-using MosaicoSolutions.ViaCep.Modelos;
 
 namespace MosaicoSolutions.ViaCep.Fluent
 {
+    /// <summary>
+    /// Define uma Fluent Interface para realizar consultas de Endereços.
+    /// </summary>
     public static class ViaCepFluent
     {
-        public static IViaCepFluentPorCep De(Cep cep) 
-            => cep.IsEmpty ? 
-            throw new ArgumentException("O cep está vazio.", nameof(cep)) : new ViaCepFluentPorCep(cep);
+        /// <summary>
+        /// Um Builder para realizar requisições por Cep.
+        /// </summary>
+        public static IViaCepBuilderPorCep RequisicaoPorCep => new ViaCepBuilderPorCep();
 
-        public static IViaCepFluentPorEndereco De(EnderecoRequisicao enderecoRequisicao) 
-            => enderecoRequisicao.EhValido() ?
-            new ViaCepFluentPorEndereco(enderecoRequisicao) : 
-            throw new ArgumentException("O enderecoRequisicao não é válido.", nameof(enderecoRequisicao));
+        /// <summary>
+        /// Um Builder para realizar requisições por Endereco.
+        /// </summary>
+        public static IViaCepBuilderPorEndereco RequisicaoPorEndereco => new ViaCepBuilderPorEndereco();
     }
 }

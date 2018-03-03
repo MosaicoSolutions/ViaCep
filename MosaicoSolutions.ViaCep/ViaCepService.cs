@@ -25,179 +25,82 @@ Authors: Bruno Xavier de Moura - https://github.com/brunoSpeedrun
 
 */
 
-using System.Collections.Generic;
+using System;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 using MosaicoSolutions.ViaCep.Modelos;
 using MosaicoSolutions.ViaCep.Net;
 using MosaicoSolutions.ViaCep.Util;
 
 namespace MosaicoSolutions.ViaCep
 {
-    /// <summary>
-    /// Cliente responsável por retornar a resposta de uma requisição.
-    /// </summary>
-    public sealed class ViaCepService : IViaCepService
+    /// <inheritdoc />
+    public sealed partial class ViaCepService : IViaCepService
     {
         private readonly IViaCepCliente _cliente;
+        private readonly IEnderecoConvert _enderecoConvert;
         private readonly IViaCepRequisicaoPorCepFactory _requisicaoPorCepFactory;
         private readonly IViaCepRequisicaoPorEnderecoFactory _requisicaoPorEnderecoFactory;
-        private readonly IEnderecoConvert _enderecoConvert;
         
-        public ViaCepService()
+        /// <summary>
+        /// Devolve um serviço ViaCep padrão.
+        /// </summary>
+        /// <returns>Um <see cref="IViaCepService"/> que representa um serviço ViaCep.</returns>
+        public static IViaCepService Default()
+            => new ViaCepService(new ViaCepCliente(),
+                                 new EnderecoConvert(), 
+                                 new ViaCepRequisicaoPorCepFactory(), 
+                                 new ViaCepRequisicaoPorEnderecoFactory());
+
+        /// <inheritdoc />
+        public ViaCepService(IViaCepCliente viaCepCliente,
+                             IEnderecoConvert enderecoConvert,
+                             IViaCepRequisicaoPorCepFactory requisicaoPorCepFactory,
+                             IViaCepRequisicaoPorEnderecoFactory requisicaoPorEnderecoFactory)
         {
-            _cliente = new ViaCepCliente();
-            _enderecoConvert = new EnderecoConvert();
-            _requisicaoPorCepFactory = new ViaCepRequisicaoPorCepFactory();
-            _requisicaoPorEnderecoFactory = new ViaCepRequisicaoPorEnderecoFactory();
+            _cliente = viaCepCliente ?? throw new ArgumentNullException(nameof(viaCepCliente));
+            _enderecoConvert = enderecoConvert ?? throw new ArgumentNullException(nameof(enderecoConvert));
+            _requisicaoPorCepFactory = requisicaoPorCepFactory ?? throw new ArgumentNullException(nameof(requisicaoPorCepFactory));
+            _requisicaoPorEnderecoFactory = requisicaoPorEnderecoFactory ?? throw new ArgumentNullException(nameof(requisicaoPorEnderecoFactory));
         }
-
-        public Endereco ObterEndereco(Cep cep) 
-            => _enderecoConvert.DeJsonParaEndereco(ObterEnderecoComoJson(cep));
-
-        public async Task<Endereco> ObterEnderecoAsync(Cep cep) 
-            => _enderecoConvert.DeJsonParaEndereco(await ObterEnderecoComoJsonAsync(cep));
-
-        public async Task<string> ObterEnderecoComoJsonAsync(Cep cep) 
-            => await ObterComoStringAsync(cep, ViaCepFormatoRequisicao.Json);
-
-        public string ObterEnderecoComoJson(Cep cep) 
-            => ObterComoString(cep, ViaCepFormatoRequisicao.Json);
-
-        public async Task<string> ObterEnderecoComoPipedAsync(Cep cep) 
-            => await ObterComoStringAsync(cep, ViaCepFormatoRequisicao.Piped);
-
-        public string ObterEnderecoComoPiped(Cep cep) 
-            => ObterComoString(cep, ViaCepFormatoRequisicao.Piped);
-
-        public async Task<string> ObterEnderecoComoQuertyAsync(Cep cep) 
-            => await ObterComoStringAsync(cep, ViaCepFormatoRequisicao.Querty);
-
-        public string ObterEnderecoComoQuerty(Cep cep) 
-            => ObterComoString(cep, ViaCepFormatoRequisicao.Querty);
-
-        public async Task<XDocument> ObterEnderecoComoXmlAsync(Cep cep)
-        {
-            var requisicao = _requisicaoPorCepFactory.NovaRequisicaoXml(cep);
-            var resposta = await _cliente.ObterRespostaAsync(requisicao);
-
-            GaranteCodigoDeSucessoOuLancaException(resposta);
-
-            var conteudo = resposta.ObterConteudo();
-
-            GaranteConteudoDaRequisicaoPorCepSemErroOuLancaException(conteudo);
-            
-            return conteudo.LerComoXml();
-        }
-
-        public XDocument ObterEnderecoComoXml(Cep cep)
-        {
-            var requisicao = _requisicaoPorCepFactory.NovaRequisicaoXml(cep);
-            var resposta = _cliente.ObterResposta(requisicao);
-
-            GaranteCodigoDeSucessoOuLancaException(resposta);
-
-            var conteudo = resposta.ObterConteudo();
-
-            GaranteConteudoDaRequisicaoPorCepSemErroOuLancaException(conteudo);
-            
-            return conteudo.LerComoXml();
-        }
-
-        public async Task<IEnumerable<Endereco>> ObterEnderecosAsync(EnderecoRequisicao enderecoRequisicao) 
-            => _enderecoConvert.DeJsonParaListaDeEnderecos(await ObterEnderecosComoJsonAsync(enderecoRequisicao));
-
-        public IEnumerable<Endereco> ObterEnderecos(EnderecoRequisicao enderecoRequisicao) 
-            => _enderecoConvert.DeJsonParaListaDeEnderecos(ObterEnderecosComoJson(enderecoRequisicao));
-
-        public async Task<string> ObterEnderecosComoJsonAsync(EnderecoRequisicao enderecoRequisicao)
-        {
-            var requisicao = _requisicaoPorEnderecoFactory.NovaRequisicaoJson(enderecoRequisicao);
-            var resposta = await _cliente.ObterRespostaAsync(requisicao);
-            
-            GaranteCodigoDeSucessoOuLancaException(resposta);
-            
-            var conteudo = resposta.ObterConteudo();
-            return conteudo.LerComoString();
-        }
-
-        public string ObterEnderecosComoJson(EnderecoRequisicao enderecoRequisicao)
-        {
-            var requisicao = _requisicaoPorEnderecoFactory.NovaRequisicaoJson(enderecoRequisicao);
-            var resposta = _cliente.ObterResposta(requisicao);
-            
-            GaranteCodigoDeSucessoOuLancaException(resposta);
-            
-            var conteudo = resposta.ObterConteudo();
-            return conteudo.LerComoString();
-        }
-
-        public async Task<XDocument> ObterEnderecosComoXmlAsync(EnderecoRequisicao enderecoRequisicao)
-        {
-            var requisicao = _requisicaoPorEnderecoFactory.NovaRequisicaoXml(enderecoRequisicao);
-            var resposta = await _cliente.ObterRespostaAsync(requisicao);
-            
-            GaranteCodigoDeSucessoOuLancaException(resposta);
-            
-            var conteudo = resposta.ObterConteudo();
-            return conteudo.LerComoXml();
-        }
-
-        public XDocument ObterEnderecosComoXml(EnderecoRequisicao enderecoRequisicao)
-        {
-            var requisicao = _requisicaoPorEnderecoFactory.NovaRequisicaoXml(enderecoRequisicao);
-            var resposta = _cliente.ObterResposta(requisicao);
-            
-            GaranteCodigoDeSucessoOuLancaException(resposta);
-            
-            var conteudo = resposta.ObterConteudo();
-            return conteudo.LerComoXml();
-        }
-
-        public IViaCepConteudo ObterConteudo(IViaCepUri uri)
-            => ObterResposta(uri).ObterConteudo();
-
-        public async Task<IViaCepConteudo> ObterConteudoAsync(IViaCepUri uri)
-            => (await ObterRespostaAsync(uri)).ObterConteudo();
-
-        public IViaCepResposta ObterResposta(IViaCepUri uri)
-            => _cliente.ObterResposta(uri);
-
-        public async Task<IViaCepResposta> ObterRespostaAsync(IViaCepUri uri)
-            => await _cliente.ObterRespostaAsync(uri);
-        
 
         #region Helpers
 
-        private string ObterComoString(Cep cep, ViaCepFormatoRequisicao formatoRequisicao)
+        private static ArgumentException ThrowCepVazioErro(string nomeParametro)
+            => new ArgumentException("O Cep não pode ser nulo ou vazio. ", nomeParametro);
+        
+        private static ArgumentException ThrowEnderecoRequisicaoInvalido(string nomeParametro)
+            => new ArgumentException("O objeto da requisição por Endereço não é válido.", nomeParametro);
+
+        private string ObterEnderecoPorCepComoString(Cep cep, ViaCepFormatoRequisicao formatoRequisicao)
         {
-            var requisicao = NovaRequisicao(cep, formatoRequisicao);
-            var resposta = _cliente.ObterResposta(requisicao);
+            IViaCepRequisicaoPor<Cep> requisicao = NovaRequisicaoPorCep(cep, formatoRequisicao);
+            IViaCepResposta resposta = _cliente.ObterResposta(requisicao.ToUri);
 
             GaranteCodigoDeSucessoOuLancaException(resposta);
 
-            var conteudo = resposta.ObterConteudo();
+            IViaCepConteudo conteudo = resposta.ObterConteudo();
 
             GaranteConteudoDaRequisicaoPorCepSemErroOuLancaException(conteudo);
             
             return conteudo.LerComoString();
         }
-        
-        private async Task<string> ObterComoStringAsync(Cep cep, ViaCepFormatoRequisicao formatoRequisicao)
-        {
-            var requisicao = NovaRequisicao(cep, formatoRequisicao);
-            var resposta = await _cliente.ObterRespostaAsync(requisicao);
 
-            GaranteCodigoDeSucessoOuLancaException(resposta);
+        private Task<string> ObterEnderecoPorCepComoStringAsync(Cep cep, ViaCepFormatoRequisicao formatoRequisicao)
+            => Task.Run(async () =>
+            {
+                IViaCepRequisicaoPor<Cep> requisicao = NovaRequisicaoPorCep(cep, formatoRequisicao);
+                IViaCepResposta resposta = await _cliente.ObterRespostaAsync(requisicao.ToUri);
 
-            var conteudo = resposta.ObterConteudo();
+                GaranteCodigoDeSucessoOuLancaException(resposta);
 
-            GaranteConteudoDaRequisicaoPorCepSemErroOuLancaException(conteudo);
+                IViaCepConteudo conteudo = resposta.ObterConteudo();
+
+                GaranteConteudoDaRequisicaoPorCepSemErroOuLancaException(conteudo);
             
-            return conteudo.LerComoString();
-        }
+                return conteudo.LerComoString();
+            });
         
-        private static IViaCepRequisicaoPor<Cep> NovaRequisicao(Cep cep, ViaCepFormatoRequisicao formatoRequisicao) 
+        private static IViaCepRequisicaoPor<Cep> NovaRequisicaoPorCep(Cep cep, ViaCepFormatoRequisicao formatoRequisicao) 
             => new ViaCepRequisicaoPorCep(cep, formatoRequisicao);
         
         private static void GaranteCodigoDeSucessoOuLancaException(IViaCepResposta resposta)
@@ -212,6 +115,27 @@ namespace MosaicoSolutions.ViaCep
                 throw new CepInexistenteException();
         }
 
+        #region IDisposable Support
+        private bool _disposedValue;
+
+        private void Dispose(bool disposing)
+        {
+            if (_disposedValue) return;
+
+            if (disposing)
+                _cliente.Dispose();
+
+            _disposedValue = true;
+        }
+
+        /// <inheritdoc />
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        #endregion
+        
         #endregion
     }
 }

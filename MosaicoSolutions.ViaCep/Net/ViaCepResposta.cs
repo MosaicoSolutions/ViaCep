@@ -1,23 +1,51 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Http;
 
 namespace MosaicoSolutions.ViaCep.Net
 {
-    /// <summary>
-    /// Representa a resposta de uma requisiçao.
-    /// </summary>
+    /// <inheritdoc />
     public sealed class ViaCepResposta : IViaCepResposta
     {
+        internal static IViaCepResposta Of(HttpResponseMessage httpResponseMessage)
+            => new ViaCepResposta(httpResponseMessage);
+        
         private readonly HttpResponseMessage _responseMessage;
 
+        private ViaCepResposta(HttpResponseMessage responseMessage) => _responseMessage = responseMessage;
+        
+        /// <inheritdoc />
         public HttpStatusCode CodigoDeStatus => _responseMessage.StatusCode;
-
+        
+        /// <inheritdoc />
         public string ReasonPhrase => _responseMessage.ReasonPhrase;
 
-        public bool EhCodigoDeSucesso => CodigoDeStatus == HttpStatusCode.OK;
+        /// <inheritdoc />
+        public bool EhCodigoDeSucesso => _responseMessage.IsSuccessStatusCode;
 
-        internal ViaCepResposta(HttpResponseMessage responseMessage) => _responseMessage = responseMessage;
+        /// <inheritdoc />
+        public IViaCepConteudo ObterConteudo() => ViaCepConteudo.Of(_responseMessage.Content);
 
-        public IViaCepConteudo ObterConteudo() => new ViaCepConteudo(_responseMessage.Content);
+        #region IDisposable Support
+        private bool _disposedValue;
+
+        private void Dispose(bool disposing)
+        {
+            if (_disposedValue) return;
+
+            if (disposing)
+                _responseMessage.Dispose();
+
+            _disposedValue = true;
+        }
+
+        /// <inheritdoc />
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        #endregion
+
     }
 }

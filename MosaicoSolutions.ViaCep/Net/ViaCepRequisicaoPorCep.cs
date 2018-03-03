@@ -3,23 +3,25 @@ using MosaicoSolutions.ViaCep.Modelos;
 
 namespace MosaicoSolutions.ViaCep.Net
 {
-    /// <summary>
-    /// Representa uma requisição por Cep.
-    /// </summary>
+    /// <inheritdoc />
     public sealed class ViaCepRequisicaoPorCep : IViaCepRequisicaoPor<Cep>
     {
+        /// <inheritdoc />
         public Cep Dados { get; }
+
+        /// <inheritdoc />
         public ViaCepFormatoRequisicao Formato { get; }
-        
+
         internal ViaCepRequisicaoPorCep(Cep cep, ViaCepFormatoRequisicao formato)
         {
             if (cep.IsEmpty)
-                throw new ArgumentException("O cep não pode estar vazio.");
+                throw new ArgumentException("O cep não pode estar vazio.", nameof(cep));
 
             Dados = cep;
             Formato = formato;
         }
 
-        public string ObterUriComoString() => $"{Dados}/{Formato}";
+        /// <inheritdoc />
+        public string ToUri() => $"{Dados}/{Formato}";
     }
 }

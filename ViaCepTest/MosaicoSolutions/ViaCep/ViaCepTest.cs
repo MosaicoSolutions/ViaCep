@@ -14,7 +14,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep
         [SetUp]
         public void SetUp()
         {
-            _viaCepService = new ViaCepService();
+            _viaCepService = ViaCepService.Default();
             _enderecoRequisicao = new EnderecoRequisicao
             {
                 UF = UF.RS,
@@ -173,5 +173,8 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep
             });
 
         #endregion
+
+        [TearDown]
+        public void TearDown() => _viaCepService.Dispose();
     }
 }

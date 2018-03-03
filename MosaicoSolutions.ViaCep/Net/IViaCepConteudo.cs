@@ -3,7 +3,7 @@
 namespace MosaicoSolutions.ViaCep.Net
 {
     /// <summary>
-    /// Define o conteúdo da resposta de uma requisição.
+    /// Define o conteúdo da resposta de uma requisição ViaCep.
     /// </summary>
     public interface IViaCepConteudo
     {
@@ -21,6 +21,7 @@ namespace MosaicoSolutions.ViaCep.Net
         /// Lê o conteúdo como Xml.
         /// </summary>
         /// <returns>Um <see cref="XDocument"/> que representa um Xml do conteúdo.</returns>
+        /// <exception cref="System.InvalidOperationException">Se não for possivel ler o conteúdo como xml.</exception>
         XDocument LerComoXml();
 
         /// <summary>

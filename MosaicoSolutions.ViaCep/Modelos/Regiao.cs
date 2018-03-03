@@ -14,7 +14,6 @@ namespace MosaicoSolutions.ViaCep.Modelos
         public static Regiao Sul { get; }
 
         public string Nome { get; }
-
         public IEnumerable<UF> Estados { get; }
 
         private Regiao(string nome, params UF[] estatos)

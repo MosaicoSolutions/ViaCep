@@ -71,9 +71,7 @@ namespace MosaicoSolutions.ViaCep.Modelos
         #endregion
         
         public int Codigo { get; }
-
         public string Sigla { get; }
-
         public string NomeEstado { get; }
 
         private UF(int codigo, string nomeEstado, string sigla)
@@ -162,11 +160,12 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// <summary>
         /// Retorna uma coleção de UF's que atendam a uma determinada condição.
         /// </summary>
-        /// <param name="predicado">Um <see cref="Predicate{UF}"/> que determina a condição.</param>
+        /// <param name="predicado">Um <see cref="Func{UF, Boolean}"/> que determina a condição.</param>
         /// <returns>Um <see cref="IEnumerable{UF}"/> contendo todas as UF's que satisfaçam a condição do predicado.</returns>
-        public static IEnumerable<UF> Onde(Predicate<UF> predicado)
-            => predicado != null ? 
-                from uf in Ufs where predicado(uf) select uf : throw new ArgumentNullException(nameof(predicado));
+        public static IEnumerable<UF> Onde(Func<UF, bool> predicado)
+            => predicado != null 
+                ? from uf in Ufs where predicado(uf) select uf 
+                : throw new ArgumentNullException(nameof(predicado));
 
         /// <summary>
         /// Aplica uma função de mapeamento para cada UF.
@@ -176,8 +175,9 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// <typeparam name="TResult">O Tipo de destino do mapeamento.</typeparam>
         /// <returns>Uma <see cref="IEnumerable{TResult}"/> que representa o resultado do mapeamento.</returns>
         public static IEnumerable<TResult> Map<TResult>(Func<UF, TResult> map)
-            => map != null ? 
-                from uf in Ufs select map(uf) : throw new ArgumentNullException(nameof(map));
+            => map != null 
+                ? from uf in Ufs select map(uf) 
+                : throw new ArgumentNullException(nameof(map));
         
         /// <summary>
         /// Retorna todos os códigos das UF's.
@@ -197,16 +197,19 @@ namespace MosaicoSolutions.ViaCep.Modelos
         /// <returns>Um <see cref="IEnumerable{Int32}"/> contendo todos os nomes.</returns>
         public static IEnumerable<string> TodosOsNomes() => Map(uf => uf.NomeEstado);
 
+        /// <inheritdoc />
         public override bool Equals(object obj)
         {
-            if (ReferenceEquals(null, obj))
+            if (obj is null)
                 return false;
             
             return ReferenceEquals(this, obj) || obj is UF && Equals((UF) obj);
         }
 
-        public bool Equals(UF other) => !ReferenceEquals(null, other) && Codigo == other.Codigo;
+        /// <inheritdoc />
+        public bool Equals(UF other) => !(other is null) && Codigo == other.Codigo;
 
+        /// <inheritdoc />
         public override int GetHashCode() => Codigo;
         
     }

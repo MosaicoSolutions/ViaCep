@@ -25,6 +25,13 @@ namespace MosaicoSolutions.ViaCep.Modelos
             Logradouro = logradouro;
         }
 
+        public void Deconstruct(out UF uf, out string cidade, out string logradouro)
+        {
+            uf = UF;
+            cidade = Cidade;
+            logradouro = Logradouro;
+        }
+
         /// <summary>
         /// Testa se o objeto é valido segundo as seguintes condições.
         /// UF é um objeto não-nulo.
