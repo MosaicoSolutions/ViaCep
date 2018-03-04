@@ -13,7 +13,7 @@ Um módulo para a consulta de endereços usando o Web Service da ViaCep.
 Primeiro você precisa instanciar um objeto da classe `ViaCepService`.
 
 ``` c#
-var viaCepService = new ViaCepService();
+var viaCepService = ViaCepService.Default();
 ```
 
 Existem duas formas de consultar endereços.
@@ -31,7 +31,7 @@ Nesse caso o endereço será retornado como um objeto do tipo [Endereco](Mosaico
 Se desejar retornar como outros formatos:
 
 ``` c#
-var enderecoJson = viaCepService.ObterEnderecoComoJson(cep); //viaCep.ObterEnderecoComoJson("01001000");
+var enderecoJson = viaCepService.ObterEnderecoComoJson(cep); //viaCepService.ObterEnderecoComoJson("01001000");
 ```
 Você ainda pode retornar com `Xml`, `Piped`, ou `Querty` utilizando os métodos `ObterEnderecoComoXml` , `ObterEnderecoComoPiped` e 
 `ObterEnderecoComoQuerty`, respectivamente, ambos métodos da classe [ViaCepService](MosaicoSolutions.ViaCep/ViaCepService.cs).
@@ -68,31 +68,64 @@ var xml = await viaCepService.ObterEnderecoComoXmlAsync("01001000");
 Para facilitar ainda mais as consultas utilize a *Fluent Interface* veja como é simples.
 
 ``` c#
-var json = ViaCepFluent.De("01001000").ComoJson();
+ViaCepFluent.RequisicaoPorCep
+            .ComOsDados("01001000")
+            .RetorneComoJson(Console.WriteLine);
 ```
-Se desejar utilizar callbacks adicione o namespace `MosaicoSolutions.ViaCep.Fluent.Callback`.
+A novidade é poder capturar e tratar qualquer Exception lançada.
 
 ``` c#
-var requisicao = new EnderecoRequisicao {
-                    UF = UF.RS,
-                    Cidade = "Porto Alegre",
-                    Logradouro = "Olavo"
-                };
+var cep = "01001000";
 
-ViaCepFluent.De(requisicao)
-            .ComoListaDeEnderecos(enderecos => {
-                foreach(var endereco in enderecos)
-                {
-                      Console.WriteLine($"Cep: {endereco.Cep}");
-                      Console.WriteLine($"Cidade: {endereco.Localidade}");
-                      Console.WriteLine($"Logradouro: {endereco.Logradouro}");
-                      Console.WriteLine(Environment.NewLine);
-                }
-             });
+await ViaCepFluent.RequisicaoPorCep
+                  .ComOsDados(cep)
+                  .Capture(e => Console.WriteLine($"Erro ao tentar consultar o endereço com o Cep {cep}. Descrição: {e.Message}"))
+                  .RetorneComoEnderecoAsync(Console.WriteLine);
 ```
 
 Você pode consultar mais sobre fluent [aqui](MosaicoSolutions.ViaCep/Fluent).
 
+## Injeção de Dependência
+
+### SimpleInject
+
+Se você estiver utilizando o SimpleInjector:
+
+``` c#
+var container = new SimpleInjector.Container();
+container.Options.DefaultScopedLifestyle = new WebRequestLifestyle();
+
+container.Register<IViaCepService, ViaCepService>();
+container.Register<IViaCepCliente, ViaCepCliente>();
+container.Register<IEnderecoConvert, EnderecoConvert>();
+container.Register<IViaCepRequisicaoPorCepFactory, ViaCepRequisicaoPorCepFactory>();
+container.Register<IViaCepRequisicaoPorEnderecoFactory, ViaCepRequisicaoPorEnderecoFactory>();
+
+container.RegisterMvcControllers(Assembly.GetExecutingAssembly());
+
+DependencyResolver.SetResolver(new SimpleInjectorDependencyResolver(container));
+```
+
+Depois basta injetar a Dependência via Construtor.
+
+``` c#
+public class EmpresaController : Controller
+{
+      private readonly IViaCepService _viaCepService;
+      
+      public EmpresaController(IViaCepService viaCepService)
+      {
+            _viaCepService = viaCepService;
+      }
+      
+      public Task<ActionResult> Index()
+      {
+            var endereco = await _viaCepService.ObterEnderecoAsync("01001000");
+            return View(endereco);
+      }
+}
+
+```
 ## Dependências
 
-[Newtonsoft.Json](http://www.newtonsoft.com/json) 9.0.1 
+[Newtonsoft.Json](http://www.newtonsoft.com/json) >= 11.0.1 
