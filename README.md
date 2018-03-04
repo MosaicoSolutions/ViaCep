@@ -87,7 +87,7 @@ Você pode consultar mais sobre fluent [aqui](MosaicoSolutions.ViaCep/Fluent).
 
 ## Injeção de Dependência
 
-### SimpleInject
+### Simple Injector
 
 Se você estiver utilizando o SimpleInjector:
 
