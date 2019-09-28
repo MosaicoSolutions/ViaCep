@@ -57,7 +57,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
 
             var resposta = _cliente.ObterResposta(_uri);
 
-            Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.NotFound);
+            Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.BadRequest);
             Assert.False(resposta.EhCodigoDeSucesso);
         }
 
@@ -71,7 +71,7 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep.Teste.Net
 
             var resposta = _cliente.ObterResposta(_uri);
 
-            Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.NotFound);
+            Assert.AreEqual(resposta.CodigoDeStatus, HttpStatusCode.BadRequest);
             Assert.False(resposta.EhCodigoDeSucesso);
         }
 
