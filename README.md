@@ -126,6 +126,26 @@ public class EmpresaController : Controller
 }
 
 ```
+
+### IServiceCollection
+
+Se você estiver utilizando o AspNet Core:
+
+``` c#
+public void ConfigureServices(IServiceCollection services)
+{
+    services.Configure<CookiePolicyOptions>(options =>
+    {
+        // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+        options.CheckConsentNeeded = context => true;
+        options.MinimumSameSitePolicy = SameSiteMode.None;
+    });
+    
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+    services.AddScoped<IViaCepService>(serviceProvider => ViaCepService.Default());
+}
+```
+
 ## Dependências
 
 [Newtonsoft.Json](http://www.newtonsoft.com/json) >= 11.0.1 
