@@ -65,20 +65,20 @@ namespace ViaCepTest.MosaicoSolutions.ViaCep
         public async Task DeveObterEnderecoComoQuertyAsync()
         {
             var quertyEndereco = await _viaCepService.ObterEnderecoComoQuertyAsync("01001000");
-            Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a+da+S%C3%A9"));
+            Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a%20da%20S%C3%A9"));
 
             quertyEndereco = await _viaCepService.ObterEnderecoComoQuertyAsync("01001-000");
-            Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a+da+S%C3%A9"));
+            Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a%20da%20S%C3%A9"));
         }
 
         [Test]
         public void DeveObterEnderecoComoQuerty()
         {
             var quertyEndereco = _viaCepService.ObterEnderecoComoQuerty("01001000");
-            Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a+da+S%C3%A9"));
+            Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a%20da%20S%C3%A9"));
 
             quertyEndereco = _viaCepService.ObterEnderecoComoQuerty("01001-000");
-            Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a+da+S%C3%A9"));
+            Assert.True(quertyEndereco.Contains("cep=01001-000&logradouro=Pra%C3%A7a%20da%20S%C3%A9"));
         }
 
         #endregion
